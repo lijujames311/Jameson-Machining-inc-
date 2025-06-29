@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jameson Machining Inc. | GTA Shaft & Centerless Grinding Specialists</title>
-  <meta name="description" content="Jameson Machining Inc. offers precision centerless, cylindrical, and surface grinding in Oakville & GTA. High-volume, custom, and prototype work. Fast, direct, and future-focused."/>
-  <meta name="keywords" content="centerless grinding, shaft grinding, cylindrical grinding, surface grinding, Oakville, GTA, Ontario, custom grinding, microfinishing, chrome, repair, Jameson Machining Inc." />
-  <meta name="author" content="Jameson Machining Inc.">
-  <link rel="canonical" href="https://www.jamesonsgrinding.com">
+  <meta name="description" content="Precision centerless, cylindrical, and surface grinding in Oakville & GTA. High-volume, custom, and prototype work. Fast, direct, future-focused."/>
+  <meta name="keywords" content="centerless grinding, shaft grinding, cylindrical grinding, surface grinding, Oakville, GTA, Ontario, custom grinding, microfinishing, chrome plating, shaft repair" />
+  <meta name="author" content="Jameson Machining Inc." />
+  <link rel="canonical" href="https://www.jamesonsgrinding.com" />
   <meta property="og:title" content="Jameson Machining Inc. – Grind with Passion" />
   <meta property="og:description" content="Next-gen centerless, shaft & surface grinding for the GTA. Production or prototype, we grind with passion." />
   <meta property="og:url" content="https://www.jamesonsgrinding.com" />
@@ -16,192 +16,486 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Jameson Machining Inc. – Grind with Passion" />
   <meta name="twitter:description" content="Modern centerless, shaft, and surface grinding. Oakville's production shop." />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:800,700,400|Inter:400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:800,700,400|Inter:400,600&display=swap" rel="stylesheet" />
   <style>
-    html,body{margin:0;padding:0;background:#faf6ed;font-family:'Inter',Arial,sans-serif;color:#23241f;font-size:19px;min-height:100vh;}
-    body{display:flex;flex-direction:column;min-height:100vh;}
-    header{background:#17160a;color:#fff;box-shadow:0 2px 22px #17160a0f;}
-    .logo-title{display:flex;align-items:center;gap:1.2em;padding:1.1em 3vw 1.1em 3vw;max-width:1160px;margin:0 auto;}
-    .logo{height:62px;width:auto;margin-right:0.8em;}
-    .logo-title h1{font-family:'Montserrat',Arial,sans-serif;font-size:2em;font-weight:800;letter-spacing:1.2px;margin:0;}
-    .motto{font-size:1.07em;color:#ffe45c;font-weight:700;letter-spacing:1px;display:block;}
-    nav{display:flex;gap:1.4em;justify-content:center;padding:0 3vw 1em 3vw;}
-    nav a{color:#ffe176;font-weight:600;text-decoration:none;font-size:1.07em;padding:5px 0;transition:color 0.14s;}
-    nav a:hover{color:#ffd900;}
-    nav .cta{background:#ffe45c;color:#17160a;border-radius:17px;font-weight:700;padding:7px 22px;margin-left:1em;box-shadow:0 2px 12px #ffe45c18;}
-    nav .cta:hover{background:#ffd900;}
-    .hero{background:linear-gradient(110deg,#ffe45c 0%,#fffde3 100%);color:#17160a;text-align:center;padding:3.2em 5vw 2.5em 5vw;}
-    .hero h2{font-family:'Montserrat',Arial,sans-serif;font-size:2.2em;font-weight:900;letter-spacing:1.1px;margin-bottom:0.17em;}
-    .hero p{font-size:1.17em;color:#474219;margin-bottom:1.3em;font-weight:500;}
-    .cta-big{font-size:1.13em;font-weight:700;background:#17160a;color:#ffe45c;border:none;border-radius:30px;padding:14px 44px;margin-top:0.45em;box-shadow:0 2px 14px #ffe45c10;transition:background 0.14s;cursor:pointer;text-decoration:none;display:inline-block;}
-    .cta-big:hover{background:#23241f;color:#fffde3;}
-    .quick-cta{background:#ffe45c;text-align:center;padding:1.1em 0.7em 0.7em 0.7em;}
-    .quick-cta h3{margin:0 0 0.7em 0;}
-    .quick-cta .cta{background:#17160a;color:#ffe45c;margin-right:1em;}
-    .quick-cta .cta-secondary{background:#fffde3;color:#b89a19;border:1.5px solid #b89a19;}
-    .quick-cta .cta,.quick-cta .cta-secondary{padding:8px 22px;border-radius:16px;text-decoration:none;font-weight:600;}
-    main{flex:1 1 auto;max-width:1080px;margin:0 auto;padding:0 3vw;}
-    .services,.capabilities,.why-jameson,.about,.machines,.leadgen{margin:2.1em auto 1.6em auto;background:#fffde3;border-radius:13px;box-shadow:0 2px 12px #ffe45c10;padding:1.3em 1.5em 1.1em 1.5em;}
-    h3{font-family:'Montserrat',Arial,sans-serif;font-size:1.16em;color:#b89a19;margin-bottom:0.75em;font-weight:800;letter-spacing:0.5px;}
-    .service-tiles{display:flex;flex-wrap:wrap;gap:1.2em;justify-content:center;}
-    .service{flex:1 1 220px;min-width:190px;max-width:260px;background:linear-gradient(93deg,#ffe45c 83%,#fffde3 100%);box-shadow:0 2px 8px #ffe45c10;border-radius:10px;padding:1em 0.9em;margin-bottom:1em;border-left:5px solid #17160a;}
-    .service h4{margin:0 0 0.4em 0;font-size:1.09em;color:#b89a19;}
-    .service ul{margin:0 0 0.7em 1em;padding:0;}
-    .capabilities ul,.machines ul{margin:0 0 0.7em 1.1em;padding:0;}
-    .why-jameson ul{margin:0 0 0.7em 1.1em;}
-    .about-txt,.machines ul,.capabilities ul{font-size:1em;}
-    .leadgen label{font-weight:600;display:block;margin-top:0.9em;}
-    .leadgen input,.leadgen textarea,.leadgen select{width:100%;padding:8px 10px;border:1.5px solid #b89a19;border-radius:6px;margin-top:0.22em;margin-bottom:0.5em;}
-    .leadgen button{background:#17160a;color:#ffe45c;font-weight:700;border:none;border-radius:17px;padding:10px 31px;cursor:pointer;}
-    .leadgen button:hover{background:#23241f;}
-    .estimator-wrap{background:#fff8d8;padding:1.3em 1em 0.7em 1em;border-radius:10px;margin-top:1.4em;margin-bottom:1.2em;box-shadow:0 1px 6px #b89a1915;}
-    .estimator-row{display:flex;gap:1em;flex-wrap:wrap;margin-bottom:0.6em;}
-    .estimator-row label{flex:1 1 130px;}
-    .estimator-row select,.estimator-row input{width:100%;}
-    .estimator-btn{background:#17160a;color:#ffe45c;font-weight:700;border:none;border-radius:14px;padding:9px 26px;cursor:pointer;margin-top:0.8em;}
-    .estimator-btn:hover{background:#b89a19;color:#fffde3;}
-    .estimator-result{font-weight:800;margin-top:1.2em;font-size:1.14em;color:#b89a19;}
-    #sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:1112;background:linear-gradient(93deg,#23241f 80%,#ffe45c 100%);color:#ffe45c;display:flex;justify-content:center;gap:1.3em;padding:0.7em 0;box-shadow:0 -3px 16px #b89a1917;}
-    #sticky-cta a{font-size:1.06em;font-weight:700;color:#17160a;background:#ffe45c;border-radius:13px;padding:7px 19px;margin:0 2px;text-decoration:none;transition:background 0.14s;}
-    #sticky-cta a.cta-secondary{background:#fffde3;color:#b89a19;border:1.5px solid #b89a19;}
-    #sticky-cta a:hover{background:#b89a19;color:#fff;}
-    footer{width:100%;background:#17160a;color:#ffe45c;font-size:1.01em;padding:1.5em 4vw 1.1em 4vw;margin-top:1.5em;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;box-shadow:0 -1px 8px #17160a12;}
-    .footer-brand{font-size:1.1em;font-weight:700;color:#ffe45c;font-family:'Montserrat',Arial,sans-serif;letter-spacing:0.7px;}
-    .footer-cta a{background:#ffe45c;color:#17160a;border-radius:12px;padding:7px 17px;text-decoration:none;font-weight:700;margin-right:1em;}
-    .footer-cta a.cta-secondary{background:#fffde3;color:#b89a19;border:1.5px solid #b89a19;}
-    .footer-cta a:hover{background:#b89a19;}
-    @media (max-width:900px){.logo-title{flex-direction:column;gap:0.4em;align-items:flex-start}.service-tiles{flex-direction:column;gap:0.8em;}.nav-wrap,main{max-width:97vw;}.hero h2{font-size:1.4em;}.services,.capabilities,.about,.machines,.leadgen{padding:1em 0.6em;}}
-    @media (max-width:600px){.brand{font-size:1.14em;}.hero{padding:1.1em 3vw 0.5em 3vw;}.services,.capabilities,.about,.machines,.leadgen{padding:0.1em 0.1em;}}
+    /* Reset and base */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin:0; padding:0;
+      background:#faf6ed;
+      font-family: 'Inter', Arial, sans-serif;
+      color:#23241f;
+      font-size:19px;
+      scroll-behavior: smooth;
+      min-height: 100vh;
+    }
+    body {
+      display:flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration:none;
+      color: inherit;
+    }
+    ul {
+      padding-left: 1.2em;
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
+    h1,h2,h3,h4 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin-top: 0;
+      margin-bottom: 0.4em;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: #b89a19;
+    }
+    h1 { font-size: 2.3rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.3rem; margin-bottom: 1em; }
+    h4 { font-size: 1.1rem; margin-bottom: 0.5em; color:#b89a19; }
+    p {
+      margin-top: 0;
+      margin-bottom: 1em;
+      color: #474219;
+      font-weight: 500;
+    }
+    /* Header */
+    header {
+      background:#17160a;
+      color:#fff;
+      box-shadow: 0 2px 20px rgb(23 22 10 / 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .logo-title {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 1.2rem 2vw;
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+    }
+    .logo-title img.logo {
+      height: 60px;
+      width: auto;
+    }
+    .logo-title div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .motto {
+      color: #ffe45c;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      font-size: 1rem;
+      margin-top: 0.1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.7rem;
+      padding: 0.9rem 0 1rem;
+      background: #23241f;
+    }
+    nav a {
+      color: #ffe176;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 6px 0;
+      transition: color 0.25s;
+      position: relative;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: #ffd900;
+    }
+    nav .cta {
+      background: #ffe45c;
+      color: #17160a;
+      padding: 7px 25px;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px #ffe45caa;
+      font-weight: 800;
+    }
+    nav .cta:hover {
+      background: #ffd900;
+    }
+    /* Hero */
+    .hero {
+      max-width: 1020px;
+      margin: 2.4rem auto 2rem;
+      padding: 0 2vw;
+      text-align: center;
+      background: linear-gradient(110deg,#ffe45c 5%,#fffde3 100%);
+      border-radius: 15px;
+      box-shadow: 0 8px 18px #ffe45c3b;
+      padding: 3rem 2.5rem 3.5rem;
+      color: #17160a;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 0.7rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 1.9rem;
+      line-height: 1.6;
+    }
+    .cta-big {
+      background: #17160a;
+      color: #ffe45c;
+      font-weight: 900;
+      padding: 14px 50px;
+      border-radius: 35px;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 16px #ffe45c73;
+      transition: background 0.3s ease;
+      display: inline-block;
+      letter-spacing: 0.07em;
+    }
+    .cta-big:hover {
+      background: #23241f;
+      color: #fffde3;
+    }
+    /* Quick CTA */
+    .quick-cta {
+      background: #ffe45c;
+      text-align: center;
+      padding: 1rem 1rem 1.2rem;
+      box-shadow: 0 3px 12px #ffe45c8c;
+    }
+    .quick-cta h3 {
+      margin-bottom: 0.7rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      color: #17160a;
+    }
+    .quick-cta .cta,
+    .quick-cta .cta-secondary {
+      display: inline-block;
+      margin: 0 10px;
+      font-weight: 700;
+      padding: 9px 26px;
+      border-radius: 22px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      user-select:none;
+    }
+    .quick-cta .cta {
+      background: #17160a;
+      color: #ffe45c;
+    }
+    .quick-cta .cta:hover {
+      background: #23241f;
+      color: #fffde3;
+    }
+    .quick-cta .cta-secondary {
+      background: #fffde3;
+      color: #b89a19;
+      border: 2.5px solid #b89a19;
+    }
+    .quick-cta .cta-secondary:hover {
+      background: #b89a19;
+      color: #fff;
+    }
+    /* Main container */
+    main {
+      flex: 1 1 auto;
+      max-width: 1080px;
+      margin: 2rem auto 3rem;
+      padding: 0 2vw;
+    }
+    section {
+      background: #fffde3;
+      border-radius: 15px;
+      box-shadow: 0 4px 16px #ffe45c4d;
+      padding: 2.2rem 2.4rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+    /* Services */
+    .service-tiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.6rem 2rem;
+    }
+    .service {
+      background: linear-gradient(95deg, #ffe45c 83%, #fffde3 100%);
+      box-shadow: 0 5px 14px #ffe45c40;
+      padding: 1.4rem 1.3rem 1.3rem 1.3rem;
+      border-left: 6px solid #17160a;
+      border-radius: 14px;
+      flex: 1 1 260px;
+      max-width: 280px;
+      min-width: 230px;
+    }
+    .service h4 {
+      margin-bottom: 0.55rem;
+    }
+    .service ul li {
+      margin-bottom: 0.42rem;
+      font-weight: 600;
+      color: #5b562a;
+    }
+    /* Lists */
+    ul li {
+      margin-bottom: 0.45rem;
+      color: #5b562a;
+      font-weight: 600;
+    }
+    /* Why Jameson */
+    .why-jameson ul li {
+      margin-bottom: 0.7rem;
+      font-weight: 600;
+      color: #5b562a;
+    }
+    /* About */
+    .about p {
+      color: #474219;
+      font-weight: 600;
+      font-size: 1.03rem;
+      line-height: 1.6;
+    }
+    /* Machines */
+    .machines ul {
+      list-style: disc inside;
+      font-weight: 600;
+      color: #5b562a;
+    }
+    /* Leadgen & estimator */
+    .leadgen h3 {
+      font-weight: 900;
+      color: #b89a19;
+      margin-bottom: 1.3rem;
+      letter-spacing: 0.04em;
+    }
+    .leadgen label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: #5b562a;
+    }
+    .leadgen input[type="text"],
+    .leadgen input[type="email"],
+    .leadgen input[type="number"],
+    .leadgen select,
+    .leadgen textarea {
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 7px;
+      border: 1.8px solid #b89a19;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1.1rem;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #23241f;
+      resize: vertical;
+      transition: border-color 0.25s ease;
+    }
+    .leadgen input:focus,
+    .leadgen select:focus,
+    .leadgen textarea:focus {
+      border-color: #ffe45c;
+      outline: none;
+      box-shadow: 0 0 10px #ffe45caa;
+    }
+    .leadgen button,
+    .estimator-btn {
+      background: #17160a;
+      color: #ffe45c;
+      font-weight: 900;
+      padding: 12px 34px;
+      font-size: 1.05rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 5px 16px #ffe45c88;
+      letter-spacing: 0.07em;
+      transition: background 0.3s ease;
+      user-select:none;
+      margin-top: 0.3rem;
+    }
+    .leadgen button:hover,
+    .estimator-btn:hover {
+      background: #b89a19;
+      color: #fffde3;
+      box-shadow: 0 8px 18px #b89a1966;
+    }
+    .estimator-wrap {
+      background: #fff8d8;
+      padding: 1.4rem 1.2rem 1rem 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px #b89a1918;
+      max-width: 720px;
+      margin: 0 auto 2rem;
+    }
+    .estimator-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 1.8rem;
+      margin-bottom: 0.9rem;
+    }
+    .estimator-row label {
+      flex: 1 1 140px;
+      min-width: 130px;
+    }
+    .estimator-result {
+      font-weight: 900;
+      margin-top: 1.4rem;
+      font-size: 1.2rem;
+      color: #b89a19;
+      text-align: center;
+      min-height: 2.3em;
+      user-select:none;
+    }
+    /* Sticky CTA */
+    #sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1112;
+      background: linear-gradient(93deg, #23241f 78%, #ffe45c 100%);
+      color: #ffe45c;
+      display: flex;
+      justify-content: center;
+      gap: 1.4em;
+      padding: 0.9em 0;
+      box-shadow: 0 -3px 20px #b89a1917;
+      user-select:none;
+    }
+    #sticky-cta a {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #17160a;
+      background: #ffe45c;
+      border-radius: 16px;
+      padding: 8px 25px;
+      margin: 0 4px;
+      text-decoration: none;
+      transition: background 0.25s ease;
+      display: inline-block;
+      user-select:none;
+    }
+    #sticky-cta a.cta-secondary {
+      background: #fffde3;
+      color: #b89a19;
+      border: 2px solid #b89a19;
+    }
+    #sticky-cta a:hover {
+      background: #b89a19;
+      color: #fff;
+    }
+    /* Footer */
+    footer {
+      width: 100%;
+      background: #17160a;
+      color: #ffe45c;
+      font-size: 1.05rem;
+      padding: 1.7rem 4vw 1.3rem 4vw;
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      box-shadow: 0 -2px 12px #17160a22;
+      user-select:none;
+    }
+    .footer-brand {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #ffe45c;
+      font-family: 'Montserrat', Arial, sans-serif;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.3rem;
+    }
+    .footer-contact a {
+      color: #ffe45c;
+      font-weight: 700;
+      margin-right: 1.4rem;
+      user-select:text;
+    }
+    .footer-contact a:hover {
+      color: #fffde3;
+    }
+    .footer-cta a {
+      background: #ffe45c;
+      color: #17160a;
+      border-radius: 15px;
+      padding: 8px 22px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-right: 1rem;
+      user-select:none;
+    }
+    .footer-cta a.cta-secondary {
+      background: #fffde3;
+      color: #b89a19;
+      border: 2px solid #b89a19;
+    }
+    .footer-cta a:hover {
+      background: #b89a19;
+      color: #fff;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      .logo-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+      .service-tiles {
+        flex-direction: column;
+        gap: 1.1rem;
+      }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      main {
+        max-width: 95vw;
+      }
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 17px;
+      }
+      .hero {
+        padding: 2rem 1rem 2rem 1rem;
+      }
+      .services, .capabilities, .about, .machines, .leadgen {
+        padding: 1rem 1rem 1rem 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo-title">
-      <img src="logo.png" alt="Jameson Machining Logo" class="logo"/>
-      <div>
-        <h1>Jameson Machining Inc.</h1>
-        <span class="motto">GTA’s Grinding & Shaft Specialists</span>
-      </div>
+
+<header>
+  <div class="logo-title">
+    <img src="logo.png" alt="Jameson Machining Logo" class="logo"/>
+    <div>
+      <h1>Jameson Machining Inc.</h1>
+      <span class="motto">GTA’s Grinding & Shaft Specialists</span>
     </div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#quote" class="cta">Request Quote</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Your GTA Grinding Partner</h2>
-    <p>Specializing in centerless, cylindrical, and surface grinding. Fast quotes, tight tolerances, high-volume and custom runs. Supporting the future of Canadian manufacturing—no excuses, just results.</p>
-    <a href="#quote" class="cta-big">Get My Quote</a>
-  </section>
-
-  <section class="quick-cta">
-    <h3>Need a fast answer?</h3>
-    <a href="#quote" class="cta">Request Instant Estimate</a>
-    <a href="https://wa.me/13653516656" target="_blank" class="cta-secondary">WhatsApp Chat</a>
-  </section>
-
-  <section class="services" id="services">
-    <h3>Our Services</h3>
-    <div class="service-tiles">
-      <div class="service">
-        <h4>Cylindrical & Shaft Grinding</h4>
-        <ul>
-          <li>Up to 24” diameter, 80” length</li>
-          <li>OD/ID, repair, tight tolerances</li>
-          <li>Microfinishing and inspection</li>
-        </ul>
-      </div>
-      <div class="service">
-        <h4>Centerless Grinding</h4>
-        <ul>
-          <li>Through-feed & plunge</li>
-          <li>Runs from prototype to 500,000+/year</li>
-          <li>Pins, shafts, bushings, rollers</li>
-        </ul>
-      </div>
-      <div class="service">
-        <h4>Surface Grinding</h4>
-        <ul>
-          <li>Precision flatness & parallelism</li>
-          <li>Tooling, plates, fixtures</li>
-          <li>Custom fixturing for complex jobs</li>
-        </ul>
-      </div>
-      <div class="service">
-        <h4>Chrome Plating & Shaft Repair</h4>
-        <ul>
-          <li>Weld, chrome, pre-grind, finish</li>
-          <li>One-stop shaft rebuild</li>
-          <li>Partnered plating, guaranteed roundness</li>
-        </ul>
-      </div>
-      <div class="service">
-        <h4>Custom Fixtures & Tooling</h4>
-        <ul>
-          <li>Full in-house fixture design</li>
-          <li>Odd-lengths, tough parts, prototypes</li>
-        </ul>
-      </div>
-      <div class="service">
-        <h4>Microfinishing</h4>
-        <ul>
-          <li>3M, film abrasives, superfinishing</li>
-          <li>Mirror polish for new & repaired parts</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="capabilities" id="capabilities">
-    <h3>Capabilities at a Glance</h3>
-    <ul>
-      <li><b>Cylindrical OD:</b> up to 24” diameter × 80” length</li>
-      <li><b>Centerless:</b> 1/16”–3” diameter, prototype to 500,000+ parts/year</li>
-      <li><b>Surface Grinding:</b> up to 24” × 80” plates</li>
-      <li><b>Materials:</b> Tool steels, stainless, chrome, specialty alloys</li>
-      <li><b>Tolerances:</b> Down to 0.0002”/0.005mm (job-dependent)</li>
-      <li><b>Inspection:</b> In-house micrometers, dial indicators, test bars, certified gages</li>
-      <li><b>Custom Fixturing:</b> Full in-house library—if it can be held, it can be ground</li>
-    </ul>
-  </section>
-
-  <section class="why-jameson">
-    <h3>Why Choose Jameson?</h3>
-    <ul>
-      <li>Every job gets personal review & oversight—no hand-off, no runaround</li>
-      <li>Modern, young, future-focused shop with deep industry roots</li>
-      <li>Fast response, clear communication, reliable deadlines</li>
-      <li>Full traceability & job traveler system for repeat runs</li>
-      <li>Known for tackling jobs others can’t—or won’t—touch</li>
-    </ul>
-  </section>
-
-  <section class="about" id="about">
-    <h3>About Jameson Machining Inc.</h3>
-    <p>
-      Jameson Machining Inc. was founded on the belief that precision grinding should be done right the first time, every time.<br>
-      Drawing on experience from top Ontario shops—Mississauga Jig Grinding, Top Grade Molds, Mold-Masters, and Collins Aerospace—Jameson Machining combines old-school skill with next-generation technology.<br>
-      Our team is young, aggressive, and focused on supporting the future of Canadian manufacturing. Every project—whether a one-off or high-volume run—gets real service and results. We don’t do excuses. We do quality, reliability, and speed.
-    </p>
-  </section>
-
-  <section class="machines">
-    <h3>Our Equipment</h3>
-    <ul>
-      <li>Zocca Como Italia RU2000/6 Cylindrical Grinder</li>
-      <li>John Shipman 1310 Cylindrical Grinder</li>
-      <li>Chevalier FSG 3A 1020 Surface Grinder</li>
-      <li>Chevalier FSG 2A 618 Surface Grinder</li>
-      <li>TOS BPH 300 Surface Grinder</li>
-      <li>Fein GX75 2H Centerless Belt Grinder + GXC GXW</li>
-      <li>DoAll VS612 Surface Grinder with Dedtru Centerless Attachment</li>
-      <li>Diamond & CBN wheels: Kapp Nile’s, 3M, Norton, more</li>
-      <li>In-house fixtures & specialty tooling for any job</li>
-    </ul>
-  </section>
-
-  <section class="leadgen" id="quote
+  </div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href
