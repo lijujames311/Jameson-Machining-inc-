@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jameson Machining Inc. | Grinding & Shaft Specialists</title>
+  <meta name="description" content="Precision grinding in Oakville & GTA: centerless, cylindrical, and surface grinding. High-volume or custom—no excuses, just results.">
+  <meta name="keywords" content="Grinding, Centerless, Cylindrical, Surface Grinding, Oakville, GTA, Jameson Machining, Shaft Grinding, Custom Machining">
+  <meta name="author" content="Jameson Machining Inc.">
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: #f9f9f9; color: #222; }
+    header { background: #111; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .logo { height: 50px; margin-right: 10px; }
+    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a.cta { background: #ff9900; padding: 8px 14px; border-radius: 5px; }
+    .hero { background: linear-gradient(to right, #222, #444); color: white; padding: 3rem 2rem; text-align: center; }
+    .hero h2 { font-size: 2rem; }
+    .cta-big { background: #ff9900; padding: 12px 24px; display: inline-block; color: black; font-weight: bold; border-radius: 6px; margin-top: 1rem; }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    h3 { border-left: 5px solid #ff9900; padding-left: 10px; margin-bottom: 1rem; }
+    .service-tiles { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .service { background: white; padding: 1rem; border-radius: 6px; flex: 1 1 300px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    form label, form input, form textarea { display: block; width: 100%; margin-bottom: 10px; }
+    form input, form textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    button { background: #ff9900; color: black; border: none; padding: 10px 20px; font-weight: bold; border-radius: 5px; cursor: pointer; }
+    footer { background: #111; color: white; padding: 2rem; text-align: center; }
+    #sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #111; color: white; text-align: center; padding: 0.8rem; z-index: 1000; }
+    #sticky-cta a { margin: 0 10px; color: #ff9900; font-weight: bold; text-decoration: none; }
+    @media (max-width: 600px) {
+      header, .hero, section { padding: 1rem; }
+      nav { margin-top: 10px; }
+      nav a { display: block; margin: 5px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="logo.png" alt="Jameson Logo" class="logo">
+    <h1>Jameson Machining Inc.</h1>
+  </div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#calculator">Estimator</a>
+    <a href="#contact">Contact</a>
+    <a href="#quote" class="cta">Request Quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Precision Grinding in Oakville & GTA</h2>
+  <p>Centerless, Cylindrical, and Surface Grinding. Fast turnarounds. Tight tolerances. We grind with passion.</p>
+  <a href="#quote" class="cta-big">Get a Quote</a>
+</section>
+
+<section id="services">
+  <h3>Our Services</h3>
+  <div class="service-tiles">
+    <div class="service"><h4>Centerless Grinding</h4><ul><li>1/16” to 3” dia</li><li>500k+ parts/year</li><li>High volume & precision</li></ul></div>
+    <div class="service"><h4>Cylindrical Grinding</h4><ul><li>Up to 24” dia, 80” long</li><li>OD/ID, Microfinish</li><li>Shafts, tools, aerospace</li></ul></div>
+    <div class="service"><h4>Surface Grinding</h4><ul><li>Up to 24” × 80”</li><li>Tooling, fixtures</li><li>Mirror finishes available</li></ul></div>
+  </div>
+</section>
+
+<section id="calculator">
+  <h3>Grinding Price Estimator</h3>
+  <form id="estimateForm">
+    <label>Grinding Type:
+      <select id="grindType">
+        <option value="centerless">Centerless</option>
+        <option value="cylindrical">Cylindrical</option>
+        <option value="surface">Surface</option>
+      </select>
+    </label>
+    <label>Material:
+      <select id="material">
+        <option value="4140PH">4140PH</option>
+        <option value="A2">A2</option>
+        <option value="Stainless">Stainless</option>
+        <option value="Mild Steel">Mild Steel</option>
+      </select>
+    </label>
+    <label>Diameter (inches): <input type="number" id="diameter" step="0.01" required></label>
+    <label>Length (inches): <input type="number" id="length" step="0.01" required></label>
+    <label>Quantity: <input type="number" id="quantity" required></label>
+    <p><b>Estimated Price:</b> $<span id="price">0.00</span></p>
+    <button type="button" onclick="calculatePrice()">Calculate</button>
+  </form>
+</section>
+
+<section id="quote">
+  <h3>Contact / Submit RFQ</h3>
+  <form action="https://formspree.io/f/mnnpzqrd" method="POST">
+    <label>Name: <input type="text" name="name" required></label>
+    <label>Email: <input type="email" name="email" required></label>
+    <label>Company: <input type="text" name="company"></label>
+    <label>Phone: <input type="tel" name="phone" required></label>
+    <label>Message: <textarea name="message" required></textarea></label>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer id="contact">
+  <p>© 2025 Jameson Machining Inc. | 1421 Speers Rd, Oakville ON<br>
+    <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a> | 
+    <a href="tel:+19055192255">(905) 519-2255</a>
+  </p>
+</footer>
+
+<div id="sticky-cta">
+  <a href="#quote">Request a Quote</a> |
+  <a href="https://wa.me/13653516656" target="_blank">Chat on WhatsApp</a>
+</div>
+
+<script>
+function calculatePrice() {
+  const type = document.getElementById("grindType").value;
+  const mat = document.getElementById("material").value;
+  const dia = parseFloat(document.getElementById("diameter").value);
+  const len = parseFloat(document.getElementById("length").value);
+  const qty = parseInt(document.getElementById("quantity").value);
+  let baseRate = 0.07;
+
+  if (type === "centerless") baseRate = 0.05;
+  else if (type === "cylindrical") baseRate = 0.09;
+  else if (type === "surface") baseRate = 0.06;
+
+  const surfaceArea = 3.14 * dia * len;
+  let pricePerPiece = baseRate * surfaceArea;
+
+  // Adjust material factor
+  if (mat === "Stainless") pricePerPiece *= 1.2;
+  if (mat === "A2") pricePerPiece *= 1.1;
+
+  // Volume discount logic
+  if (qty > 5000) pricePerPiece *= 0.85;
+  else if (qty > 1000) pricePerPiece *= 0.9;
+  else if (qty < 50) pricePerPiece *= 1.2;
+
+  const total = pricePerPiece * qty;
+  const minimum = 120; // Minimum floor
+
+  document.getElementById("price").innerText = (total < minimum ? minimum : total).toFixed(2);
+}
+</script>
+
+</body>
+</html>
