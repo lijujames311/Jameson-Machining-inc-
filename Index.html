@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jameson Machining Inc. | Shaft Grinding & Centerless Experts GTA</title>
+  <meta name="description" content="Precision shaft, centerless, and cylindrical grinding in Oakville & the GTA. Jameson Machining Inc. delivers fast, reliable, and market-calibrated results. Get a quote now.">
+  <meta name="keywords" content="centerless grinding, shaft grinding, cylindrical grinding, Oakville, GTA, Jameson Machining, surface grinding, grinding quote, grinding services">
+  <meta name="author" content="Jameson Machining Inc.">
+  <meta property="og:title" content="Jameson Machining Inc. | Precision Grinding in GTA">
+  <meta property="og:description" content="Specializing in centerless, cylindrical, and shaft grinding. Fast quotes and long-part expertise.">
+  <meta property="og:image" content="https://www.jamesonsgrinding.com/logo.png">
+  <meta property="og:url" content="https://www.jamesonsgrinding.com">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      color: #222;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 { margin: 0; font-size: 1.8em; }
+    .motto { font-size: 0.9em; font-style: italic; color: #ccc; }
+    nav a {
+      color: #eee; margin-left: 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 4em 2em;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+    .cta-big {
+      background: #f90;
+      color: #000;
+      padding: 0.8em 1.6em;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 1em;
+    }
+    .services, .capabilities, .about, .contact, .quote, .estimator {
+      padding: 3em 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h3 { margin-top: 0; }
+    ul { padding-left: 1.2em; }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.6em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: #111;
+      color: #fff;
+      padding: 0.7em 1.4em;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .footer {
+      background: #111;
+      color: #aaa;
+      padding: 2em;
+      text-align: center;
+    }
+    .estimator input {
+      max-width: 300px;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      header, .hero, .services, .capabilities, .about, .contact, .quote, .estimator {
+        padding: 2em 1em;
+      }
+      nav a { display: block; margin: 0.5em 0; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Jameson Machining Inc.</h1>
+    <div class="motto">Grind With Passion</div>
+  </div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#quote">Quote</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Precision Grinding. Real Results.</h2>
+  <p>We specialize in centerless, cylindrical, and shaft grinding. Fast quotes, no excuses—just results.</p>
+  <a href="#quote" class="cta-big">Get My Quote</a>
+</section>
+
+<section class="services" id="services">
+  <h3>Services</h3>
+  <ul>
+    <li>Centerless grinding (plunge and through-feed)</li>
+    <li>Cylindrical grinding up to 80” length</li>
+    <li>Surface and ID grinding</li>
+    <li>Microfinishing, shaft repair, chrome & weld prep</li>
+  </ul>
+</section>
+
+<section class="estimator">
+  <h3>Instant Estimator</h3>
+  <p><i>Estimate is indicative only. Final pricing will be confirmed after review.</i></p>
+  <form oninput="updatePrice()">
+    <label>Grinding Type:
+      <select id="type">
+        <option value="centerless">Centerless</option>
+        <option value="cylindrical">Cylindrical</option>
+        <option value="surface">Surface</option>
+      </select>
+    </label><br/>
+    <label>Material:
+      <select id="material">
+        <option value="4140">4140 PH</option>
+        <option value="stainless">Stainless</option>
+        <option value="mild">Mild Steel</option>
+      </select>
+    </label><br/>
+    <label>Diameter (in): <input type="number" id="dia" /></label>
+    <label>Length (in): <input type="number" id="len" /></label>
+    <label>Quantity: <input type="number" id="qty" /></label>
+    <p><b>Estimated Price:</b> <span id="price">$0.00</span></p>
+  </form>
+  <script>
+    function updatePrice() {
+      const dia = parseFloat(document.getElementById("dia").value) || 0;
+      const len = parseFloat(document.getElementById("len").value) || 0;
+      const qty = parseInt(document.getElementById("qty").value) || 0;
+      const type = document.getElementById("type").value;
+      const material = document.getElementById("material").value;
+
+      let baseRate = 0.06; // Market base per sq.in
+
+      if (type === "cylindrical") baseRate = 0.08;
+      if (type === "surface") baseRate = 0.05;
+
+      if (material === "stainless") baseRate *= 1.15;
+
+      const surfaceArea = Math.PI * dia * len;
+      const estimate = baseRate * surfaceArea * qty;
+
+      document.getElementById("price").innerText = `$${estimate.toFixed(2)}`;
+    }
+  </script>
+</section>
+
+<section class="quote" id="quote">
+  <h3>Request a Quote</h3>
+  <form action="https://formspree.io/f/mnnpzqrd" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="text" name="company" placeholder="Company">
+    <input type="tel" name="phone" placeholder="Phone" required>
+    <textarea name="message" placeholder="What do you need?" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<section class="contact" id="contact">
+  <h3>Contact Us</h3>
+  <p><b>Jameson Machining Inc.</b><br>
+  1421 Speers Road, Oakville, ON L6L 2X5<br>
+  (905) 519-2255<br>
+  <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a></p>
+</section>
+
+<footer class="footer">
+  &copy; 2025 Jameson Machining Inc. | All rights reserved.
+</footer>
+
+</body>
+</html>
