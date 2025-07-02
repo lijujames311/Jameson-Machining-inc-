@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jameson Machining Inc. | Precision Grinding & Shaft Repair in Oakville</title>
-  <meta name="description" content="Affordable precision grinding and shaft repair in Oakville, GTA, Mississauga, and Toronto. Instant quotes for cylindrical, surface, and centerless grinding with Zocca RU2000/6 and Jones & Shipman 1310.">
-  <meta name="keywords" content="precision grinding, shaft repair, chrome finishing, cylindrical grinding, surface grinding, centerless grinding, Oakville, GTA, Mississauga, Toronto, affordable machining, emergency repair, Zocca grinder, Jones & Shipman, Canada">
+  <meta name="description" content="Affordable precision grinding and shaft repair in Oakville, GTA, Mississauga, and Toronto. Instant quotes for centerless, cylindrical, and surface grinding with Zocca RU2000/6 and Jones & Shipman 1310.">
+  <meta name="keywords" content="precision grinding, shaft repair, chrome finishing, centerless grinding, cylindrical grinding, surface grinding, Oakville, GTA, Mississauga, Toronto, affordable machining, emergency repair, Zocca grinder, Jones & Shipman, Canada">
   <meta name="author" content="Jameson Machining Inc.">
   <meta property="og:title" content="Jameson Machining Inc. | Precision Grinding & Shaft Repair">
   <meta property="og:description" content="Fast, affordable precision grinding and shaft repair in Oakville, GTA. Instant quotes and micron-level precision.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1581092917733-9a743ff31d0a?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1584291528214-4b7f5f24d86d?auto=format&fit=crop&w=1200&q=80">
   <meta property="og:url" content="https://jamesonsgrinding.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -19,8 +19,8 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Jameson Machining Inc.",
-    "description": "Affordable precision grinding and shaft repair in Oakville, GTA. Specializing in cylindrical, surface, and centerless grinding, chrome finishing, and emergency repairs.",
-    "image": "https://images.unsplash.com/photo-1581092917733-9a743ff31d0a?auto=format&fit=crop&w=1200&q=80",
+    "description": "Affordable precision grinding and shaft repair in Oakville, GTA. Specializing in centerless, cylindrical, and surface grinding, chrome finishing, and emergency repairs.",
+    "image": "https://images.unsplash.com/photo-1584291528214-4b7f5f24d86d?auto=format&fit=crop&w=1200&q=80",
     "url": "https://jamesonsgrinding.com",
     "telephone": "+13653516656",
     "email": "info@jamesonsgrinding.com",
@@ -122,7 +122,6 @@
     gtag('js',new Date());
     gtag('config','G-YHH6HGB9YY');
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <style>
     :root {
@@ -144,30 +143,19 @@
       scroll-behavior: smooth;
       min-height: 100vh;
       box-sizing: border-box;
-      transition: background 0.5s ease;
     }
     body { overflow-x: hidden; }
-    body.scrolled { background: linear-gradient(to bottom, #1a1f2b, #2a3242); }
     header {
       position: relative;
       background: #1f2a44;
       color: #fff;
-      min-height: 550px;
+      min-height: 500px;
       z-index: 2;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0;
-    }
-    .hero-video {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      z-index: 0;
-      opacity: 0.7;
-      filter: brightness(0.6);
     }
     .hero-carousel {
       position: absolute;
@@ -604,42 +592,6 @@
       color: var(--accent);
       font-weight: 700;
     }
-    .blog-preview {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8em;
-      margin-top: 1.5em;
-    }
-    .blog-card {
-      background: var(--card);
-      border: 1.8px solid var(--border);
-      border-radius: 12px;
-      padding: 1em;
-      text-align: left;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 30px #24e3ff25;
-    }
-    .blog-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 1em;
-      loading: lazy;
-    }
-    .blog-card h3 {
-      color: var(--accent);
-      font-size: 1.15em;
-      font-weight: 800;
-      margin-bottom: 0.5em;
-    }
-    .blog-card p {
-      color: #daf8ff;
-      font-size: 1em;
-    }
     #chatBubble {
       position: fixed;
       bottom: 30px; right: 30px;
@@ -656,13 +608,6 @@
       animation: fadeinup .8s cubic-bezier(.22,1.01,.36,.97) 1.8s both;
     }
     #chatBubble img { width: 36px; }
-    #machineViewer {
-      width: 100%;
-      height: 400px;
-      border-radius: 12px;
-      border: 2px solid var(--accent);
-      margin-top: 1.5em;
-    }
     .counter {
       text-align: center;
       margin: 2em 0;
@@ -697,13 +642,6 @@
       border-top: 4.5px solid var(--accent2);
       box-shadow: 0 -3px 18px #1e293b2c;
     }
-    .social-feed {
-      margin-top: 1.5em;
-      background: var(--card);
-      border: 1.5px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5em;
-    }
     @media (max-width: 700px) {
       .header-content { flex-direction: column; align-items: flex-start; gap: 1.3em; padding: 3.5em 0.8em 1.8em 0.8em; }
       header img { margin: 0 0 1.3em 0; }
@@ -712,7 +650,6 @@
       section { padding: 0 .2em; }
       .card { padding: .9em 0.7em 0.8em 0.7em; }
       form { padding: 1em 0.5em 0.8em 0.5em; }
-      #machineViewer { height: 300px; }
     }
     @media (max-width: 460px) {
       header { min-height: 300px; }
@@ -724,24 +661,20 @@
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-P3N6JF5J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
-  <!-- Optional video background, uncomment to use -->
-  <!-- <video class="hero-video" autoplay muted loop>
-    <source src="https://assets.mixkit.co/videos/preview/mixkit-cnc-machine-working-1234-large.mp4" type="video/mp4">
-  </video> -->
   <div class="hero-carousel">
-    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1581092917733-9a743ff31d0a?auto=format&fit=crop&w=1200&q=80');">
+    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1584291528214-4b7f5f24d86d?auto=format&fit=crop&w=1200&q=80');">
       <div class="carousel-caption">Shaft Repair with Zocca RU2000/6</div>
     </div>
-    <div class="carousel-slide" style="background-image: url('https://images.pexels.com/photos/162465/industrial-grinder-machine-metal-work-162465.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+    <div class="carousel-slide" style="background-image: url('https://images.pexels.com/photos/162553/industrial-metal-machine-machining-162553.jpeg?auto=compress&cs=tinysrgb&w=1200');">
       <div class="carousel-caption">Precision Centerless Grinding at $3/Part</div>
     </div>
-    <div class="carousel-slide" style="background-image: url('https://images.pixabay.com/photos/1445516/metal-cnc-machining-1445516_1280.jpg?auto=compress&cs=tinysrgb&w=1200');">
+    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1620288650810-6c8e39b1f7ad?auto=format&fit=crop&w=1200&q=80');">
       <div class="carousel-caption">Jones & Shipman 1310 Expertise</div>
     </div>
   </div>
   <div class="windmill-blade"></div>
   <div class="header-content">
-    <img src="https://images.pexels.com/photos/162465/industrial-grinder-machine-metal-work-162465.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Jameson Machining Logo" loading="lazy">
+    <img src="https://images.pexels.com/photos/162553/industrial-metal-machine-machining-162553.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Jameson Machining Logo" loading="lazy">
     <div class="hero-text">
       <div class="hero-sub">Centerless Grinding • Shaft Repair • Precision Machining</div>
       <h1>Jameson Machining Inc. — Oakville/GTA</h1>
@@ -761,33 +694,31 @@
   <a href="#services">Services</a>
   <a href="#portfolio">Portfolio</a>
   <a href="#equipment">Equipment</a>
-  <a href="#viewer">3D Viewer</a>
   <a href="#quote">Quote</a>
   <a href="#faq">FAQ</a>
   <a href="#testimonials">Testimonials</a>
-  <a href="#blog">Blog</a>
   <a href="#contact">Contact</a>
 </nav>
 <section id="services">
   <h2>Our Capabilities</h2>
   <div class="services-grid">
     <div class="card">
-      <img src="https://images.pexels.com/photos/162465/industrial-grinder-machine-metal-work-162465.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Centerless Grinding Machine" loading="lazy">
+      <img src="https://images.pexels.com/photos/162553/industrial-metal-machine-machining-162553.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Centerless Grinding Machine" loading="lazy">
       <h3>Centerless Grinding</h3>
       <p>High-volume OD grinding starting at $3/part, from 1/8” to 8”, with Fein GX75/2H and DoAll VS612.</p>
     </div>
     <div class="card">
-      <img src="https://images.pixabay.com/photos/1445516/metal-cnc-machining-1445516_1280.jpg?auto=compress&cs=tinysrgb&w=1200" alt="Cylindrical Grinding Machine" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1620288650810-6c8e39b1f7ad?auto=format&fit=crop&w=1200&q=80" alt="Cylindrical Grinding Machine" loading="lazy">
       <h3>Cylindrical Grinding</h3>
       <p>Precision grinding for shafts and rollers up to 24” x 80” with Zocca RU2000/6 and Jones & Shipman 1310.</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80" alt="Surface Grinding Machine" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1581092917733-9a743ff31d0a?auto=format&fit=crop&w=1200&q=80" alt="Surface Grinding Machine" loading="lazy">
       <h3>Surface Grinding</h3>
       <p>Micron-level flatness for tooling, plates, and die sets with Chevalier FSG-3A and TOS BPH 300.</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092917733-9a743ff31d0a?auto=format&fit=crop&w=1200&q=80" alt="Shaft Repair and Chrome Finishing" loading="lazy">
+      <img src="https://images.pexels.com/photos/159279/factory-machine-industrial-metal-159279.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Shaft Repair and Chrome Finishing" loading="lazy">
       <h3>Shaft Repair & Chrome Finishing</h3>
       <p>Repair worn or scored shafts with chrome build-up, ground to micron tolerances.</p>
     </div>
@@ -807,49 +738,51 @@
       <p>High-volume pins at $3/part for industrial supplier.</p>
     </div>
     <div class="card">
-      <img src="https://images.pixabay.com/photos/162465/industrial-grinder-machine-metal-work-162465_1280.jpg?auto=compress&cs=tinysrgb&w=1200" alt="Chrome Finished Shaft" loading="lazy">
+      <img src="https://images.pexels.com/photos/162553/industrial-metal-machine-machining-162553.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Chrome Finished Shaft" loading="lazy">
       <h3>Chrome Finishing</h3>
       <p>Restored worn shaft with chrome build-up for heavy machinery.</p>
     </div>
   </div>
 </section>
-<section id="viewer">
-  <h2>Explore Our Equipment in 3D</h2>
-  <div id="machineViewer" role="img" aria-label="3D model of cylindrical grinder"></div>
-</section>
 <section id="equipment">
   <h2>Our Equipment</h2>
   <div class="services-grid">
     <div class="card">
-      <img src="https://images.pixabay.com/photos/1445516/metal-cnc-machining-1445516_1280.jpg?auto=compress&cs=tinysrgb&w=1200" alt="Zocca Como Italia RU2000/6 Grinder" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1584291528214-4b7f5f24d86d?auto=format&fit=crop&w=1200&q=80" alt="Zocca Como Italia RU2000/6 Grinder" loading="lazy">
       <h3>Zocca Como Italia RU2000/6</h3>
       <p>Italian-built for large-diameter shafts up to 24” x 80”.</p>
     </div>
     <div class="card">
-      <img src="https://images.pexels.com/photos/162465/industrial-grinder-machine-metal-work-162465.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Jones & Shipman 1310 Grinder" loading="lazy">
+      <img src="https://images.pexels.com/photos/162553/industrial-metal-machine-machining-162553.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Jones & Shipman 1310 Grinder" loading="lazy">
       <h3>Jones & Shipman 1310</h3>
       <p>Precision OD/ID grinding for small-to-mid shafts and rolls.</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80" alt="Chevalier FSG-3A & 2A Grinder" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1581092917733-9a743ff31d0a?auto=format&fit=crop&w=1200&q=80" alt="Chevalier FSG-3A & 2A Grinder" loading="lazy">
       <h3>Chevalier FSG-3A & 2A</h3>
       <p>High-precision surface grinding for tooling and die sets.</p>
     </div>
     <div class="card">
-      <img src="https://images.pexels.com/photos/159275/factory-gears-cogs-industry-159275.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="TOS BPH 300 Grinder" loading="lazy">
+      <img src="https://images.pexels.com/photos/159279/factory-machine-industrial-metal-159279.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="TOS BPH 300 Grinder" loading="lazy">
       <h3>TOS BPH 300</h3>
       <p>European-built for ultra-flat, high-precision surface grinding.</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Fein GX75/2H Centerless Grinder" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80" alt="Fein GX75/2H Centerless Grinder" loading="lazy">
       <h3>Fein GX75/2H Centerless Belt Grinder</h3>
       <p>Efficient for high-volume production at $3/part.</p>
     </div>
     <div class="card">
-      <img src="https://images.pexels.com/photos/162465/industrial-grinder-machine-metal-work-162465.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="DoAll VS612 Grinder" loading="lazy">
+      <img src="https://images.pexels.com/photos/162553/industrial-metal-machine-machining-16255326.jpg?auto=compress&cs=tinysrgb&w=1200" alt="DoAll VS612 Grinder" loading="lazy">
       <h3>DoAll VS612 + Centerless Attachment</h3>
       <p>Specialty work for small OD grinding and flexible jobs.</p>
     </div>
+  </div>
+</section>
+<section id="stats">
+  <h2>Our Impact</h2>
+  <div class="counter">
+    Over <span id="jobCounter">0</span> Parts Ground with Precision
   </div>
 </section>
 <section id="quote">
@@ -907,12 +840,6 @@
   </form>
   <div id="quoteResult"></div>
 </section>
-<section id="stats">
-  <h2>Our Impact</h2>
-  <div class="counter">
-    Over <span id="jobCounter">0</span> Parts Ground with Precision
-  </div>
-</section>
 <section id="faq">
   <h2>Frequently Asked Questions</h2>
   <div class="faq-container">
@@ -945,35 +872,6 @@
       <p>"Emergency shaft repair done in 24 hours. Jameson is our go-to shop!"</p>
       <h4>— Mike R., Industrial Engineer</h4>
     </div>
-  </div>
-</section>
-<section id="blog">
-  <h2>Blog & Insights</h2>
-  <div class="blog-preview">
-    <div class="blog-card">
-      <img src="https://images.pexels.com/photos/162465/industrial-grinder-machine-metal-work-162465.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Centerless Grinding Benefits" loading="lazy">
-      <h3>Why Centerless Grinding Saves You Money</h3>
-      <p>Discover how our $3/part centerless grinding delivers precision and affordability for high-volume runs.</p>
-      <a href="/blog/centerless-grinding" class="cta-btn">Read More</a>
-    </div>
-    <div class="blog-card">
-      <img src="https://images.unsplash.com/photo-1581092917733-9a743ff31d0a?auto=format&fit=crop&w=1200&q=80" alt="Shaft Repair Tips" loading="lazy">
-      <h3>Shaft Repair 101: Chrome Build-Up Tips</h3>
-      <p>Learn how our Zocca RU2000/6 restores worn shafts with chrome finishing.</p>
-      <a href="/blog/shaft-repair" class="cta-btn">Read More</a>
-    </div>
-    <div class="blog-card">
-      <img src="https://images.pixabay.com/photos/159275/factory-gears-cogs-industry-159275_1280.jpg?auto=compress&cs=tinysrgb&w=1200" alt="Automotive Grinding" loading="lazy">
-      <h3>Precision Grinding for Automotive Parts</h3>
-      <p>Explore how our Jones & Shipman 1310 ensures micron-level accuracy.</p>
-      <a href="/blog/automotive-grinding" class="cta-btn">Read More</a>
-    </div>
-  </div>
-</section>
-<section id="social">
-  <h2>Connect With Us</h2>
-  <div class="social-feed">
-    <p>Follow us on <a href="https://linkedin.com" target="_blank">LinkedIn</a> for updates and machining tips!</p>
   </div>
 </section>
 <section id="contact">
@@ -1022,56 +920,6 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){var s=document.createElement("script"),t=document.getElementsByTagName("script")[0];s.async=true;s.src='https://embed.tawk.to/6864f6cacfa578190992a097/1iv568h37';s.charset='UTF-8';s.setAttribute('crossorigin','*');t.parentNode.insertBefore(s,t);})();
 </script>
 <script>
-// Scroll-based background transition
-window.addEventListener('scroll', () => {
-  document.body.classList.toggle('scrolled', window.scrollY > 200);
-});
-
-// 3D Machine Viewer
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 400, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('machineViewer'), alpha: true });
-renderer.setSize(window.innerWidth > 1200 ? 1200 : window.innerWidth - 40, 400);
-scene.background = null;
-const geometry = new THREE.CylinderGeometry(1, 1, 3, 32);
-const material = new THREE.MeshPhongMaterial({ color: 0x2de2ff, shininess: 100 });
-const cylinder = new THREE.Mesh(geometry, material);
-scene.add(cylinder);
-const light = new THREE.PointLight(0xffffff, 1, 100);
-light.position.set(5, 5, 5);
-scene.add(light);
-camera.position.z = 5;
-function animate() {
-  requestAnimationFrame(animate);
-  cylinder.rotation.x += 0.01;
-  cylinder.rotation.y += 0.01;
-  renderer.render(scene, camera);
-}
-animate();
-
-// Counter animation
-function startCounter() {
-  let count = 0;
-  const target = 10000;
-  const counter = document.getElementById('jobCounter');
-  const interval = setInterval(() => {
-    count += Math.ceil(target / 100);
-    counter.textContent = count.toLocaleString();
-    if (count >= target) {
-      counter.textContent = target.toLocaleString() + '+';
-      clearInterval(interval);
-    }
-  }, 20);
-}
-const statsSection = document.getElementById('stats');
-const observer = new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting) {
-    startCounter();
-    observer.disconnect();
-  }
-}, { threshold: 0.5 });
-observer.observe(statsSection);
-
 // Carousel functionality
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');
@@ -1096,6 +944,29 @@ const reveal = () => {
   }
 };
 window.addEventListener("scroll", reveal); window.addEventListener("load", reveal);
+
+// Counter animation
+function startCounter() {
+  let count = 0;
+  const target = 10000;
+  const counter = document.getElementById('jobCounter');
+  const interval = setInterval(() => {
+    count += Math.ceil(target / 100);
+    counter.textContent = count.toLocaleString();
+    if (count >= target) {
+      counter.textContent = target.toLocaleString() + '+';
+      clearInterval(interval);
+    }
+  }, 20);
+}
+const statsSection = document.getElementById('stats');
+const observer = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) {
+    startCounter();
+    observer.disconnect();
+  }
+}, { threshold: 0.5 });
+observer.observe(statsSection);
 
 // Form progress bar
 function updateProgress() {
@@ -1161,8 +1032,6 @@ function submitQuote() {
 function submitNewsletter() {
   alert('Subscribed to our newsletter! Stay tuned for updates.');
   closeModal('newsletterModal');
-  // Placeholder for Mailchimp integration
-  // fetch('https://api.mailchimp.com/subscribe', { method: 'POST', body: JSON.stringify({ email: document.querySelector('#newsletterForm input').value }) });
 }
 
 // Advanced Quote Calculator
@@ -1190,8 +1059,8 @@ function calculateQuote() {
   else if(service === 'surface') { baseRate = 8; setup = 50; laborRate = 35; marketRate = 10; }
   else if(service === 'shaft_repair') { baseRate = 20; setup = 60; laborRate = 50; marketRate = 25; }
 
-  if(quantity > 50) { baseRate *= 0.8; setup = 25; }
   if(quantity > 100) { baseRate *= 0.6; setup = 20; }
+  else if(quantity > 50) { baseRate *= 0.8; setup = 25; }
   if(quantity > 200) { setup = 15; }
 
   let materialFactor = 1;
@@ -1223,7 +1092,7 @@ function calculateQuote() {
 
 // Load last quote
 if(localStorage.getItem('lastQuote')) {
-  const lastQuote = JSON.parse(localStorage.getItem('lastQuote'));
+  const lastQuote = JSON.parse(localStorage.getItem('lastQuote') || '{}');
   document.getElementById('quoteResult').innerHTML += `<br><span style="color:#daf8ff;font-size:0.9em;">Last Quote (from ${new Date(lastQuote.timestamp).toLocaleString()}): $${lastQuote.total}</span>`;
 }
 
