@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Jameson Machining Inc. | Precision Grinding Experts</title>
-  <meta name="description" content="Precision surface, cylindrical & centerless grinding in Oakville & GTA—boost part quality, speed, and consistency with Canadian precision.">
+  <meta name="description" content="Precision surface, cylindrical & centerless grinding in Oakville & GTA—upgrade part quality, speed, and consistency with Canadian precision.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -20,30 +20,37 @@
     a { text-decoration:none; }
     header { background:var(--primary) url('IMG_1539.jpeg') center/cover no-repeat; color:#fff; text-align:center; padding:4em 1em; position:relative; }
     header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
-    header .content { position:relative; z-index:1; max-width:800px; margin:auto; }
+    .content { position:relative; z-index:1; max-width:800px; margin:auto; }
     header img { width:90px; margin-bottom:1em; }
     header h1 { font-family:'Montserrat',sans-serif; font-size:2.5em; margin:0.2em 0; }
     header p.lead { font-size:1.2em; margin:0.5em 0; }
     .cta-big { background:var(--accent); color:#fff; padding:0.8em 1.4em; border-radius:6px; font-weight:700; margin:1em 0.5em; display:inline-block; }
+
     nav { background:var(--dark-gray); text-align:center; padding:1em 0; }
     nav a { color:#fff; margin:0 1em; font-weight:600; }
     nav a:hover { text-decoration:underline; }
+
     section { padding:3em 1.5em; max-width:1100px; margin:auto; }
     .alt { background:var(--light-gray); }
-    .service-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:2em; }
-    .svc { background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); width:300px; text-align:center; overflow:hidden; }
+
+    .service-grid, .equip-list { display:flex; flex-wrap:wrap; gap:2em; justify-content:center; }
+    .svc, .equip-item { background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); width:300px; text-align:center; overflow:hidden; }
     .svc img { width:100%; height:180px; object-fit:cover; }
-    .svc h3 { margin:1em 0 0.5em; font-family:'Montserrat',sans-serif; }
-    .svc p { padding:0 1em 1em; font-size:0.95em; color:var(--text); }
+    .svc h3, .equip-item h3 { font-family:'Montserrat',sans-serif; margin:1em 0 0.5em; }
+    .svc p, .equip-item p { padding:0 1em 1em; font-size:0.95em; color:var(--text); }
+
     .form-group { margin-bottom:1em; }
     input, select, button { width:100%; padding:0.8em; border:1px solid #ccc; border-radius:4px; font-size:1em; }
     button { background:var(--accent); color:#fff; border:none; cursor:pointer; }
     button:hover { background:#e65500; }
+
     iframe { width:100%; border:none; border-radius:6px; }
+
     footer { background:var(--dark-gray); color:#ccc; text-align:center; padding:2em 1em; }
     footer p { margin:0.5em 0; }
+
     @media(max-width:768px){
-      .service-grid { flex-direction:column; align-items:center; }
+      .service-grid, .equip-list { flex-direction:column; align-items:center; }
     }
   </style>
 </head>
@@ -53,7 +60,7 @@
   <div class="content">
     <img src="logo.png" alt="Jameson Logo">
     <h1>Precision Grinding for the Next Generation of Canadian Manufacturing</h1>
-    <p class="lead">Surface • Cylindrical • Centerless — upgrade your parts with micron-level accuracy, fast turnarounds, and expert craftsmanship.</p>
+    <p class="lead">Surface • Cylindrical • Centerless — upgrade parts with micron-level accuracy, fast turnarounds, and expert craftsmanship.</p>
     <a href="#quote" class="cta-big">Get Instant Estimate</a>
     <a href="#booking" class="cta-big">Book a Visit</a>
   </div>
@@ -61,6 +68,7 @@
 
 <nav>
   <a href="#services">Services</a>
+  <a href="#equipment">Equipment</a>
   <a href="#quote">Estimator</a>
   <a href="#booking">Visit</a>
   <a href="#contact">Contact</a>
@@ -72,22 +80,49 @@
     <div class="svc">
       <img src="IMG_1539.jpeg" alt="Surface Grinding">
       <h3>Surface Grinding</h3>
-      <p>Flat, polished finishes up to 24×80″—perfect for plates, tooling, and fixtures.</p>
+      <p>High-precision grinding for flat parts, tooling, and tooling plates with ultra-tight tolerances.</p>
     </div>
     <div class="svc">
       <img src="IMG_1616.jpeg" alt="Cylindrical Grinding">
       <h3>Cylindrical Grinding</h3>
-      <p>OD & ID grinding for shafts and rollers with tolerances to 0.0002″—up to 24″×80″.</p>
+      <p>OD & ID grinding for shafts, rollers, and components, offering exceptional geometric accuracy.</p>
     </div>
     <div class="svc">
       <img src="IMG_3130.jpeg" alt="Centerless Grinding">
       <h3>Centerless Grinding</h3>
-      <p>High-volume, chuck-less OD grinding: go from prototype to 500,000+ parts/year.</p>
+      <p>Efficient, chuck-free OD grinding—ideal for both prototype runs and high-volume production.</p>
     </div>
   </div>
 </section>
 
-<section id="quote" class="alt">
+<section id="equipment" class="alt">
+  <h2>Our Equipment</h2>
+  <div class="equip-list">
+    <div class="equip-item">
+      <h3>Zocca Como Italia RU2000/6 Cylindrical Grinder</h3>
+    </div>
+    <div class="equip-item">
+      <h3>John Shipman 1310 Cylindrical Grinder</h3>
+    </div>
+    <div class="equip-item">
+      <h3>Chevalier FSG-3A/FSG-2A Surface Grinders</h3>
+    </div>
+    <div class="equip-item">
+      <h3>TOS BPH 300 Surface Grinder</h3>
+    </div>
+    <div class="equip-item">
+      <h3>Fein GX75/2H Centerless Belt Grinder</h3>
+    </div>
+    <div class="equip-item">
+      <h3>DoAll VS612 Surface Grinder w/ Centerless Attachment</h3>
+    </div>
+    <div class="equip-item">
+      <h3>Diamond & CBN Wheels + Custom In‑House Fixturing</h3>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
   <h2>Instant CAD Estimate</h2>
   <form id="quoteCalcForm" onsubmit="return false;" style="max-width:500px; margin:auto;">
     <div class="form-group"><label>Diameter (in): <input type="number" id="diameter" step="0.01" required></label></div>
@@ -103,6 +138,7 @@
     <button onclick="calculateQuote()">Estimate</button>
   </form>
   <div id="quoteResult" style="text-align:center; margin-top:1em; font-weight:bold;"></div>
+  
   <form id="instantForm" action="https://formspree.io/f/mnnpzqrd" method="POST" enctype="multipart/form-data" style="display:none; max-width:500px; margin:auto; margin-top:2em;">
     <input type="hidden" name="Diameter" id="f_diameter">
     <input type="hidden" name="Length" id="f_length">
@@ -118,7 +154,7 @@
 
 <section id="booking">
   <h2>Book a Shop Visit</h2>
-  <p style="text-align:center;">Discuss your parts in person, drop off drawings, and talk specifications with our team.</p>
+  <p style="text-align:center;">Discuss your project, review drawings, or tour our shop in person.</p>
   <iframe src="https://calendly.com/lijujames28/30min?embed_domain=www.jamesonsgrinding.com" width="100%" height="650"></iframe>
 </section>
 
@@ -126,8 +162,8 @@
   <h2>Contact Us</h2>
   <p style="text-align:center;">
     <strong>Jameson Machining Inc.</strong><br>
-    1421 Speers Road, Oakville, ON L6L&nbsp;2X5<br>
-    <a href="tel:3653516656">(365) 351‑6656</a> | <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a><br>
+    1421 Speers Road, Oakville, ON L6L 2X5<br>
+    <a href="tel:3653516656">(365) 351‑6656</a> | <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a><br>
     <a href="https://www.jamesonsgrinding.com" target="_blank">www.jamesonsgrinding.com</a>
   </p>
 </section>
@@ -162,7 +198,7 @@ function calculateQuote(){
   document.getElementById('instantSentMsg').style.display='none';
 }
 document.getElementById('instantForm').onsubmit=function(){
-  setTimeout(()=>document.getElementById('instantSentMsg').style.display='block', 500);
+  setTimeout(()=>document.getElementById('instantSentMsg').style.display='block',500);
   return true;
 };
 </script>
