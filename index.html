@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Jameson Machining Inc. | Precision Grinding Experts</title>
-  <meta name="description" content="Precision surface, cylindrical & centerless grinding in Oakville & GTA—upgrade part quality, speed, and consistency with Canadian precision.">
+  <meta name="description" content="Precision surface, cylindrical & centerless grinding in Oakville & GTA—micron-level accuracy, fast turnarounds, and Canadian craftsmanship.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -15,42 +15,54 @@
       --text: #222;
       --text-light: #bbb;
     }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:'Open Sans',sans-serif; color:var(--text); }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family:'Open Sans',sans-serif; color:var(--text); scroll-behavior:smooth; }
     a { text-decoration:none; }
-    header { background:var(--primary) url('IMG_1539.jpeg') center/cover no-repeat; color:#fff; text-align:center; padding:4em 1em; position:relative; }
+    header { background:var(--primary) url('IMG_1539.jpeg') center/cover no-repeat; color:#fff; text-align:center; padding:4em 1em; position:relative; overflow:hidden; }
     header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
     .content { position:relative; z-index:1; max-width:800px; margin:auto; }
-    header img { width:90px; margin-bottom:1em; }
-    header h1 { font-family:'Montserrat',sans-serif; font-size:2.5em; margin:0.2em 0; }
-    header p.lead { font-size:1.2em; margin:0.5em 0; }
-    .cta-big { background:var(--accent); color:#fff; padding:0.8em 1.4em; border-radius:6px; font-weight:700; margin:1em 0.5em; display:inline-block; }
+    header img { width:90px; margin-bottom:1em; animation:fadeUp 1s ease-out; }
+    header h1 { font-family:'Montserrat',sans-serif; font-size:2.5em; margin:0.2em 0; animation:fadeUp 1.1s ease-out; }
+    header p.lead { font-size:1.2em; margin:0.5em 0 1em; animation:fadeUp 1.2s ease-out; }
+    .cta-big { background:var(--accent); color:#fff; padding:0.8em 1.4em; border-radius:6px; font-weight:700; margin:0.5em; display:inline-block; transition:background 0.3s; }
+    .cta-big:hover { background:darken(var(--accent), 10%); }
 
-    nav { background:var(--dark-gray); text-align:center; padding:1em 0; }
+    nav { background:var(--dark-gray); text-align:center; padding:1em 0; position:sticky; top:0; z-index:10;}
     nav a { color:#fff; margin:0 1em; font-weight:600; }
     nav a:hover { text-decoration:underline; }
 
-    section { padding:3em 1.5em; max-width:1100px; margin:auto; }
-    .alt { background:var(--light-gray); }
+    section { padding:3em 1.5em; max-width:1100px; margin:auto; opacity:0; transform:translateY(30px); animation:fadeUp 0.8s ease-out forwards; }
+    section:nth-of-type(odd) { background:var(--light-gray); }
+    #services { background:transparent; }
 
-    .service-grid, .equip-list { display:flex; flex-wrap:wrap; gap:2em; justify-content:center; }
-    .svc, .equip-item { background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); width:300px; text-align:center; overflow:hidden; }
+    .service-grid, .equip-list, .stats-grid { display:flex; flex-wrap:wrap; gap:2em; justify-content:center; }
+    .svc, .equip-item, .stat { background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); width:300px; text-align:center; overflow:hidden; transition:transform 0.3s, box-shadow 0.3s; }
+    .svc:hover, .equip-item:hover, .stat:hover { transform:translateY(-6px); box-shadow:0 4px 12px rgba(0,0,0,0.15); }
     .svc img { width:100%; height:180px; object-fit:cover; }
-    .svc h3, .equip-item h3 { font-family:'Montserrat',sans-serif; margin:1em 0 0.5em; }
-    .svc p, .equip-item p { padding:0 1em 1em; font-size:0.95em; color:var(--text); }
+    .svc h3, .equip-item h3, .stat h3 { font-family:'Montserrat',sans-serif; margin:1em 0 0.5em; }
+    .svc p, .equip-item p, .stat p { padding:0 1em 1em; font-size:0.95em; }
+    .stats-grid { margin-top:1em; }
+
+    .stat { padding:2em 1em; }
+    .contact-btn { margin-top:2em; }
 
     .form-group { margin-bottom:1em; }
     input, select, button { width:100%; padding:0.8em; border:1px solid #ccc; border-radius:4px; font-size:1em; }
-    button { background:var(--accent); color:#fff; border:none; cursor:pointer; }
+    button { background:var(--accent); color:#fff; border:none; cursor:pointer; transition:background 0.3s; }
     button:hover { background:#e65500; }
 
-    iframe { width:100%; border:none; border-radius:6px; }
+    iframe { width:100%; border:none; border-radius:6px; margin-top:1em; }
 
     footer { background:var(--dark-gray); color:#ccc; text-align:center; padding:2em 1em; }
     footer p { margin:0.5em 0; }
 
+    @keyframes fadeUp {
+      to { opacity:1; transform:translateY(0); }
+    }
+
     @media(max-width:768px){
-      .service-grid, .equip-list { flex-direction:column; align-items:center; }
+      .service-grid, .equip-list, .stats-grid { flex-direction:column; align-items:center; }
+      nav a { display:block; margin:0.5em 0; }
     }
   </style>
 </head>
@@ -60,7 +72,7 @@
   <div class="content">
     <img src="logo.png" alt="Jameson Logo">
     <h1>Precision Grinding for the Next Generation of Canadian Manufacturing</h1>
-    <p class="lead">Surface • Cylindrical • Centerless — upgrade parts with micron-level accuracy, fast turnarounds, and expert craftsmanship.</p>
+    <p class="lead">Surface • Cylindrical • Centerless — micron-level accuracy, fast turnarounds, and expert craftsmanship.</p>
     <a href="#quote" class="cta-big">Get Instant Estimate</a>
     <a href="#booking" class="cta-big">Book a Visit</a>
   </div>
@@ -69,6 +81,7 @@
 <nav>
   <a href="#services">Services</a>
   <a href="#equipment">Equipment</a>
+  <a href="#stats">Why Choose Us</a>
   <a href="#quote">Estimator</a>
   <a href="#booking">Visit</a>
   <a href="#contact">Contact</a>
@@ -80,45 +93,40 @@
     <div class="svc">
       <img src="IMG_1539.jpeg" alt="Surface Grinding">
       <h3>Surface Grinding</h3>
-      <p>High-precision grinding for flat parts, tooling, and tooling plates with ultra-tight tolerances.</p>
+      <p>Flat-part precision grinding with micron tolerances, ideal for tooling and components.</p>
     </div>
     <div class="svc">
       <img src="IMG_1616.jpeg" alt="Cylindrical Grinding">
       <h3>Cylindrical Grinding</h3>
-      <p>OD & ID grinding for shafts, rollers, and components, offering exceptional geometric accuracy.</p>
+      <p>OD & ID grinding for shafts and rollers, delivering exceptional geometry control.</p>
     </div>
     <div class="svc">
       <img src="IMG_3130.jpeg" alt="Centerless Grinding">
       <h3>Centerless Grinding</h3>
-      <p>Efficient, chuck-free OD grinding—ideal for both prototype runs and high-volume production.</p>
+      <p>Efficient, chuck-free OD grinding—great for both prototypes and high-volume production.</p>
     </div>
   </div>
 </section>
 
-<section id="equipment" class="alt">
+<section id="equipment">
   <h2>Our Equipment</h2>
   <div class="equip-list">
-    <div class="equip-item">
-      <h3>Zocca Como Italia RU2000/6 Cylindrical Grinder</h3>
-    </div>
-    <div class="equip-item">
-      <h3>John Shipman 1310 Cylindrical Grinder</h3>
-    </div>
-    <div class="equip-item">
-      <h3>Chevalier FSG-3A/FSG-2A Surface Grinders</h3>
-    </div>
-    <div class="equip-item">
-      <h3>TOS BPH 300 Surface Grinder</h3>
-    </div>
-    <div class="equip-item">
-      <h3>Fein GX75/2H Centerless Belt Grinder</h3>
-    </div>
-    <div class="equip-item">
-      <h3>DoAll VS612 Surface Grinder w/ Centerless Attachment</h3>
-    </div>
-    <div class="equip-item">
-      <h3>Diamond & CBN Wheels + Custom In‑House Fixturing</h3>
-    </div>
+    <div class="equip-item"><h3>Zocca Como Italia RU2000/6 Cylindrical Grinder</h3></div>
+    <div class="equip-item"><h3>John Shipman 1310 Cylindrical Grinder</h3></div>
+    <div class="equip-item"><h3>Chevalier FSG-3A/FSG-2A Surface Grinders</h3></div>
+    <div class="equip-item"><h3>TOS BPH 300 Surface Grinder</h3></div>
+    <div class="equip-item"><h3>Fein GX75/2H Centerless Belt Grinder</h3></div>
+    <div class="equip-item"><h3>DoAll VS612 Surface Grinder w/ Centerless Attachment</h3></div>
+    <div class="equip-item"><h3>Diamond & CBN Wheels + Custom In‑House Fixturing</h3></div>
+  </div>
+</section>
+
+<section id="stats" class="alt">
+  <h2>Why Choose Us</h2>
+  <div class="stats-grid">
+    <div class="stat"><h3>±0.0002″ Precision</h3><p>We hold tolerances tighter than most competitors.</p></div>
+    <div class="stat"><h3>500K+ Parts/Year</h3><p>From prototypes to high-volume runs, we scale with you.</p></div>
+    <div class="stat"><h3>100% Canadian Owned</h3><p>Built locally in Oakville, supporting the GTA and Ontario industries.</p></div>
   </div>
 </section>
 
@@ -129,16 +137,11 @@
     <div class="form-group"><label>Length (in): <input type="number" id="length" step="0.01" required></label></div>
     <div class="form-group"><label>Quantity: <input type="number" id="quantity" required></label></div>
     <div class="form-group"><label>Material:
-      <select id="material">
-        <option value="standard">Standard Steel</option>
-        <option value="toolsteel">Tool Steel</option>
-        <option value="chrome">Chrome Plated</option>
-      </select>
+      <select id="material"><option value="standard">Standard Steel</option><option value="toolsteel">Tool Steel</option><option value="chrome">Chrome Plated</option></select>
     </label></div>
-    <button onclick="calculateQuote()">Estimate</button>
+    <button onclick="calculateQuote()" class="contact-btn">Estimate</button>
   </form>
   <div id="quoteResult" style="text-align:center; margin-top:1em; font-weight:bold;"></div>
-  
   <form id="instantForm" action="https://formspree.io/f/mnnpzqrd" method="POST" enctype="multipart/form-data" style="display:none; max-width:500px; margin:auto; margin-top:2em;">
     <input type="hidden" name="Diameter" id="f_diameter">
     <input type="hidden" name="Length" id="f_length">
@@ -149,7 +152,7 @@
     <div class="form-group"><label>Upload Drawing: <input type="file" name="Drawing" accept=".pdf,.jpg,.png"></label></div>
     <button type="submit">Send Estimate</button>
   </form>
-  <div id="instantSentMsg" style="display:none;text-align:center;margin-top:1em;color:green;">Estimate sent — we’ll reply shortly!</div>
+  <div id="instantSentMsg" style="text-align:center;margin-top:1em;color:green;">Estimate sent — we’ll reply shortly!</div>
 </section>
 
 <section id="booking">
@@ -160,12 +163,7 @@
 
 <section id="contact" class="alt">
   <h2>Contact Us</h2>
-  <p style="text-align:center;">
-    <strong>Jameson Machining Inc.</strong><br>
-    1421 Speers Road, Oakville, ON L6L 2X5<br>
-    <a href="tel:3653516656">(365) 351‑6656</a> | <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a><br>
-    <a href="https://www.jamesonsgrinding.com" target="_blank">www.jamesonsgrinding.com</a>
-  </p>
+  <p style="text-align:center;"><strong>Jameson Machining Inc.</strong><br>1421 Speers Road, Oakville, ON L6L 2X5<br><a href="tel:3653516656">(365) 351‑6656</a> | <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a><br><a href="https://www.jamesonsgrinding.com" target="_blank">www.jamesonsgrinding.com</a></p>
 </section>
 
 <footer>
@@ -173,34 +171,34 @@
 </footer>
 
 <script>
-function calculateQuote(){
-  const d=parseFloat(document.getElementById('diameter').value);
-  const l=parseFloat(document.getElementById('length').value);
-  const q=parseInt(document.getElementById('quantity').value);
-  const m=document.getElementById('material').value;
-  if(!d||!l||!q){
-    document.getElementById('quoteResult').innerHTML="Please fill all fields";
-    document.getElementById('instantForm').style.display='none';
-    return;
+  function calculateQuote(){
+    const d=parseFloat(document.getElementById('diameter').value);
+    const l=parseFloat(document.getElementById('length').value);
+    const q=parseInt(document.getElementById('quantity').value);
+    const m=document.getElementById('material').value;
+    if(!d||!l||!q){
+      document.getElementById('quoteResult').innerHTML="Please fill all fields";
+      document.getElementById('instantForm').style.display='none';
+      return;
+    }
+    let setup=100, base=q<10?10:q<50?8:q<100?6:3;
+    let mf=m==='toolsteel'?1.2:m==='chrome'?1.4:1.0;
+    let sf=(d>3||l>48)?1.2:1.0;
+    let per=base*mf*sf;
+    let total=setup+per*q;
+    document.getElementById('quoteResult').innerHTML=`Estimated Total: <strong>$${total.toFixed(2)}</strong><br>Per‑part: $${per.toFixed(2)}`;
+    document.getElementById('f_diameter').value=d;
+    document.getElementById('f_length').value=l;
+    document.getElementById('f_quantity').value=q;
+    document.getElementById('f_material').value=m;
+    document.getElementById('f_price').value=`$${total.toFixed(2)} (≈$${per.toFixed(2)}/part)`;
+    document.getElementById('instantForm').style.display='block';
+    document.getElementById('instantSentMsg').style.display='none';
   }
-  let setup=100, base=q<10?10:q<50?8:q<100?6:3;
-  let mf=m==='toolsteel'?1.2:m==='chrome'?1.4:1.0;
-  let sf=(d>3||l>48)?1.2:1.0;
-  let per=base*mf*sf;
-  let total=setup+per*q;
-  document.getElementById('quoteResult').innerHTML=`Estimated Total: <strong>$${total.toFixed(2)}</strong><br>Per‑part: $${per.toFixed(2)}`;
-  document.getElementById('f_diameter').value=d;
-  document.getElementById('f_length').value=l;
-  document.getElementById('f_quantity').value=q;
-  document.getElementById('f_material').value=m;
-  document.getElementById('f_price').value=`$${total.toFixed(2)} (≈$${per.toFixed(2)}/part)`;
-  document.getElementById('instantForm').style.display='block';
-  document.getElementById('instantSentMsg').style.display='none';
-}
-document.getElementById('instantForm').onsubmit=function(){
-  setTimeout(()=>document.getElementById('instantSentMsg').style.display='block',500);
-  return true;
-};
+  document.getElementById('instantForm').onsubmit=function(){
+    setTimeout(()=>document.getElementById('instantSentMsg').style.display='block',500);
+    return true;
+  };
 </script>
 
 </body>
