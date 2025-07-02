@@ -396,4 +396,93 @@
   <div class="services-grid">
     <div class="card"><h3>Zocca Como Italia RU2000/6 Cylindrical Grinder</h3></div>
     <div class="card"><h3>John Shipman 1310 Cylindrical Grinder</h3></div>
-    <div class="card"><h3>Chevalier FSG
+    <div class="card"><h3>Chevalier FSG-3A & 2A Surface Grinders</h3></div>
+    <div class="card"><h3>TOS BPH 300 Surface Grinder</h3></div>
+    <div class="card"><h3>Fein GX75/2H Centerless Belt Grinder</h3></div>
+    <div class="card"><h3>DoAll VS612 + Centerless Attachment</h3></div>
+  </div>
+</section>
+
+<section id="quote">
+  <h2>Instant Estimate</h2>
+  <form id="quoteCalcForm" onsubmit="return false;">
+    <input type="number" id="diameter" placeholder="Diameter (inches)" step="0.01" required>
+    <input type="number" id="length" placeholder="Length (inches)" step="0.01" required>
+    <input type="number" id="quantity" placeholder="Quantity" required>
+    <select id="material">
+      <option value="standard">Standard Steel</option>
+      <option value="toolsteel">Tool Steel</option>
+      <option value="chrome">Chrome Plated</option>
+      <option value="repair">Repair / Chrome Finish</option>
+    </select>
+    <button class="estimate-btn" onclick="calculateQuote()">Estimate</button>
+  </form>
+  <div id="quoteResult"></div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    <b>Jameson Machining Inc.</b><br>
+    1421 Speers Road, Oakville, ON L6L 2X5<br>
+    <a href="tel:3653516656">+1 (365) 351‑6656</a> |
+    <a href="mailto:info@jamesonsgrinding.com">info@jamesonsgrinding.com</a><br>
+    <a href="https://jamesonsgrinding.com" target="_blank">jamesonsgrinding.com</a>
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 Jameson Machining Inc. &mdash; Real Precision. Real Results.
+</footer>
+
+<!-- WhatsApp Chat Bubble -->
+<div id="chatBubble" onclick="window.open('https://wa.me/13653516656','_blank')">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</div>
+
+<!-- Tawk.to live chat -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){var s=document.createElement("script"),t=document.getElementsByTagName("script")[0];s.async=true;s.src='https://embed.tawk.to/6864f6dacfa578190992a097/1iv568h37';s.charset='UTF-8';s.setAttribute('crossorigin','*');t.parentNode.insertBefore(s,t);})();
+</script>
+
+<script>
+// Section animation on scroll
+const sections = document.querySelectorAll("section");
+const reveal = () => {
+  for(const sec of sections) {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50) sec.classList.add("visible");
+  }
+};
+window.addEventListener("scroll", reveal); window.addEventListener("load", reveal);
+
+// Estimator
+function calculateQuote() {
+  const d = +document.getElementById('diameter').value,
+        l = +document.getElementById('length').value,
+        q = +document.getElementById('quantity').value,
+        m = document.getElementById('material').value;
+  if (!d || !l || !q) {
+    return document.getElementById('quoteResult').textContent = 'Please fill all fields.';
+  }
+  let setup = 100, base;
+  let mf = 1;
+  let minRepair = 180; // Minimum for repair/chrome
+  let resultText = '';
+  if (m === "repair") {
+    base = 15; mf = 1.8;
+    let total = Math.max(minRepair, setup + base * mf * q);
+    resultText = `Total: $${total.toFixed(2)}<br>Per-part: $${(total/q).toFixed(2)}<br><span style="color:#ffe047;font-weight:600;font-size:0.96em;">*Final pricing subject to shaft inspection*</span>`;
+  } else {
+    base = q < 10 ? 10 : q < 50 ? 8 : q < 100 ? 6 : 3;
+    if (m === "toolsteel") mf = 1.2;
+    else if (m === "chrome") mf = 1.4;
+    let total = setup + base * mf * q;
+    resultText = `Total: $${total.toFixed(2)}<br>Per-part: $${(total/q).toFixed(2)}`;
+  }
+  document.getElementById('quoteResult').innerHTML = resultText;
+}
+</script>
+</body>
+</html>
