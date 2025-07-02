@@ -183,4 +183,27 @@ function calculateQuote(){
   if(m==="repair"){
     base=15; mf=1.8;
     let total=Math.max(minRepair,setup+base*mf*q);
-    document.getElementById('quoteResult').innerHTML=`Total: $${total.toFixed(2)}<br>Per-part: $${(total/q).toFixed(2)}<br><span style="color:#ff6600;font-weight:700
+    document.getElementById('quoteResult').innerHTML=`Total: $${total.toFixed(2)}<br>Per-part: $${(total/q).toFixed(2)}<br><span style="color:#ff6600;font-weight:700;">*Final pricing subject to shaft inspection and confirmation*</span>`;
+    document.getElementById('f_material').value="Repair / Chrome Finish";
+    document.getElementById('f_price').value = `$${total.toFixed(2)}`;
+  } else {
+    base=q<10?10:q<50?8:q<100?6:3;
+    if(m==="toolsteel") mf=1.2;
+    else if(m==="chrome") mf=1.4;
+    let total=setup+base*mf*q;
+    document.getElementById('quoteResult').innerHTML=`Total: $${total.toFixed(2)}<br>Per-part: $${(total/q).toFixed(2)}`;
+    document.getElementById('f_material').value=document.getElementById('material').options[document.getElementById('material').selectedIndex].text;
+    document.getElementById('f_price').value = `$${total.toFixed(2)}`;
+  }
+  ['diameter','length','quantity'].forEach(id=>{document.getElementById('f_' + id).value = document.getElementById(id).value;});
+  document.getElementById('instantForm').style.display='block';
+}
+document.getElementById('instantForm').addEventListener('submit',()=>{setTimeout(()=>{document.getElementById('instantSentMsg').style.display='block';},500);});
+</script>
+<!-- Tawk.to live chat -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){var s=document.createElement("script"),t=document.getElementsByTagName("script")[0];s.async=true;s.src='https://embed.tawk.to/6864f6dacfa578190992a097/1iv568h37';s.charset='UTF-8';s.setAttribute('crossorigin','*');t.parentNode.insertBefore(s,t);})();
+</script>
+</body>
+</html>
