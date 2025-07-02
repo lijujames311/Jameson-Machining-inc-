@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Jameson Machining Inc. | Precision Grinding Experts</title>
-  <meta name="description" content="Centerless, cylindrical, and surface grinding in Oakville & GTA. Book a visit, upload your drawing, and get an instant CAD estimate.">
+  <meta name="description" content="Precision surface, cylindrical & centerless grinding in Oakville & GTA—boost part quality, speed, and consistency with Canadian precision.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family: 'Open Sans', sans-serif; background:#f8f9fa; color:#222; }
-    header { background:#1e2a38; color:#fff; text-align:center; padding:3em 1em; }
-    header img { width:90px; }
-    header h1 { font-family: 'Montserrat', sans-serif; font-size:2em; margin:0.5em 0 0; }
-    .motto { font-style:italic; font-size:1.1em; color:#bbb; }
-
-    nav { background:#111820; text-align:center; padding:1em 0; }
-    nav a { color:#fff; margin:0 1em; text-decoration:none; font-weight:600; }
+    :root {
+      --primary: #1e2a38;
+      --accent: #ff6600;
+      --light-gray: #f5f6f7;
+      --dark-gray: #111820;
+      --text: #222;
+      --text-light: #bbb;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:'Open Sans',sans-serif; color:var(--text); }
+    a { text-decoration:none; }
+    header { background:var(--primary) url('IMG_1539.jpeg') center/cover no-repeat; color:#fff; text-align:center; padding:4em 1em; position:relative; }
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+    header .content { position:relative; z-index:1; max-width:800px; margin:auto; }
+    header img { width:90px; margin-bottom:1em; }
+    header h1 { font-family:'Montserrat',sans-serif; font-size:2.5em; margin:0.2em 0; }
+    header p.lead { font-size:1.2em; margin:0.5em 0; }
+    .cta-big { background:var(--accent); color:#fff; padding:0.8em 1.4em; border-radius:6px; font-weight:700; margin:1em 0.5em; display:inline-block; }
+    nav { background:var(--dark-gray); text-align:center; padding:1em 0; }
+    nav a { color:#fff; margin:0 1em; font-weight:600; }
     nav a:hover { text-decoration:underline; }
-
-    .cta, .cta-big {
-      background:#ff6600; color:white; text-decoration:none;
-      padding:0.8em 1.4em; display:inline-block; border-radius:6px; margin:1em 0;
-    }
-    .cta-big { font-size:1.1em; font-weight:700; }
-
     section { padding:3em 1.5em; max-width:1100px; margin:auto; }
-    .hero h2 { font-size:2em; color:#222; }
-    .hero p { font-size:1.2em; max-width:600px; margin:auto; }
-
-    .service-grid {
-      display: flex; flex-wrap: wrap; gap:2em; justify-content: center; margin-top:2em;
-    }
-    .svc-card {
-      background:white; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1);
-      width:300px; overflow:hidden; text-align:center;
-    }
-    .svc-card img { width:100%; height:180px; object-fit:cover; }
-    .svc-card h3 { margin:1em 0 0.5em; }
-    .svc-card p { padding:0 1em 1em; font-size:0.95em; }
-
+    .alt { background:var(--light-gray); }
+    .service-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:2em; }
+    .svc { background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); width:300px; text-align:center; overflow:hidden; }
+    .svc img { width:100%; height:180px; object-fit:cover; }
+    .svc h3 { margin:1em 0 0.5em; font-family:'Montserrat',sans-serif; }
+    .svc p { padding:0 1em 1em; font-size:0.95em; color:var(--text); }
+    .form-group { margin-bottom:1em; }
+    input, select, button { width:100%; padding:0.8em; border:1px solid #ccc; border-radius:4px; font-size:1em; }
+    button { background:var(--accent); color:#fff; border:none; cursor:pointer; }
+    button:hover { background:#e65500; }
+    iframe { width:100%; border:none; border-radius:6px; }
+    footer { background:var(--dark-gray); color:#ccc; text-align:center; padding:2em 1em; }
+    footer p { margin:0.5em 0; }
     @media(max-width:768px){
-      .service-grid{ flex-direction: column; align-items:center; }
+      .service-grid { flex-direction:column; align-items:center; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Jameson Logo">
-  <h1>Jameson Machining Inc.</h1>
-  <p class="motto">Precision Grinding. Canadian Quality.</p>
-  <a href="#quote" class="cta-big">Get Instant Estimate</a>
-  <a href="https://calendly.com/lijujames28/30min" class="cta-big">Book Visit</a>
+  <div class="content">
+    <img src="logo.png" alt="Jameson Logo">
+    <h1>Precision Grinding for the Next Generation of Canadian Manufacturing</h1>
+    <p class="lead">Surface • Cylindrical • Centerless — upgrade your parts with micron-level accuracy, fast turnarounds, and expert craftsmanship.</p>
+    <a href="#quote" class="cta-big">Get Instant Estimate</a>
+    <a href="#booking" class="cta-big">Book a Visit</a>
+  </div>
 </header>
 
 <nav>
@@ -61,117 +67,102 @@
 </nav>
 
 <section id="services">
-  <h2>Our Grinding Capabilities</h2>
+  <h2>Our Capabilities</h2>
   <div class="service-grid">
-    <div class="svc-card">
-      <img src="IMG_1539.jpeg" alt="Surface Grinding Machine">
+    <div class="svc">
+      <img src="IMG_1539.jpeg" alt="Surface Grinding">
       <h3>Surface Grinding</h3>
-      <p>Precision flatness and finishes on plates, tooling, and custom parts—up to 24&quot; × 80&quot;.</p>
+      <p>Flat, polished finishes up to 24×80″—perfect for plates, tooling, and fixtures.</p>
     </div>
-    <div class="svc-card">
-      <img src="IMG_1616.jpeg" alt="Cylindrical Grinding Machine">
+    <div class="svc">
+      <img src="IMG_1616.jpeg" alt="Cylindrical Grinding">
       <h3>Cylindrical Grinding</h3>
-      <p>OD and ID grinding for shafts, rolls, and precision components up to 24″ diameter × 80″ length.</p>
+      <p>OD & ID grinding for shafts and rollers with tolerances to 0.0002″—up to 24″×80″.</p>
     </div>
-    <div class="svc-card">
-      <img src="IMG_3130.jpeg" alt="Centerless Grinding Machine">
+    <div class="svc">
+      <img src="IMG_3130.jpeg" alt="Centerless Grinding">
       <h3>Centerless Grinding</h3>
-      <p>High-speed OD grinding for round parts—ideal for prototypes or 500,000+ parts per year.</p>
+      <p>High-volume, chuck-less OD grinding: go from prototype to 500,000+ parts/year.</p>
     </div>
   </div>
 </section>
 
-<section id="quote">
+<section id="quote" class="alt">
   <h2>Instant CAD Estimate</h2>
   <form id="quoteCalcForm" onsubmit="return false;" style="max-width:500px; margin:auto;">
-    <label>Diameter (in): <input type="number" id="diameter" step="0.01" required></label><br>
-    <label>Length (in): <input type="number" id="length" step="0.01" required></label><br>
-    <label>Quantity: <input type="number" id="quantity" required></label><br>
-    <label>Material:
+    <div class="form-group"><label>Diameter (in): <input type="number" id="diameter" step="0.01" required></label></div>
+    <div class="form-group"><label>Length (in): <input type="number" id="length" step="0.01" required></label></div>
+    <div class="form-group"><label>Quantity: <input type="number" id="quantity" required></label></div>
+    <div class="form-group"><label>Material:
       <select id="material">
         <option value="standard">Standard Steel</option>
         <option value="toolsteel">Tool Steel</option>
         <option value="chrome">Chrome Plated</option>
       </select>
-    </label><br>
-    <button class="cta" onclick="calculateQuote()">Estimate</button>
+    </label></div>
+    <button onclick="calculateQuote()">Estimate</button>
   </form>
-
   <div id="quoteResult" style="text-align:center; margin-top:1em; font-weight:bold;"></div>
-
   <form id="instantForm" action="https://formspree.io/f/mnnpzqrd" method="POST" enctype="multipart/form-data" style="display:none; max-width:500px; margin:auto; margin-top:2em;">
     <input type="hidden" name="Diameter" id="f_diameter">
     <input type="hidden" name="Length" id="f_length">
     <input type="hidden" name="Quantity" id="f_quantity">
     <input type="hidden" name="Material" id="f_material">
     <input type="hidden" name="Estimated Price" id="f_price">
-    <label>Your Email: <input type="email" name="Email" id="f_email" required></label><br>
-    <label>Upload Drawing: <input type="file" name="Drawing" accept=".pdf,.jpg,.png" /></label><br>
-    <button class="cta" type="submit">Send Estimate</button>
+    <div class="form-group"><label>Your Email: <input type="email" name="Email" id="f_email" required></label></div>
+    <div class="form-group"><label>Upload Drawing: <input type="file" name="Drawing" accept=".pdf,.jpg,.png"></label></div>
+    <button type="submit">Send Estimate</button>
   </form>
-
-  <div id="instantSentMsg" style="display:none;text-align:center;margin-top:1em;color:green;">Estimate sent. We'll reply shortly!</div>
+  <div id="instantSentMsg" style="display:none;text-align:center;margin-top:1em;color:green;">Estimate sent — we’ll reply shortly!</div>
 </section>
 
 <section id="booking">
-  <h2>Book a Visit</h2>
-  <p style="text-align:center;">Come walk through the shop, discuss your drawings, or inspect a job in person.</p>
-  <iframe src="https://calendly.com/lijujames28/30min?embed_domain=www.jamesonsgrinding.com" width="100%" height="650" frameborder="0" style="border:none; margin-top:2em;"></iframe>
+  <h2>Book a Shop Visit</h2>
+  <p style="text-align:center;">Discuss your parts in person, drop off drawings, and talk specifications with our team.</p>
+  <iframe src="https://calendly.com/lijujames28/30min?embed_domain=www.jamesonsgrinding.com" width="100%" height="650"></iframe>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
+<section id="contact" class="alt">
+  <h2>Contact Us</h2>
   <p style="text-align:center;">
     <strong>Jameson Machining Inc.</strong><br>
-    1421 Speers Road, Oakville, ON L6L 2X5<br>
-    <a href="tel:3653516656">(365) 351‑6656</a> | <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a><br>
+    1421 Speers Road, Oakville, ON L6L&nbsp;2X5<br>
+    <a href="tel:3653516656">(365) 351‑6656</a> | <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a><br>
     <a href="https://www.jamesonsgrinding.com" target="_blank">www.jamesonsgrinding.com</a>
   </p>
 </section>
 
-<footer style="text-align:center; background:#111; color:#ccc; padding:2em 1em;">
-  <p>© 2025 Jameson Machining Inc. | Built for the next generation of Canadian manufacturing.</p>
+<footer>
+  <p>© 2025 Jameson Machining Inc. | Supporting the next generation of Canadian manufacturing.</p>
 </footer>
 
 <script>
-function calculateQuote() {
-  const d = parseFloat(document.getElementById('diameter').value);
-  const l = parseFloat(document.getElementById('length').value);
-  const q = parseInt(document.getElementById('quantity').value);
-  const m = document.getElementById('material').value;
-
-  if (!d || !l || !q) {
-    document.getElementById('quoteResult').innerHTML = "Please fill in all fields.";
-    document.getElementById('instantForm').style.display = 'none';
+function calculateQuote(){
+  const d=parseFloat(document.getElementById('diameter').value);
+  const l=parseFloat(document.getElementById('length').value);
+  const q=parseInt(document.getElementById('quantity').value);
+  const m=document.getElementById('material').value;
+  if(!d||!l||!q){
+    document.getElementById('quoteResult').innerHTML="Please fill all fields";
+    document.getElementById('instantForm').style.display='none';
     return;
   }
-
-  let setupFee = 100;
-  let basePerPart = q < 10 ? 10 : q < 50 ? 8 : q < 100 ? 6 : 3;
-  let materialFactor = m === "toolsteel" ? 1.2 : m === "chrome" ? 1.4 : 1.0;
-  let sizeFactor = (d > 3 || l > 48) ? 1.2 : 1.0;
-  let perPart = basePerPart * materialFactor * sizeFactor;
-  let total = setupFee + (perPart * q);
-
-  document.getElementById('quoteResult').innerHTML =
-    "Estimated Total: <strong>$" + total.toFixed(2) +
-    "</strong><br>Per-part: $" + perPart.toFixed(2);
-
-  document.getElementById('f_diameter').value = d;
-  document.getElementById('f_length').value = l;
-  document.getElementById('f_quantity').value = q;
-  document.getElementById('f_material').value = m;
-  document.getElementById('f_price').value = "$" + total.toFixed(2) + " (Per-part: $" + perPart.toFixed(2) + ")";
-
-  document.getElementById('instantForm').style.display = 'block';
-  document.getElementById('instantSentMsg').style.display = 'none';
+  let setup=100, base=q<10?10:q<50?8:q<100?6:3;
+  let mf=m==='toolsteel'?1.2:m==='chrome'?1.4:1.0;
+  let sf=(d>3||l>48)?1.2:1.0;
+  let per=base*mf*sf;
+  let total=setup+per*q;
+  document.getElementById('quoteResult').innerHTML=`Estimated Total: <strong>$${total.toFixed(2)}</strong><br>Per‑part: $${per.toFixed(2)}`;
+  document.getElementById('f_diameter').value=d;
+  document.getElementById('f_length').value=l;
+  document.getElementById('f_quantity').value=q;
+  document.getElementById('f_material').value=m;
+  document.getElementById('f_price').value=`$${total.toFixed(2)} (≈$${per.toFixed(2)}/part)`;
+  document.getElementById('instantForm').style.display='block';
+  document.getElementById('instantSentMsg').style.display='none';
 }
-
-document.getElementById('instantForm').onsubmit = function() {
-  setTimeout(function() {
-    document.getElementById('instantForm').style.display = 'none';
-    document.getElementById('instantSentMsg').style.display = 'block';
-  }, 500);
+document.getElementById('instantForm').onsubmit=function(){
+  setTimeout(()=>document.getElementById('instantSentMsg').style.display='block', 500);
   return true;
 };
 </script>
