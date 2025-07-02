@@ -10,191 +10,325 @@
   <meta property="og:image" content="logo.png">
   <meta property="og:url" content="https://jamesonsgrinding.com">
   <meta name="twitter:card" content="summary_large_image">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main-bg: #f8fafc;
-      --main-text: #14202c;
-      --accent: #223d53;
-      --button: #223d53;
-      --button-hover: #1c3042;
+      --main-bg: #f4f8fb;
+      --main-text: #182433;
+      --steel: #213558;
+      --midsteel: #3b5070;
+      --accent: #ffe047;
+      --accent-dark: #dfbe11;
       --card: #fff;
       --border: #d1d5db;
+      --card2: #e9edf2;
+      --windmill: linear-gradient(112deg, #25395b 70%, #445c86 100%);
     }
-    body {
-      font-family: 'Montserrat', Arial, sans-serif;
+    html, body {
       background: var(--main-bg);
       color: var(--main-text);
+      font-family: 'Montserrat', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.01rem;
     }
     header {
+      background: var(--windmill);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      padding: 4.5em 1.5em 2.5em 1.5em;
+      min-height: 340px;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: -70px; right: -110px;
+      width: 380px; height: 400px;
+      background: linear-gradient(-22deg, #ffe047cc 30%, #fff0 100%);
+      transform: skew(-17deg);
+      z-index: 1;
+      pointer-events: none;
+    }
+    header .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1150px;
+      margin: auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 2em 2em 1em 2em;
-      background: #fff;
-      border-bottom: 1.5px solid var(--border);
+      gap: 2em;
+      flex-wrap: wrap;
     }
     header img {
-      width: 78px;
-      height: auto;
-      margin-right: 1.2em;
+      width: 100px;
+      margin-right: 1.5em;
+      flex-shrink: 0;
+      filter: drop-shadow(1px 4px 18px #1e293b88);
+      border-radius: 12px;
+      background: #fff3;
+      padding: 0.5em;
     }
-    header .headline {
-      flex: 1;
+    .hero-text {
+      flex: 1 1 290px;
+      min-width: 240px;
     }
-    header h1 {
-      font-size: 2em;
+    .hero-text h1 {
+      font-size: 2.5em;
       font-weight: 900;
-      margin: 0 0 0.4em 0;
-      color: var(--accent);
-      letter-spacing: 0.5px;
+      line-height: 1.09;
+      margin-bottom: 0.25em;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg,#fff 70%,#ffe047 100%);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 2px 5px 16px #0004;
     }
-    header p {
-      margin: 0;
-      color: #3a4c60;
-      font-size: 1.15em;
-    }
-    .cta-btn {
-      background: var(--button);
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 1.05em;
+    .hero-sub {
+      display: inline-block;
+      font-size: 1.1em;
       font-weight: 700;
-      padding: 0.7em 1.5em;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-left: 2em;
+      letter-spacing: .6px;
+      background: #ffe047cc;
+      color: #19233a;
+      border-radius: 6px;
+      padding: 0.19em 0.75em;
+      margin-bottom: 0.7em;
+      box-shadow: 2px 6px 16px #fff4;
     }
-    .cta-btn:hover {
-      background: var(--button-hover);
+    .hero-text p {
+      font-size: 1.15em;
+      font-weight: 500;
+      margin: 1.3em 0 0.9em 0;
+      color: #f8fcff;
+      text-shadow: 1px 1px 4px #1a2233;
+    }
+    .hero-buttons {
+      margin-top: 1.2em;
+      display: flex;
+      gap: 1.1em;
+      flex-wrap: wrap;
+    }
+    .hero-buttons .cta-btn {
+      background: var(--accent);
+      color: #213558;
+      border: none;
+      border-radius: 7px;
+      font-size: 1.13em;
+      font-weight: 800;
+      padding: 0.7em 2em;
+      cursor: pointer;
+      transition: background 0.18s;
+      box-shadow: 1px 4px 16px #0002;
+      outline: none;
+      letter-spacing: .8px;
+    }
+    .hero-buttons .cta-btn:hover {
+      background: var(--accent-dark);
+    }
+    .hero-buttons .visit-btn {
+      background: #fff;
+      color: #1e293b;
+      border: 2px solid #ffe047;
+      font-weight: 700;
     }
     nav {
+      background: #1e293b;
+      color: #fff;
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding: 1em 0;
-      background: #eef2f7;
-      border-bottom: 1.5px solid var(--border);
-      font-size: 1em;
+      padding: 0.92em 0 0.7em 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      gap: 2.4em;
+      font-size: 1.02em;
     }
     nav a {
-      color: var(--accent);
+      color: #fff;
       text-decoration: none;
-      margin: 0 1.5em;
       font-weight: 600;
-      letter-spacing: .02em;
-      transition: color 0.2s;
+      letter-spacing: .03em;
+      padding-bottom: 4px;
+      transition: color .18s, border-bottom .15s;
+      border-bottom: 2.5px solid transparent;
     }
-    nav a:hover {
-      color: #000;
-      border-bottom: 2px solid var(--accent);
+    nav a:hover, nav a:focus {
+      color: #ffe047;
+      border-bottom: 2.5px solid #ffe047;
     }
     section {
-      max-width: 1050px;
-      margin: 2.5em auto 2em auto;
-      padding: 0 1.2em;
+      max-width: 1130px;
+      margin: 2.7em auto 2em auto;
+      padding: 0 1.4em;
+      position: relative;
     }
     h2 {
-      color: var(--accent);
+      color: var(--steel);
       font-size: 1.35em;
+      font-weight: 900;
       margin-bottom: 1em;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: .2em;
+      border-bottom: 2.5px solid var(--accent);
+      padding-bottom: .3em;
+      letter-spacing: .5px;
+    }
+    .windmill-bg {
+      background: linear-gradient(120deg, #f4f8fb 60%, #dde4ee 100%);
+      border-radius: 10px;
+      padding: 2.3em 1.2em 2.2em 1.2em;
+      box-shadow: 0 3px 18px #18243316;
     }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 1.4em;
-      margin-top: 1.3em;
+      gap: 1.5em;
+      margin-top: 1.7em;
     }
     .card {
       background: var(--card);
-      border: 1.5px solid var(--border);
-      border-radius: 4px;
-      padding: 1.3em 1em 1em 1em;
+      border: 1.8px solid var(--border);
+      border-radius: 7px;
+      padding: 1.25em 1em 1em 1em;
       text-align: left;
-      box-shadow: none;
-      transition: border 0.2s;
-      min-height: 180px;
+      box-shadow: 0 2px 18px #21355811;
+      min-height: 184px;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow .18s, border .18s;
     }
     .card h3 {
-      margin: 0 0 .5em 0;
-      font-size: 1.07em;
-      color: var(--accent);
+      margin: 0 0 .4em 0;
+      font-size: 1.15em;
+      color: var(--steel);
+      font-weight: 800;
+      letter-spacing: .05em;
     }
     .card p {
-      font-size: 0.98em;
+      font-size: 0.99em;
       color: #33475b;
       margin: 0;
+      font-weight: 500;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      right: -30px; top: -20px;
+      width: 80px; height: 80px;
+      background: linear-gradient(120deg,#ffe04733 55%,transparent 100%);
+      border-radius: 45% 25% 70% 45%;
+      transform: rotate(-19deg);
+      z-index: 0;
     }
     form {
-      max-width: 430px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 1.4em 1.3em 1em 1.3em;
+      max-width: 420px;
+      background: var(--card);
+      border: 1.6px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2em 1em 1em 1em;
       margin: 1.3em auto 0 auto;
-      box-shadow: none;
+      box-shadow: 0 2px 16px #21355816;
     }
     input, select, button {
       width: 100%;
-      padding: .8em;
+      padding: .83em;
       margin: .5em 0 1em 0;
-      border: 1.2px solid var(--border);
-      border-radius: 3px;
+      border: 1.1px solid var(--border);
+      border-radius: 4px;
       font-size: 1em;
+      font-family: inherit;
+      box-sizing: border-box;
     }
     button[type="submit"], .estimate-btn {
-      background: var(--button);
-      color: #fff;
+      background: var(--accent);
+      color: #223558;
       font-weight: 700;
       border: none;
-      border-radius: 3px;
+      border-radius: 4px;
       cursor: pointer;
       transition: background 0.2s;
+      box-shadow: 1px 2px 10px #25395b19;
+      font-size: 1.07em;
     }
     button[type="submit"]:hover, .estimate-btn:hover {
-      background: var(--button-hover);
+      background: var(--accent-dark);
     }
     #quoteResult {
       text-align:center;
       margin:1em 0 0.2em 0;
       font-weight:700;
-      color: var(--accent);
-      font-size: 1.12em;
+      color: var(--steel);
+      font-size: 1.13em;
     }
-    footer {
-      background: #fff;
-      color: #5b6b7d;
+    /* WhatsApp chat bubble */
+    #chatBubble {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      background: #25D366;
+      border-radius: 50%;
+      width: 60px; height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 2px 4px 24px #1e293b40;
+      z-index: 1111;
+      transition: box-shadow .16s;
+    }
+    #chatBubble img {width: 36px;}
+    /* Reviews */
+    #reviews {
+      max-width: 600px;
+      margin: 2em auto 1em auto;
       text-align: center;
-      padding: 1.5em 1em 1em 1em;
-      border-top: 1.5px solid var(--border);
-      font-size: .95em;
-      margin-top: 2.5em;
+      font-size: 1.03em;
+      color: #223558;
     }
-    @media (max-width: 650px) {
-      header {flex-direction: column;align-items: flex-start;padding: 1.2em 1em 1em 1em;}
-      header img {margin-bottom: 1em;}
-      .cta-btn {margin: 1.2em 0 0 0;}
-      nav {font-size: .95em;}
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: #ffe047;
+      text-align: center;
+      padding: 2em 1em 1em 1em;
+      font-size: .97em;
+      margin-top: 2.5em;
+      letter-spacing: .15em;
+      border-top: 3px solid #ffe04755;
+    }
+    @media (max-width: 700px) {
+      header .header-content {flex-direction: column;align-items: flex-start;gap: 1.1em;}
+      header img {margin: 0 0 1.2em 0;}
+      .hero-text h1 {font-size: 2em;}
+      nav {gap: 1.2em;}
       section {padding: 0 .3em;}
+    }
+    @media (max-width: 480px) {
+      header {padding: 2.3em 0.4em 1.3em 0.4em;}
+      .hero-text h1 {font-size: 1.13em;}
+      nav {font-size: .99em;}
     }
   </style>
 </head>
 <body>
 <header>
-  <img src="logo.png" alt="Jameson Machining Logo">
-  <div class="headline">
-    <h1>Precision Grinding & Shaft Repair</h1>
-    <p>Fast turnaround. Micron accuracy. <b>GTA’s trusted shop for shaft, chrome & repair.</b></p>
+  <div class="header-content">
+    <img src="logo.png" alt="Jameson Machining Logo">
+    <div class="hero-text">
+      <div class="hero-sub">Shaft Repair • Chrome Finishing • Grinding</div>
+      <h1>Precision Grinding<br>& Shaft Repair, GTA</h1>
+      <p>
+        Serious jobs. Micron tolerances.<br>
+        500,000+ parts/year. Full shop support for <b>shaft, chrome, & production grinding</b>.<br>
+        <span style="color:#ffe047;font-weight:700;">Same-day instant quote below.</span>
+      </p>
+      <div class="hero-buttons">
+        <button class="cta-btn" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'});">Instant Estimate</button>
+        <button class="cta-btn visit-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Contact Shop</button>
+      </div>
+    </div>
   </div>
-  <a href="#quote" class="cta-btn">Get Estimate</a>
 </header>
+
 <nav>
   <a href="#services">Services</a>
   <a href="#equipment">Equipment</a>
@@ -202,7 +336,7 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="services">
+<section id="services" class="windmill-bg">
   <h2>Services</h2>
   <div class="services-grid">
     <div class="card">
@@ -224,7 +358,7 @@
   </div>
 </section>
 
-<section id="equipment">
+<section id="equipment" class="windmill-bg">
   <h2>Our Equipment</h2>
   <div class="services-grid">
     <div class="card"><h3>Zocca Como Italia RU2000/6 Cylindrical Grinder</h3></div>
@@ -236,7 +370,7 @@
   </div>
 </section>
 
-<section id="quote">
+<section id="quote" class="windmill-bg">
   <h2>Instant Estimate</h2>
   <form id="quoteCalcForm" onsubmit="return false;">
     <input type="number" id="diameter" placeholder="Diameter (inches)" step="0.01" required>
@@ -253,7 +387,7 @@
   <div id="quoteResult"></div>
 </section>
 
-<section id="contact">
+<section id="contact" class="windmill-bg">
   <h2>Contact</h2>
   <p>
     <b>Jameson Machining Inc.</b><br>
@@ -268,32 +402,17 @@
   &copy; 2025 Jameson Machining Inc. &mdash; Real Precision. Real Results.
 </footer>
 
+<!-- WhatsApp Chat Bubble -->
+<div id="chatBubble" onclick="window.open('https://wa.me/13653516656','_blank')">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</div>
+
+<!-- Tawk.to live chat -->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){var s=document.createElement("script"),t=document.getElementsByTagName("script")[0];s.async=true;s.src='https://embed.tawk.to/6864f6dacfa578190992a097/1iv568h37';s.charset='UTF-8';s.setAttribute('crossorigin','*');t.parentNode.insertBefore(s,t);})();
+</script>
+
 <script>
 function calculateQuote() {
-  const d = +document.getElementById('diameter').value,
-        l = +document.getElementById('length').value,
-        q = +document.getElementById('quantity').value,
-        m = document.getElementById('material').value;
-  if (!d || !l || !q) {
-    return document.getElementById('quoteResult').textContent = 'Please fill all fields.';
-  }
-  let setup = 100, base;
-  let mf = 1;
-  let minRepair = 180; // Minimum for repair/chrome
-  let resultText = '';
-  if (m === "repair") {
-    base = 15; mf = 1.8;
-    let total = Math.max(minRepair, setup + base * mf * q);
-    resultText = `Total: $${total.toFixed(2)}<br>Per-part: $${(total/q).toFixed(2)}<br><span style="color:#223d53;font-weight:600;font-size:0.96em;">*Final pricing subject to shaft inspection*</span>`;
-  } else {
-    base = q < 10 ? 10 : q < 50 ? 8 : q < 100 ? 6 : 3;
-    if (m === "toolsteel") mf = 1.2;
-    else if (m === "chrome") mf = 1.4;
-    let total = setup + base * mf * q;
-    resultText = `Total: $${total.toFixed(2)}<br>Per-part: $${(total/q).toFixed(2)}`;
-  }
-  document.getElementById('quoteResult').innerHTML = resultText;
-}
-</script>
-</body>
-</html>
+  const d = +document.getElementById('
