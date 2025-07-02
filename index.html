@@ -10,7 +10,7 @@
   <meta property="og:image" content="logo.png">
   <meta property="og:url" content="https://jamesonsgrinding.com">
   <meta name="twitter:card" content="summary_large_image">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:900,700,600,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900,700,500&display=swap" rel="stylesheet">
   <style>
     :root {
       --main-bg: #181f2a;
@@ -19,8 +19,6 @@
       --accent2: #31e6ff;
       --card: #232b3c;
       --border: #252b37;
-      --windmill1: #25395b;
-      --windmill2: #445c86;
       --mach-blue: #2079bb;
       --mach-dark: #10151d;
     }
@@ -30,56 +28,52 @@
       font-family: 'Montserrat', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-size: 1.01rem;
+      font-size: 1.02rem;
       scroll-behavior: smooth;
       min-height: 100vh;
       box-sizing: border-box;
     }
-    body {
-      overflow-x: hidden;
-    }
+    body { overflow-x: hidden; }
     header {
       position: relative;
-      background: linear-gradient(120deg, var(--windmill1) 55%, var(--windmill2) 100%);
+      background: linear-gradient(120deg, #25395b 65%, #445c86 100%);
       color: #fff;
-      overflow: hidden;
-      min-height: 360px;
-      padding: 0;
+      min-height: 370px;
       z-index: 2;
+      overflow: hidden;
     }
-    /* Windmill animated blade */
     .windmill-blade {
       position: absolute;
-      top: -180px; left: 45vw;
-      width: 490px; height: 700px;
-      background: linear-gradient(-70deg, var(--accent) 0%, transparent 80%);
-      opacity: 0.085;
+      top: -120px; left: 45vw;
+      width: 500px; height: 620px;
+      background: linear-gradient(-70deg, var(--accent) 0%, transparent 90%);
+      opacity: 0.09;
       z-index: 0;
-      transform: rotate(-19deg);
+      transform: rotate(-14deg);
       animation: spinblade 18s linear infinite;
       pointer-events: none;
     }
     @keyframes spinblade {
-      from {transform: rotate(-19deg);}
-      to {transform: rotate(341deg);}
+      from {transform: rotate(-14deg);}
+      to {transform: rotate(346deg);}
     }
-    header .header-content {
+    .header-content {
       position: relative;
       z-index: 2;
       max-width: 1200px;
       margin: auto;
       display: flex;
       align-items: center;
-      gap: 2.1em;
+      gap: 2.2em;
       flex-wrap: wrap;
-      padding: 4.5em 1.5em 3em 1.5em;
+      padding: 4.4em 1.5em 2.7em 1.5em;
     }
     header img {
-      width: 108px;
-      margin-right: 2.1em;
+      width: 98px;
+      margin-right: 2em;
       flex-shrink: 0;
       filter: drop-shadow(1px 4px 18px #1e293b88);
-      border-radius: 16px;
+      border-radius: 14px;
       background: #fff3;
       padding: 0.4em;
       z-index: 10;
@@ -91,12 +85,12 @@
       z-index: 2;
     }
     .hero-text h1 {
-      font-size: 2.7em;
+      font-size: 2.3em;
       font-weight: 900;
-      line-height: 1.09;
-      margin-bottom: 0.18em;
+      line-height: 1.1;
+      margin-bottom: 0.22em;
       letter-spacing: 1.3px;
-      background: linear-gradient(90deg, #fff 77%, var(--accent) 100%);
+      background: linear-gradient(90deg, #fff 75%, var(--accent) 100%);
       color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
@@ -109,43 +103,43 @@
     }
     .hero-sub {
       display: inline-block;
-      font-size: 1.05em;
+      font-size: 1.06em;
       font-weight: 700;
       letter-spacing: .5px;
       background: var(--accent);
       color: #19233a;
       border-radius: 7px;
       padding: 0.15em 0.85em;
-      margin-bottom: 0.9em;
+      margin-bottom: 1em;
       box-shadow: 2px 6px 22px #ffe04719;
       animation: fadeinup 1.2s cubic-bezier(.22,1.01,.36,.97) 0.32s both;
     }
     .hero-text p {
-      font-size: 1.15em;
+      font-size: 1.1em;
       font-weight: 500;
-      margin: 1.15em 0 1.2em 0;
-      color: #d9e4f8;
+      margin: 1.05em 0 1.2em 0;
+      color: #e4eaf3;
       text-shadow: 1px 1px 4px #1a2233;
       animation: fadeinup 1.15s cubic-bezier(.22,1.01,.36,.97) 0.35s both;
     }
     .hero-buttons {
-      margin-top: 1.1em;
+      margin-top: 1.0em;
       display: flex;
-      gap: 1.1em;
+      gap: 1.05em;
       flex-wrap: wrap;
       animation: fadeinup 1.25s cubic-bezier(.22,1.01,.36,.97) 0.5s both;
     }
     .hero-buttons .cta-btn {
-      background: var(--accent);
-      color: #213558;
+      background: var(--accent2);
+      color: #10151d;
       border: none;
       border-radius: 9px;
-      font-size: 1.13em;
+      font-size: 1.12em;
       font-weight: 900;
-      padding: 0.75em 2.4em;
+      padding: 0.70em 2.2em;
       cursor: pointer;
-      transition: background 0.18s, box-shadow 0.18s;
-      box-shadow: 0 2px 30px #ffe04749;
+      transition: background 0.17s, box-shadow 0.16s;
+      box-shadow: 0 2px 20px #31e6ff36;
       outline: none;
       letter-spacing: .7px;
       animation: pulsebtn 2.3s infinite;
@@ -153,7 +147,7 @@
     }
     @keyframes pulsebtn {
       0% {box-shadow: 0 0 0 0 var(--accent2);}
-      60% {box-shadow: 0 0 0 22px transparent;}
+      60% {box-shadow: 0 0 0 18px transparent;}
       100% {box-shadow: 0 0 0 0 transparent;}
     }
     .hero-buttons .visit-btn {
@@ -169,13 +163,13 @@
       color: #fff;
       display: flex;
       justify-content: center;
-      padding: 1em 0 0.7em 0;
+      padding: 0.92em 0 0.7em 0;
       position: sticky;
       top: 0;
       z-index: 10;
-      gap: 2.4em;
-      font-size: 1.03em;
-      box-shadow: 0 5px 26px #0001;
+      gap: 2.1em;
+      font-size: 1.01em;
+      box-shadow: 0 5px 20px #0001;
       opacity: 0.99;
       animation: fadeinup .8s cubic-bezier(.22,1.01,.36,.97) 0.3s both;
     }
@@ -185,7 +179,7 @@
       font-weight: 600;
       letter-spacing: .03em;
       padding-bottom: 4px;
-      transition: color .18s, border-bottom .15s;
+      transition: color .17s, border-bottom .14s;
       border-bottom: 2.5px solid transparent;
     }
     nav a:hover, nav a:focus {
@@ -193,21 +187,18 @@
       border-bottom: 2.5px solid var(--accent);
     }
     section {
-      max-width: 1130px;
-      margin: 2.7em auto 2em auto;
-      padding: 0 1.3em;
+      max-width: 1100px;
+      margin: 2.3em auto 2em auto;
+      padding: 0 1.1em;
       position: relative;
       opacity: 0;
       transform: translateY(36px);
       transition: all 0.5s cubic-bezier(.22,1.01,.36,.97);
     }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    section.visible { opacity: 1; transform: translateY(0);}
     h2 {
       color: var(--accent2);
-      font-size: 1.38em;
+      font-size: 1.29em;
       font-weight: 900;
       margin-bottom: 1em;
       border-bottom: 2.5px solid var(--accent);
@@ -217,26 +208,26 @@
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 1.4em;
-      margin-top: 1.4em;
+      gap: 1.3em;
+      margin-top: 1.1em;
     }
     .card {
       background: var(--card);
-      border: 1.9px solid var(--border);
+      border: 1.7px solid var(--border);
       border-radius: 10px;
-      padding: 1.28em 1.2em 1.2em 1.2em;
+      padding: 1.08em 1.1em 1em 1.1em;
       text-align: left;
-      box-shadow: 0 5px 24px #24e3ff13;
-      min-height: 180px;
+      box-shadow: 0 5px 22px #24e3ff13;
+      min-height: 170px;
       position: relative;
       overflow: hidden;
-      transition: box-shadow .18s, border .18s;
+      transition: box-shadow .17s, border .17s;
       z-index: 1;
       animation: fadeinup 1.15s cubic-bezier(.22,1.01,.36,.97) 0.3s both;
     }
     .card h3 {
-      margin: 0 0 .43em 0;
-      font-size: 1.13em;
+      margin: 0 0 .33em 0;
+      font-size: 1.08em;
       color: var(--accent);
       font-weight: 800;
       letter-spacing: .07em;
@@ -250,29 +241,29 @@
     .card::before {
       content: "";
       position: absolute;
-      right: -32px; top: -18px;
-      width: 95px; height: 95px;
+      right: -28px; top: -14px;
+      width: 85px; height: 85px;
       background: linear-gradient(120deg,var(--accent2) 30%,transparent 100%);
       border-radius: 53% 26% 70% 48%;
       transform: rotate(-16deg);
       z-index: 0;
-      opacity: .15;
+      opacity: .12;
     }
     form {
-      max-width: 430px;
+      max-width: 410px;
       background: var(--mach-dark);
-      border: 1.6px solid var(--border);
+      border: 1.5px solid var(--border);
       border-radius: 10px;
-      padding: 1.45em 1.1em 1.2em 1.1em;
-      margin: 1.5em auto 0 auto;
-      box-shadow: 0 2px 16px #25395b26;
+      padding: 1.3em 1em 1em 1em;
+      margin: 1.2em auto 0 auto;
+      box-shadow: 0 2px 16px #25395b23;
       animation: fadeinup 1.2s cubic-bezier(.22,1.01,.36,.97) 0.7s both;
     }
     input, select, button {
       width: 100%;
-      padding: .89em;
+      padding: .82em;
       margin: .5em 0 1em 0;
-      border: 1.3px solid var(--border);
+      border: 1.2px solid var(--border);
       border-radius: 4px;
       font-size: 1em;
       font-family: inherit;
@@ -282,13 +273,13 @@
     }
     button[type="submit"], .estimate-btn {
       background: var(--accent2);
-      color: #19233a;
+      color: #10151d;
       font-weight: 900;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background 0.2s, box-shadow .18s;
-      box-shadow: 0 1px 10px #31e6ff16;
+      transition: background 0.18s, box-shadow .18s;
+      box-shadow: 0 1px 10px #31e6ff12;
       font-size: 1.11em;
       letter-spacing: .1em;
       outline: none;
@@ -296,14 +287,14 @@
     }
     button[type="submit"]:hover, .estimate-btn:hover {
       background: var(--accent);
-      color: #222a33;
+      color: #10151d;
     }
     #quoteResult {
       text-align:center;
       margin:1em 0 0.2em 0;
       font-weight:900;
       color: var(--accent2);
-      font-size: 1.12em;
+      font-size: 1.09em;
       text-shadow: 1px 2px 14px #10151d;
     }
     /* WhatsApp chat bubble */
@@ -312,7 +303,7 @@
       bottom: 28px; right: 28px;
       background: #25D366;
       border-radius: 50%;
-      width: 60px; height: 60px;
+      width: 58px; height: 58px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -322,32 +313,31 @@
       transition: box-shadow .16s;
       animation: fadeinup .7s cubic-bezier(.22,1.01,.36,.97) 1.7s both;
     }
-    #chatBubble img {width: 36px;}
-    /* Footer */
+    #chatBubble img {width: 34px;}
     footer {
       background: var(--mach-dark);
       color: var(--accent2);
       text-align: center;
-      padding: 2.2em 1em 1.2em 1em;
-      font-size: 1.02em;
-      margin-top: 2.5em;
-      letter-spacing: .13em;
+      padding: 2.0em 1em 1.1em 1em;
+      font-size: 1.01em;
+      margin-top: 2.2em;
+      letter-spacing: .11em;
       border-top: 4px solid var(--accent2);
-      box-shadow: 0 -2px 18px #1e293b2a;
+      box-shadow: 0 -2px 16px #1e293b2a;
     }
     @media (max-width: 700px) {
-      header .header-content {flex-direction: column;align-items: flex-start;gap: 1.1em;padding: 3.2em 0.7em 1.6em 0.7em;}
+      .header-content {flex-direction: column;align-items: flex-start;gap: 1.1em;padding: 3.2em 0.7em 1.6em 0.7em;}
       header img {margin: 0 0 1.2em 0;}
-      .hero-text h1 {font-size: 1.48em;}
-      nav {gap: 1.1em;}
-      section {padding: 0 .2em;}
-      .card {padding: 1.0em 0.7em 0.85em 0.7em;}
-      form {padding: 1.1em 0.6em 0.7em 0.6em;}
+      .hero-text h1 {font-size: 1.19em;}
+      nav {gap: 1em;}
+      section {padding: 0 .18em;}
+      .card {padding: .82em 0.6em 0.7em 0.6em;}
+      form {padding: .95em 0.45em 0.7em 0.45em;}
     }
     @media (max-width: 460px) {
-      header {min-height: 180px;}
-      .hero-text h1 {font-size: 1em;}
-      nav {font-size: .98em;}
+      header {min-height: 140px;}
+      .hero-text h1 {font-size: .95em;}
+      nav {font-size: .97em;}
     }
   </style>
 </head>
@@ -360,7 +350,7 @@
       <div class="hero-sub">Shaft Repair • Chrome Finishing • Grinding</div>
       <h1>Precision Grinding<br>& Shaft Repair, GTA</h1>
       <p>
-        **Instant Estimate. Real Results.**<br>
+        <b>Instant Estimate. Real Results.</b><br>
         Micron-level tolerances. Emergency repair & production volume.<br>
         <span style="color:#31e6ff;font-weight:700;">Get a live quote below & chat anytime.</span>
       </p>
@@ -391,4 +381,19 @@
       <p>Shafts, rollers, sleeves—OD, ID, tight geometry, all materials.</p>
     </div>
     <div class="card">
-      <h3>
+      <h3>Surface Grinding</h3>
+      <p>Tooling, plates, die sets—flatness, finish, parallelism, up to 24” x 80”.</p>
+    </div>
+    <div class="card">
+      <h3>Centerless Grinding</h3>
+      <p>Production or prototype, OD 1/8” to 8”, high-volume runs, close-tolerance.</p>
+    </div>
+  </div>
+</section>
+
+<section id="equipment">
+  <h2>Our Equipment</h2>
+  <div class="services-grid">
+    <div class="card"><h3>Zocca Como Italia RU2000/6 Cylindrical Grinder</h3></div>
+    <div class="card"><h3>John Shipman 1310 Cylindrical Grinder</h3></div>
+    <div class="card"><h3>Chevalier FSG
