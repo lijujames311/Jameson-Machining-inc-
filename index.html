@@ -3,135 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jameson Machining Inc. | Precision Grinding Oakville</title>
-    <meta name="description" content="Young innovators preserving the art of precision grinding in Oakville, GTA. Cylindrical and centerless grinding with instant quotes starting at $3/part + GST.">
-    <meta name="keywords" content="precision grinding Oakville, cylindrical grinding, centerless grinding, grinding GTA, Canadian manufacturing, Jameson Machining">
+    <title>Jameson Machining Inc. | Precision Machining</title>
+    <meta name="description" content="Jameson Machining Inc. offers precision cylindrical, centerless, and surface grinding, welding, chrome plating, and more in Oakville, GTA.">
+    <meta name="keywords" content="cylindrical grinding Oakville, centerless grinding, surface grinding, welding, chrome plating, repair">
     <meta name="author" content="Jameson Machining Inc.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Tawk.to Script -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6864f6dacfa578190992a097/1iv568h37';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #1a1a1a;
+            color: #ffffff;
             margin: 0;
-            text-align: center;
+            line-height: 1.6;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0055a5;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .nav a {
+            color: #ffffff;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ffcc00;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://images.pexels.com/photos/162568/pexels-photo-162568.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center/cover;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hero-content {
+            background: rgba(0, 85, 165, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
         }
         h1 {
-            color: #0055a5;
-            font-size: 2.5em;
+            font-size: 3rem;
+            margin: 0;
+            color: #ffffff;
         }
         p {
-            font-size: 1.1em;
-            line-height: 1.5;
+            font-size: 1.2rem;
+            margin: 1rem 0;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            loading: lazy;
-        }
-        .cta-button, .contact-button {
-            background-color: #0055a5;
-            color: #fff;
-            padding: 12px 20px;
+        .cta-button {
+            background-color: #ffcc00;
+            color: #1a1a1a;
+            padding: 1rem 2rem;
             border: none;
             border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 1.1rem;
+            font-weight: 700;
             text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+            transition: transform 0.3s, background-color 0.3s;
         }
-        .cta-button:hover, .contact-button:hover {
-            background-color: #003d7a;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-            transform: scale(1.05);
+        .cta-button:hover {
+            transform: scale(1.1);
+            background-color: #e6b800;
         }
-        nav {
-            margin: 20px 0;
+        .section {
+            padding: 4rem 2rem;
+            background: #ffffff;
+            color: #1a1a1a;
+            text-align: center;
         }
-        nav a {
-            margin: 0 15px;
+        .section h2 {
             color: #0055a5;
-            text-decoration: none;
-            font-weight: bold;
+            font-size: 2.5rem;
         }
-        nav a:hover {
-            text-decoration: underline;
+        .section p {
+            max-width: 600px;
+            margin: 1rem auto;
         }
-        .form-container {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .service-item {
+            background: #f5f5f5;
+            padding: 1rem;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            transition: transform 0.3s;
         }
-        .form-container input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .form-container input:focus {
-            border-color: #0055a5;
-            outline: none;
+        .service-item:hover {
+            transform: translateY(-5px);
         }
         footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
+            background: #0055a5;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="quote.html">Quote Tool</a>
-        </nav>
-        <h1>Jameson Machining Inc.</h1>
-        <p>We are a young, dedicated team committed to preserving the art of precision grinding for Canada’s future. Based in Oakville, GTA (1421 Speers Rd, Oakville, ON L6L2X5), we specialize in cylindrical and centerless grinding, offering custom parts starting at $3/part + GST. Contact us at 365-351-6656.</p>
-        <img src="machine.jpg" alt="Zocca RU2000/6 Cylindrical Grinder" width="400">
-        <p><a href="quote.html" class="cta-button">Get an Instant Quote</a></p>
-        <div class="form-container">
-            <h2>Book a Consultation</h2>
-            <p>Schedule a 30-minute consultation with us:</p>
-            <a href="https://calendly.com/lijujames28/30min" target="_blank" class="cta-button">Book Now</a>
-        </div>
-        <div class="form-container">
-            <h2>Contact Us</h2>
-            <form action="https://formspree.io/f/mnnpzqrd" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="_replyto" placeholder="Your Email" required>
-                <input type="text" name="message" placeholder="Your Message">
-                <input type="hidden" name="_subject" value="Contact Form - Jameson Machining">
-                <button type="submit" class="contact-button">Send Message</button>
-            </form>
-        </div>
-        <footer>
-            <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | 365-351-6656 | info@jamesonsgrinding.com</p>
-        </footer>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="quote.html">Quote Tool</a>
+        <a href="about.html">About</a>
     </div>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Jameson Machining Inc.</h1>
+            <p>Precision machining experts in Oakville, GTA (1421 Speers Rd, Oakville, ON L6L2X5). Specializing in grinding, welding, and chrome plating since 2022.</p>
+            <a href="quote.html" class="cta-button">Get a Quote</a>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Our Core Services</h2>
+        <div class="services">
+            <div class="service-item">Cylindrical Grinding</div>
+            <div class="service-item">Centerless Grinding</div>
+            <div class="service-item">Surface Grinding</div>
+            <div class="service-item">Welding</div>
+            <div class="service-item">Chrome Plating & Repair</div>
+            <div class="service-item">Lead Coating</div>
+            <div class="service-item">Micro-Finishing</div>
+            <div class="service-item">Heat Treatment Facilitation</div>
+            <div class="service-item">Assembly</div>
+        </div>
+        <p>We handle every step from precision grinding to final assembly, ensuring top-quality results.</p>
+    </div>
+    <div class="section" style="background: #1a1a1a; color: #ffffff;">
+        <h2>Contact Us</h2>
+        <p><a href="mailto:info@jamesonsgrinding.com">info@jamesonsgrinding.com</a> | +1 365-351-6656</p>
+        <a href="https://calendly.com/lijujames28/30min" target="_blank" class="cta-button">Book a Consultation</a>
+    </div>
+    <footer>
+        <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | +1 365-351-6656 | info@jamesonsgrinding.com</p>
+    </footer>
+    <!-- Tawk.to Script is in head -->
 </body>
 </html>
