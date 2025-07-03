@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jameson Machining Inc. | Innovative Precision Machining</title>
-    <meta name="description" content="Jameson Machining Inc. delivers innovative precision grinding, welding, and chrome plating solutions in Oakville, GTA since 2022.">
+    <title>Jameson Machining Inc. | Precision Machining</title>
+    <meta name="description" content="Jameson Machining Inc. offers innovative precision grinding, welding, and chrome plating in Oakville, GTA since 2022.">
     <meta name="keywords" content="cylindrical grinding Oakville, centerless grinding, surface grinding, welding, chrome plating">
     <meta name="author" content="Jameson Machining Inc.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -50,15 +50,16 @@
             overflow: hidden;
         }
         .hero {
-            background: url('https://images.pexels.com/photos/162568/pexels-photo-162568.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center/cover;
-            animation: zoomIn 2s ease-out;
+            background: linear-gradient(45deg, #1a1a1a, #0055a5), url('https://images.pexels.com/photos/162568/pexels-photo-162568.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center/cover;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            animation: slideUp 1.5s ease-out;
         }
-        @keyframes zoomIn {
-            from { transform: scale(1.1); }
-            to { transform: scale(1); }
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         .hero-content {
-            background: rgba(0, 85, 165, 0.7);
+            background: rgba(26, 26, 26, 0.7);
             padding: 3rem;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -68,11 +69,10 @@
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 2px;
-            animation: slideIn 1s ease-out;
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            background: linear-gradient(90deg, #fff, #ffcc00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
         p {
             font-size: 1.3rem;
@@ -97,52 +97,40 @@
             box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
             background: #e6b800;
         }
-        .services {
+        .estimator {
             background: #fff;
             color: #1a1a1a;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
             padding: 2rem;
-            animation: fadeUp 1s ease-out;
-        }
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .service-item {
-            background: #f5f5f5;
-            padding: 1.5rem;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .service-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        .contact {
-            background: rgba(0, 85, 165, 0.9);
-        }
-        .contact-form {
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 85, 165, 0.5);
             max-width: 500px;
             margin: 0 auto;
-            padding: 2rem;
-            background: #fff;
-            color: #1a1a1a;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: popIn 1s ease-out;
         }
-        input {
+        @keyframes popIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .estimator label {
+            display: block;
+            margin: 1rem 0 0.5rem;
+            font-weight: 700;
+            color: #0055a5;
+        }
+        .estimator select, .estimator input {
             width: 100%;
-            padding: 1rem;
-            margin: 0.5rem 0;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1rem;
+            transition: border-color 0.3s;
         }
-        button {
+        .estimator select:focus, .estimator input:focus {
+            border-color: #0055a5;
+            outline: none;
+        }
+        .estimator button {
             background: #0055a5;
             color: #fff;
             padding: 1rem;
@@ -153,8 +141,18 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-        button:hover {
+        .estimator button:hover {
             background: #003d7a;
+        }
+        .result {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #ffcc00;
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         footer {
             background: #0055a5;
@@ -162,6 +160,18 @@
             text-align: center;
             padding: 1rem;
             width: 100%;
+        }
+        /* Geometric Background */
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 20%, rgba(0, 85, 165, 0.1) 20%) 0 0 / 30px 30px;
+            opacity: 0.3;
+            z-index: -1;
         }
     </style>
 </head>
@@ -174,12 +184,12 @@
     <div id="home" class="section hero">
         <div class="hero-content">
             <h1>Jameson Machining Inc.</h1>
-            <p>Revolutionizing precision machining in Oakville, GTA (1421 Speers Rd, Oakville, ON L6L2X5) with innovative grinding, welding, and chrome plating since 2022.</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <p>Redefining precision machining in Oakville, GTA (1421 Speers Rd, Oakville, ON L6L2X5) with cutting-edge grinding, welding, and chrome plating since 2022.</p>
+            <a href="#estimator" class="cta-button">Estimate Now</a>
         </div>
     </div>
-    <div id="services" class="section services">
-        <h2>Our Expertise</h2>
+    <div id="services" class="section">
+        <h2>Our Precision Services</h2>
         <div class="services-grid">
             <div class="service-item">Cylindrical Grinding</div>
             <div class="service-item">Centerless Grinding</div>
@@ -191,10 +201,35 @@
             <div class="service-item">Heat Treatment Facilitation</div>
             <div class="service-item">Assembly</div>
         </div>
-        <p>We deliver a seamless experience from precision machining to final assembly, breaking the mold of traditional manufacturing.</p>
+        <p>Experience a seamless, innovative process from design to delivery.</p>
+    </div>
+    <div id="estimator" class="section">
+        <h2>Live Cost Estimator</h2>
+        <div class="estimator">
+            <form id="estimate-form">
+                <label for="service-type">Service</label>
+                <select id="service-type">
+                    <option value="cylindrical">Cylindrical Grinding</option>
+                    <option value="centerless">Centerless Grinding</option>
+                    <option value="surface">Surface Grinding</option>
+                    <option value="welding">Welding</option>
+                    <option value="chrome">Chrome Plating & Repair</option>
+                    <option value="lead">Lead Coating</option>
+                    <option value="micro">Micro-Finishing</option>
+                    <option value="heat">Heat Treatment Facilitation</option>
+                    <option value="assembly">Assembly</option>
+                </select>
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" min="1" placeholder="e.g., 100" required>
+                <label for="material">Material</label>
+                <input type="text" id="material" placeholder="e.g., Steel">
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="result" class="result"></div>
+        </div>
     </div>
     <div id="contact" class="section contact">
-        <h2>Let’s Build Together</h2>
+        <h2>Connect With Us</h2>
         <div class="contact-form">
             <form action="https://formspree.io/f/mnnpzqrd" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -211,5 +246,21 @@
         <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | +1 365-351-6656 | info@jamesonsgrinding.com</p>
     </footer>
     <!-- Tawk.to Script is in head -->
+    <script>
+        document.getElementById('estimate-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const serviceType = document.getElementById('service-type').value;
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            const material = document.getElementById('material').value || 'material';
+            const baseCosts = {
+                cylindrical: 5, centerless: 5, surface: 6, welding: 10,
+                chrome: 20, lead: 25, micro: 8, heat: 15, assembly: 10
+            };
+            const baseCost = baseCosts[serviceType] || 5;
+            const gstRate = 0.13;
+            const totalCost = (baseCost * quantity * (1 + gstRate)).toFixed(2);
+            document.getElementById('result').textContent = `Estimated Cost: $${totalCost} CAD (includes 13% GST) for ${quantity} ${serviceType} on ${material}`;
+        });
+    </script>
 </body>
 </html>
