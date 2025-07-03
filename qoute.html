@@ -4,64 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Tool - Jameson Machining Inc.</title>
-    <meta name="description" content="Instant quotes for cylindrical and centerless grinding in Oakville, GTA, with 13% GST included.">
-    <meta name="keywords" content="grinding quote Oakville, instant quote grinding, precision grinding GTA, Canadian manufacturing">
+    <meta name="description" content="Get instant quotes for grinding, welding, chrome plating, and more in Oakville, GTA with 13% GST included.">
+    <meta name="keywords" content="grinding quote Oakville, welding quote, chrome plating quote">
+    <meta name="author" content="Jameson Machining Inc.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Tawk.to Script -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6864f6dacfa578190992a097/1iv568h37';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #1a1a1a;
+            color: #ffffff;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0055a5;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .nav a {
+            color: #ffffff;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ffcc00;
+        }
         .quote-container {
             max-width: 500px;
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
+            margin: 2rem;
+            padding: 2rem;
+            background: #ffffff;
+            color: #1a1a1a;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in;
+            box-shadow: 0 0 15px rgba(0, 85, 165, 0.5);
+            animation: slideUp 1s ease-in;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         h2 {
-            text-align: center;
             color: #0055a5;
-            margin-bottom: 20px;
-            font-size: 2em;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
         }
         label {
             display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
+            margin: 1rem 0 0.5rem;
+            font-weight: 700;
         }
         input, select {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 16px;
-            box-sizing: border-box;
+            font-size: 1rem;
             transition: border-color 0.3s;
         }
         input:focus, select:focus {
@@ -70,69 +78,64 @@
         }
         button {
             background-color: #0055a5;
-            color: #fff;
-            padding: 12px 20px;
+            color: #ffffff;
+            padding: 1rem;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+            font-size: 1.1rem;
+            font-weight: 700;
             width: 100%;
+            transition: background-color 0.3s, transform 0.3s;
         }
         button:hover {
             background-color: #003d7a;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
             transform: scale(1.05);
         }
         .result {
-            margin-top: 20px;
-            font-size: 1.2em;
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
             color: #0055a5;
             text-align: center;
             display: none;
-            animation: slideIn 0.5s ease-in;
+            animation: fadeIn 0.5s ease-in;
         }
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-20px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        nav {
-            position: absolute;
-            top: 20px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #0055a5;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         footer {
-            position: absolute;
-            bottom: 20px;
+            background: #0055a5;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-            font-size: 0.9em;
-            color: #666;
         }
     </style>
 </head>
 <body>
-    <nav>
+    <div class="nav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="quote.html">Quote Tool</a>
-    </nav>
+        <a href="about.html">About</a>
+    </div>
     <div class="quote-container">
-        <h2>Instant Grinding Quote</h2>
+        <h2>Instant Service Quote</h2>
         <form id="quote-form" action="https://formspree.io/f/mnnpzqrd" method="POST">
-            <label for="part-type">Grinding Type</label>
-            <select id="part-type" name="part-type">
+            <label for="service-type">Service Type</label>
+            <select id="service-type" name="service-type">
                 <option value="cylindrical">Cylindrical Grinding</option>
                 <option value="centerless">Centerless Grinding</option>
+                <option value="surface">Surface Grinding</option>
+                <option value="welding">Welding</option>
+                <option value="chrome">Chrome Plating & Repair</option>
+                <option value="lead">Lead Coating</option>
+                <option value="micro">Micro-Finishing</option>
+                <option value="heat">Heat Treatment Facilitation</option>
+                <option value="assembly">Assembly</option>
             </select>
             <label for="material">Material</label>
             <input type="text" id="material" name="material" placeholder="e.g., Steel">
@@ -146,21 +149,24 @@
         <div class="result" id="result">Estimated Cost: Calculating...</div>
     </div>
     <footer>
-        <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | 365-351-6656 | info@jamesonsgrinding.com</p>
+        <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | +1 365-351-6656 | info@jamesonsgrinding.com</p>
     </footer>
     <script>
         document.getElementById('quote-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const partType = document.getElementById('part-type').value;
+            const serviceType = document.getElementById('service-type').value;
             const material = document.getElementById('material').value || 'material';
             const quantity = parseInt(document.getElementById('quantity').value) || 1;
-            const baseCost = 3; // Base cost for grinding in CAD
-            const gstRate = 0.13; // 13% GST for Ontario
+            const baseCosts = {
+                cylindrical: 5, centerless: 5, surface: 6, welding: 10,
+                chrome: 20, lead: 25, micro: 8, heat: 15, assembly: 10
+            };
+            const baseCost = baseCosts[serviceType] || 5;
+            const gstRate = 0.13;
             const totalCost = (baseCost * quantity * (1 + gstRate)).toFixed(2);
             const result = document.getElementById('result');
-            result.textContent = `Estimated Cost: $${totalCost} CAD (includes 13% GST) for ${quantity} ${partType} parts in ${material}`;
+            result.textContent = `Estimated Cost: $${totalCost} CAD (includes 13% GST) for ${quantity} ${serviceType} services on ${material}`;
             result.style.display = 'block';
-            // Submit form data to Formspree
             this.submit();
         });
     </script>
