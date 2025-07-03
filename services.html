@@ -4,41 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Jameson Machining Inc.</title>
-    <meta name="description" content="Cylindrical and centerless grinding services in Oakville, GTA. Precision grinding solutions for Canada’s manufacturing needs.">
-    <meta name="keywords" content="cylindrical grinding Oakville, centerless grinding, grinding services GTA, precision grinding, Canadian manufacturing">
+    <meta name="description" content="Detailed services including cylindrical, centerless, and surface grinding, welding, chrome plating, and more in Oakville, GTA.">
+    <meta name="keywords" content="cylindrical grinding, centerless grinding, surface grinding, welding, chrome plating, repair">
+    <meta name="author" content="Jameson Machining Inc.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Tawk.to Script -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6864f6dacfa578190992a097/1iv568h37';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #1a1a1a;
+            color: #ffffff;
             margin: 0;
+            line-height: 1.6;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0055a5;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .nav a {
+            color: #ffffff;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ffcc00;
+        }
+        .section {
+            padding: 4rem 2rem;
+            background: #ffffff;
+            color: #1a1a1a;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        h1 {
+        .section h2 {
             color: #0055a5;
-            font-size: 2.5em;
+            font-size: 2.5rem;
         }
-        p {
-            font-size: 1.1em;
-            line-height: 1.5;
+        .section p {
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+        .service-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .service-item {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
         }
         img {
             max-width: 100%;
@@ -46,58 +71,68 @@
             border-radius: 10px;
             loading: lazy;
         }
-        .cta-button {
-            background-color: #0055a5;
-            color: #fff;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
-        }
-        .cta-button:hover {
-            background-color: #003d7a;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-            transform: scale(1.05);
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #0055a5;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
         footer {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
+            background: #0055a5;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="quote.html">Quote Tool</a>
-        </nav>
-        <h1>Our Services</h1>
-        <p>We are dedicated to preserving precision grinding for Canada’s future. Our services include:<br>
-           <strong>Cylindrical Grinding:</strong> High-precision grinding for steel parts, with tolerances to 0.0001 inches.<br>
-           <strong>Centerless Grinding:</strong> Efficient high-volume production, starting at $3/part + GST.</p>
-        <img src="part.jpg" alt="Jones & Shipman 1310 Precision Part" width="400">
-        <p><a href="quote.html" class="cta-button">Get a Quote</a></p>
-        <footer>
-            <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | 365-351-6656 | info@jamesonsgrinding.com</p>
-        </footer>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="quote.html">Quote Tool</a>
+        <a href="about.html">About</a>
     </div>
+    <div class="section">
+        <h2>Our Services</h2>
+        <div class="service-details">
+            <div class="service-item">
+                <h3>Cylindrical Grinding</h3>
+                <p>High-precision grinding for cylindrical parts, ensuring tight tolerances.</p>
+            </div>
+            <div class="service-item">
+                <h3>Centerless Grinding</h3>
+                <p>Efficient production of cylindrical components in high volumes.</p>
+            </div>
+            <div class="service-item">
+                <h3>Surface Grinding</h3>
+                <p>Precision finishing for flat and complex surfaces.</p>
+            </div>
+            <div class="service-item">
+                <h3>Welding</h3>
+                <p>Expert welding for assembly and repair, delivering strong joints.</p>
+            </div>
+            <div class="service-item">
+                <h3>Chrome Plating & Repair</h3>
+                <p>Durable plating with post-chrome repair services for longevity.</p>
+            </div>
+            <div class="service-item">
+                <h3>Lead Coating</h3>
+                <p>Specialized lead applications for industrial components.</p>
+            </div>
+            <div class="service-item">
+                <h3>Micro-Finishing</h3>
+                <p>Advanced micro-finishing for superior surface quality.</p>
+            </div>
+            <div class="service-item">
+                <h3>Heat Treatment Facilitation</h3>
+                <p>Facilitating heat treatment to enhance material properties.</p>
+            </div>
+            <div class="service-item">
+                <h3>Assembly</h3>
+                <p>Full or partial assembly of machined components.</p>
+            </div>
+        </div>
+        <img src="https://images.pexels.com/photos/2589751/pexels-photo-2589751.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Machining Workshop" width="800">
+    </div>
+    <footer>
+        <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | +1 365-351-6656 | info@jamesonsgrinding.com</p>
+    </footer>
 </body>
 </html>
