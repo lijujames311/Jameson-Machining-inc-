@@ -3,139 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jameson Machining Inc. | Precision Machining</title>
-    <meta name="description" content="Jameson Machining Inc. offers precision cylindrical, centerless, and surface grinding, welding, chrome plating, and more in Oakville, GTA.">
-    <meta name="keywords" content="cylindrical grinding Oakville, centerless grinding, surface grinding, welding, chrome plating, repair">
+    <title>Jameson Machining Inc. | Innovative Precision Machining</title>
+    <meta name="description" content="Jameson Machining Inc. delivers innovative precision grinding, welding, and chrome plating solutions in Oakville, GTA since 2022.">
+    <meta name="keywords" content="cylindrical grinding Oakville, centerless grinding, surface grinding, welding, chrome plating">
     <meta name="author" content="Jameson Machining Inc.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background: #1a1a1a;
+            color: #fff;
             margin: 0;
+            overflow-x: hidden;
             line-height: 1.6;
         }
         .nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: #0055a5;
+            background: rgba(0, 85, 165, 0.9);
             padding: 1rem;
             display: flex;
             justify-content: center;
             z-index: 1000;
+            backdrop-filter: blur(5px);
         }
         .nav a {
-            color: #ffffff;
+            color: #fff;
             margin: 0 1.5rem;
             text-decoration: none;
             font-weight: 700;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
         .nav a:hover {
             color: #ffcc00;
-        }
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: url('https://images.pexels.com/photos/162568/pexels-photo-162568.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center/cover;
-            animation: fadeIn 1s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .hero-content {
-            background: rgba(0, 85, 165, 0.8);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            color: #ffffff;
-        }
-        p {
-            font-size: 1.2rem;
-            margin: 1rem 0;
-        }
-        .cta-button {
-            background-color: #ffcc00;
-            color: #1a1a1a;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-        .cta-button:hover {
             transform: scale(1.1);
-            background-color: #e6b800;
         }
         .section {
-            padding: 4rem 2rem;
-            background: #ffffff;
-            color: #1a1a1a;
+            padding: 6rem 2rem;
             text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
         }
-        .section h2 {
-            color: #0055a5;
-            font-size: 2.5rem;
+        .hero {
+            background: url('https://images.pexels.com/photos/162568/pexels-photo-162568.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center/cover;
+            animation: zoomIn 2s ease-out;
         }
-        .section p {
-            max-width: 600px;
-            margin: 1rem auto;
+        @keyframes zoomIn {
+            from { transform: scale(1.1); }
+            to { transform: scale(1); }
+        }
+        .hero-content {
+            background: rgba(0, 85, 165, 0.7);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        p {
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            background: #ffcc00;
+            color: #1a1a1a;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.4s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
+            background: #e6b800;
         }
         .services {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            background: #fff;
+            color: #1a1a1a;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            padding: 2rem;
+            animation: fadeUp 1s ease-out;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .service-item {
             background: #f5f5f5;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 10px;
-            width: 200px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .service-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .contact {
+            background: rgba(0, 85, 165, 0.9);
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #fff;
+            color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        input {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background: #0055a5;
+            color: #fff;
+            padding: 1rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #003d7a;
         }
         footer {
             background: #0055a5;
-            color: #ffffff;
+            color: #fff;
             text-align: center;
             padding: 1rem;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="quote.html">Quote Tool</a>
-        <a href="about.html">About</a>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </div>
-    <div class="hero">
+    <div id="home" class="section hero">
         <div class="hero-content">
             <h1>Jameson Machining Inc.</h1>
-            <p>Precision machining experts in Oakville, GTA (1421 Speers Rd, Oakville, ON L6L2X5). Specializing in grinding, welding, and chrome plating since 2022.</p>
-            <a href="quote.html" class="cta-button">Get a Quote</a>
+            <p>Revolutionizing precision machining in Oakville, GTA (1421 Speers Rd, Oakville, ON L6L2X5) with innovative grinding, welding, and chrome plating since 2022.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
         </div>
     </div>
-    <div class="section">
-        <h2>Our Core Services</h2>
-        <div class="services">
+    <div id="services" class="section services">
+        <h2>Our Expertise</h2>
+        <div class="services-grid">
             <div class="service-item">Cylindrical Grinding</div>
             <div class="service-item">Centerless Grinding</div>
             <div class="service-item">Surface Grinding</div>
@@ -146,12 +191,21 @@
             <div class="service-item">Heat Treatment Facilitation</div>
             <div class="service-item">Assembly</div>
         </div>
-        <p>We handle every step from precision grinding to final assembly, ensuring top-quality results.</p>
+        <p>We deliver a seamless experience from precision machining to final assembly, breaking the mold of traditional manufacturing.</p>
     </div>
-    <div class="section" style="background: #1a1a1a; color: #ffffff;">
-        <h2>Contact Us</h2>
-        <p><a href="mailto:info@jamesonsgrinding.com">info@jamesonsgrinding.com</a> | +1 365-351-6656</p>
-        <a href="https://calendly.com/lijujames28/30min" target="_blank" class="cta-button">Book a Consultation</a>
+    <div id="contact" class="section contact">
+        <h2>Let’s Build Together</h2>
+        <div class="contact-form">
+            <form action="https://formspree.io/f/mnnpzqrd" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <input type="text" name="message" placeholder="Your Message">
+                <input type="hidden" name="_subject" value="Inquiry - Jameson Machining">
+                <button type="submit">Send Message</button>
+            </form>
+            <p><a href="mailto:info@jamesonsgrinding.com" style="color: #ffcc00;">info@jamesonsgrinding.com</a> | +1 365-351-6656</p>
+            <a href="https://calendly.com/lijujames28/30min" target="_blank" class="cta-button">Book a Consultation</a>
+        </div>
     </div>
     <footer>
         <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | +1 365-351-6656 | info@jamesonsgrinding.com</p>
