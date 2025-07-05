@@ -1,266 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/LocalBusiness">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jameson Machining Inc. | Precision Machining</title>
-    <meta name="description" content="Jameson Machining Inc. offers innovative precision grinding, welding, and chrome plating in Oakville, GTA since 2022.">
-    <meta name="keywords" content="cylindrical grinding Oakville, centerless grinding, surface grinding, welding, chrome plating">
-    <meta name="author" content="Jameson Machining Inc.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #1a1a1a;
-            color: #fff;
-            margin: 0;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-        .nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 85, 165, 0.9);
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
-        }
-        .nav a {
-            color: #fff;
-            margin: 0 1.5rem;
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s, transform 0.3s;
-        }
-        .nav a:hover {
-            color: #ffcc00;
-            transform: scale(1.1);
-        }
-        .section {
-            padding: 6rem 2rem;
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero {
-            background: linear-gradient(45deg, #1a1a1a, #0055a5), url('https://images.pexels.com/photos/162568/pexels-photo-162568.jpeg?auto=compress&cs=tinysrgb&w=1920') no-repeat center/cover;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            animation: slideUp 1.5s ease-out;
-        }
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .hero-content {
-            background: rgba(26, 26, 26, 0.7);
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-        h1 {
-            font-size: 4rem;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: linear-gradient(90deg, #fff, #ffcc00);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        p {
-            font-size: 1.3rem;
-            margin: 1.5rem 0;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .cta-button {
-            background: #ffcc00;
-            color: #1a1a1a;
-            padding: 1.2rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.4s ease;
-        }
-        .cta-button:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
-            background: #e6b800;
-        }
-        .estimator {
-            background: #fff;
-            color: #1a1a1a;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 85, 165, 0.5);
-            max-width: 500px;
-            margin: 0 auto;
-            animation: popIn 1s ease-out;
-        }
-        @keyframes popIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        .estimator label {
-            display: block;
-            margin: 1rem 0 0.5rem;
-            font-weight: 700;
-            color: #0055a5;
-        }
-        .estimator select, .estimator input {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        .estimator select:focus, .estimator input:focus {
-            border-color: #0055a5;
-            outline: none;
-        }
-        .estimator button {
-            background: #0055a5;
-            color: #fff;
-            padding: 1rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .estimator button:hover {
-            background: #003d7a;
-        }
-        .result {
-            margin-top: 1.5rem;
-            font-size: 1.2rem;
-            color: #ffcc00;
-            animation: fadeIn 0.5s ease-in;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        footer {
-            background: #0055a5;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            width: 100%;
-        }
-        /* Geometric Background */
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, transparent 20%, rgba(0, 85, 165, 0.1) 20%) 0 0 / 30px 30px;
-            opacity: 0.3;
-            z-index: -1;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jameson's Grinding – Precision Grinding in GTA</title>
+  <meta name="description" content="Jameson's Grinding: young Canadian precision grinding shop offering cylindrical, centerless, and surface grinding, microfinishing & TIG welding in Oakville & GTA." />
+  <meta name="keywords" content="precision grinding, cylindrical grinding, centerless, surface grinding, microfinishing, TIG welding, Oakville, Toronto, Mississauga, Brampton, GTA" />
+  <link rel="canonical" href="https://www.jamesonsgrinding.com/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Jameson's Grinding – Precision Grinding in GTA">
+  <meta property="og:description" content="Affordable cylindrical, centerless & surface grinding in Oakville, microfinishing, TIG welding. Serving entire GTA.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jamesonsgrinding.com/">
+  <meta property="og:site_name" content="Jameson's Grinding">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/png;base64,iVBORw0...AB" type="image/png">
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body{margin:0;font-family:'Inter',sans-serif;line-height:1.6;color:#222;background:#f9f9f9}
+    header,footer{background:#003366;color:#fff;text-align:center;padding:1.5em}
+    nav{display:flex;justify-content:center;flex-wrap:wrap;background:#002244;padding:.75em}
+    nav a{color:#fff;text-decoration:none;margin:.5em 1em;font-weight:600}
+    section{padding:2em 1em;max-width:900px;margin:auto}
+    h2{color:#003366;margin-bottom:1em}
+    ul{list-style:none;padding:0}
+    li{margin-bottom:1em}
+    form input,select,textarea,button{width:100%;padding:.6em;margin:.6em 0;border:1px solid #ccc;border-radius:4px}
+    button{background:#003366;color:#fff;border:none;cursor:pointer;font-weight:600}
+    @media(max-width:600px){nav a{margin:.5em 0}}
+  </style>
 </head>
-<body>
-    <div class="nav">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </div>
-    <div id="home" class="section hero">
-        <div class="hero-content">
-            <h1>Jameson Machining Inc.</h1>
-            <p>Redefining precision machining in Oakville, GTA (1421 Speers Rd, Oakville, ON L6L2X5) with cutting-edge grinding, welding, and chrome plating since 2022.</p>
-            <a href="#estimator" class="cta-button">Estimate Now</a>
-        </div>
-    </div>
-    <div id="services" class="section">
-        <h2>Our Precision Services</h2>
-        <div class="services-grid">
-            <div class="service-item">Cylindrical Grinding</div>
-            <div class="service-item">Centerless Grinding</div>
-            <div class="service-item">Surface Grinding</div>
-            <div class="service-item">Welding</div>
-            <div class="service-item">Chrome Plating & Repair</div>
-            <div class="service-item">Lead Coating</div>
-            <div class="service-item">Micro-Finishing</div>
-            <div class="service-item">Heat Treatment Facilitation</div>
-            <div class="service-item">Assembly</div>
-        </div>
-        <p>Experience a seamless, innovative process from design to delivery.</p>
-    </div>
-    <div id="estimator" class="section">
-        <h2>Live Cost Estimator</h2>
-        <div class="estimator">
-            <form id="estimate-form">
-                <label for="service-type">Service</label>
-                <select id="service-type">
-                    <option value="cylindrical">Cylindrical Grinding</option>
-                    <option value="centerless">Centerless Grinding</option>
-                    <option value="surface">Surface Grinding</option>
-                    <option value="welding">Welding</option>
-                    <option value="chrome">Chrome Plating & Repair</option>
-                    <option value="lead">Lead Coating</option>
-                    <option value="micro">Micro-Finishing</option>
-                    <option value="heat">Heat Treatment Facilitation</option>
-                    <option value="assembly">Assembly</option>
-                </select>
-                <label for="quantity">Quantity</label>
-                <input type="number" id="quantity" min="1" placeholder="e.g., 100" required>
-                <label for="material">Material</label>
-                <input type="text" id="material" placeholder="e.g., Steel">
-                <button type="submit">Calculate</button>
-            </form>
-            <div id="result" class="result"></div>
-        </div>
-    </div>
-    <div id="contact" class="section contact">
-        <h2>Connect With Us</h2>
-        <div class="contact-form">
-            <form action="https://formspree.io/f/mnnpzqrd" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="_replyto" placeholder="Your Email" required>
-                <input type="text" name="message" placeholder="Your Message">
-                <input type="hidden" name="_subject" value="Inquiry - Jameson Machining">
-                <button type="submit">Send Message</button>
-            </form>
-            <p><a href="mailto:info@jamesonsgrinding.com" style="color: #ffcc00;">info@jamesonsgrinding.com</a> | +1 365-351-6656</p>
-            <a href="https://calendly.com/lijujames28/30min" target="_blank" class="cta-button">Book a Consultation</a>
-        </div>
-    </div>
-    <footer>
-        <p>Jameson Machining Inc. | 1421 Speers Rd, Oakville, ON L6L2X5 | +1 365-351-6656 | info@jamesonsgrinding.com</p>
-    </footer>
-    <!-- Tawk.to Script is in head -->
+<body itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+  <header>
+    <h1 itemprop="name">Jameson's Grinding</h1>
+    <p itemprop="description">Affordable precision grinding services in Oakville & GTA</p>
+    <meta itemprop="telephone" content="+1 365-351-6656">
+    <meta itemprop="email" content="info@jamesonsgrinding.com">
+    <meta itemprop="addressLocality" content="Oakville">
+    <meta itemprop="addressRegion" content="ON">
+    <meta itemprop="addressCountry" content="CA">
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="#services">Services</a>
+    <a href="#estimator">Estimator</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Cylindrical Grinding</strong> – ZOCCA RU2000 & John Shipman 1310 (up to 80″ shafts).</li>
+      <li><strong>Surface Grinding</strong> – Chevalier FSG-3A-1020 & TOS BPH-300 for high-accuracy flat work.</li>
+      <li><strong>Centerless Grinding</strong> – DEETRU & GCX with coolant, ideal for volume runs.</li>
+      <li><strong>TIG Welding + Grinding</strong> – External TIG repair finished in-house.</li>
+      <li><strong>Chrome Plating (Pre/Post)</strong> – Grinding for external plating partner.</li>
+      <li><strong>Microfinishing</strong> – 45µm Premium or 45µm+9µm Ultra finishes.</li>
+    </ul>
+  </section>
+
+  <section id="estimator">
+    <h2>Request a Rough Estimate</h2>
+    <form id="estimateForm">
+      <select required><option value="">Service Type...</option><option>Cylindrical Grinding</option><option>Surface Grinding</option><option>Centerless Grinding</option><option>TIG + Grinding</option><option>Chrome Plating</option></select>
+      <input type="text" placeholder="Material (e.g., D2, A2)" required>
+      <input type="number" placeholder="Quantity" required>
+      <input type="number" placeholder="Length (in)">
+      <input type="number" placeholder="Diameter (in)">
+      <select><option value="none">No microfinish</option><option value="premium">Premium (45µm)</option><option value="ultra">Ultra (45µm+9µm)</option></select>
+      <textarea placeholder="Additional notes..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
     <script>
-        document.getElementById('estimate-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const serviceType = document.getElementById('service-type').value;
-            const quantity = parseInt(document.getElementById('quantity').value) || 1;
-            const material = document.getElementById('material').value || 'material';
-            const baseCosts = {
-                cylindrical: 5, centerless: 5, surface: 6, welding: 10,
-                chrome: 20, lead: 25, micro: 8, heat: 15, assembly: 10
-            };
-            const baseCost = baseCosts[serviceType] || 5;
-            const gstRate = 0.13;
-            const totalCost = (baseCost * quantity * (1 + gstRate)).toFixed(2);
-            document.getElementById('result').textContent = `Estimated Cost: $${totalCost} CAD (includes 13% GST) for ${quantity} ${serviceType} on ${material}`;
-        });
+      document.getElementById('estimateForm').addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Estimate received! We’ll review & reply soon.');
+        e.target.reset();
+      });
     </script>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <ul>
+      <li><strong>Appointments only?</strong> Yes—book via form or Calendly.</li>
+      <li><strong>Service area?</strong> Oakville, Mississauga, Brampton, Toronto, Burlington, Hamilton, Kitchener, Barrie, Oshawa, Etobicoke.</li>
+      <li><strong>Microfinishing standalone?</strong> Offered only post-grind.</li>
+      <li><strong>Getting a quote?</strong> Use estimator or contact form—final pricing after review.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mnnpzqrd" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>📧 <a href="mailto:info@jamesonsgrinding.com">info@jamesonsgrinding.com</a></p>
+    <p>📅 <a href="https://calendly.com/lijujames28/30min" target="_blank">Book Appointment</a></p>
+    <p>📍 Oakville, ON — <a href="https://maps.app.goo.gl/3tGunFp8dypMP7zL7" target="_blank">View Map</a></p>
+    <iframe src="https://maps.google.com/maps?q=Oakville%2C%20ON&output=embed" width="100%" height="280" style="border:0;" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 Jameson's Grinding | Young Canadian Shop Supporting Manufacturing
+  </footer>
+
+  <!-- Live Chat -->
+  <script>
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement('script'),s0=document.getElementsByTagName('script')[0];
+      s1.async=true; s1.src='https://embed.tawk.to/6864f6dacfa578190992a097/1iv568h37';
+      s1.charset='UTF-8'; s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+  <!-- robots.txt embedded -->
+  <script type="application/robots-txt">
+User-agent: *
+Allow: /
+Sitemap: https://www.jamesonsgrinding.com/sitemap.xml
+  </script>
+
+  <!-- sitemap embedded -->
+  <script id="sitemap" type="application/xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.jamesonsgrinding.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.jamesonsgrinding.com/#services</loc><priority>0.8</priority></url>
+  <url><loc>https://www.jamesonsgrinding.com/#estimator</loc><priority>0.8</priority></url>
+  <url><loc>https://www.jamesonsgrinding.com/#faq</loc><priority>0.64</priority></url>
+  <url><loc>https://www.jamesonsgrinding.com/#contact</loc><priority>0.64</priority></url>
+</urlset>
+  </script>
+
 </body>
 </html>
