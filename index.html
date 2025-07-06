@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jameson's Grinding | Precision Grinding | Oakville</title>
+    <title>Jameson's Grinding | Precision Grinding | Oakville, ON</title>
     <meta name="description" content="Fast, precise grinding services for professionals. Get instant estimates and book appointments online.">
     
     <!-- Font Awesome -->
@@ -11,6 +11,15 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-488024804"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-488024804');
+    </script>
     
     <style>
         :root {
@@ -32,7 +41,7 @@
         
         body {
             font-family: 'Roboto', sans-serif;
-            line-height: 1.5;
+            line-height: 1.6;
             color: var(--dark);
             background-color: var(--light-bg);
             overflow-x: hidden;
@@ -88,7 +97,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 1rem;
+            gap: 1.5rem;
         }
         
         nav a {
@@ -98,10 +107,26 @@
             padding: 0.5rem;
             transition: var(--transition);
             font-size: 0.95rem;
+            position: relative;
         }
         
         nav a:hover {
             color: var(--accent);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
         }
         
         .header-actions {
@@ -140,13 +165,14 @@
         .appointment-btn:hover {
             background-color: #e68a00;
             transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
         /* Hero Section */
         .hero {
             background: linear-gradient(105deg, rgba(13,27,42,0.92), rgba(13,27,42,0.88)), url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3') center/cover;
             color: var(--light);
-            padding: 4rem 0;
+            padding: 5rem 0;
             text-align: center;
         }
         
@@ -156,24 +182,26 @@
         }
         
         .hero h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
             opacity: 0.92;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
         
         .hero-btns {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
         
@@ -181,7 +209,7 @@
             display: inline-block;
             background-color: var(--accent);
             color: var(--primary);
-            padding: 0.9rem 1.8rem;
+            padding: 0.9rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
@@ -210,17 +238,17 @@
         
         /* Services */
         .section {
-            padding: 3.5rem 0;
+            padding: 4rem 0;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
         }
         
         .section-header h2 {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
             position: relative;
             display: inline-block;
         }
@@ -228,19 +256,26 @@
         .section-header h2:after {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
+            width: 70px;
+            height: 4px;
             background: var(--accent);
             border-radius: 2px;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: var(--gray);
         }
         
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.8rem;
+            gap: 2rem;
         }
         
         .service-card {
@@ -251,23 +286,28 @@
             transition: var(--transition);
             border: 1px solid #eee;
             text-align: center;
-            padding: 1.8rem 1.5rem;
+            padding: 2rem 1.5rem;
+            position: relative;
         }
         
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             box-shadow: 0 12px 25px rgba(0,0,0,0.12);
         }
         
         .service-icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--accent);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
         
         .service-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-content p {
+            color: var(--gray);
         }
         
         /* Calculator */
@@ -283,39 +323,39 @@
         .calculator-header {
             background: var(--primary);
             color: var(--light);
-            padding: 1.2rem 1.8rem;
+            padding: 1.5rem 2rem;
             text-align: center;
         }
         
         .calculator-content {
-            padding: 1.8rem;
+            padding: 2rem;
         }
         
         .form-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.2rem;
-            margin-bottom: 1.2rem;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
         
         .form-group {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             font-weight: 600;
             color: var(--primary);
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
         
         .form-control {
             width: 100%;
-            padding: 0.8rem 1rem;
+            padding: 0.9rem 1.2rem;
             border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 0.95rem;
+            border-radius: 8px;
+            font-size: 1rem;
             transition: var(--transition);
         }
         
@@ -329,131 +369,139 @@
             display: block;
             width: 100%;
             text-align: center;
-            margin-top: 1.2rem;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            padding: 1rem;
         }
         
         .quote-disclaimer {
             background: #e6f7ff;
-            border-left: 3px solid #1890ff;
-            padding: 1rem;
-            border-radius: 6px;
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
+            border-left: 4px solid #1890ff;
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-top: 1.8rem;
+            font-size: 0.95rem;
         }
         
         /* Combined Section */
         .combined-section {
             background: linear-gradient(135deg, var(--primary), #0c1a2c);
             color: var(--light);
-            padding: 3.5rem 0;
+            padding: 4rem 0;
         }
         
         .contact-booking-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1000px;
+            gap: 3rem;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
         .contact-info {
-            padding: 1.8rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
         }
         
         .contact-info h3 {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.2rem;
             border-bottom: 1px solid rgba(255,255,255,0.1);
             color: var(--light);
+            font-size: 1.8rem;
         }
         
         .contact-item {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 1.2rem;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
             align-items: flex-start;
         }
         
         .contact-icon {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: var(--accent);
-            min-width: 30px;
+            min-width: 40px;
+            padding-top: 5px;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+            color: var(--light);
+        }
+        
+        .contact-details p, .contact-details a {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-details a:hover {
+            color: var(--accent);
         }
         
         .booking-widget {
             background-color: var(--light);
             border-radius: 10px;
-            padding: 1.8rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 0;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
             color: var(--dark);
+            overflow: hidden;
         }
         
         .booking-widget h3 {
-            margin-bottom: 1.5rem;
-            color: var(--primary);
+            margin: 0;
+            padding: 1.5rem;
+            background: var(--primary);
+            color: var(--light);
             text-align: center;
-        }
-        
-        .booking-options {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .booking-option {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 1.2rem;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid #eee;
-            cursor: pointer;
-        }
-        
-        .booking-option:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-        }
-        
-        .booking-option i {
-            font-size: 1.8rem;
-            color: var(--accent);
-            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
         }
         
         /* Footer */
         footer {
             background-color: var(--dark);
             color: var(--light);
-            padding: 2.5rem 0 1.2rem;
+            padding: 3rem 0 1.5rem;
             position: relative;
             text-align: center;
         }
         
         .footer-content {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
         
         .footer-logo {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             color: var(--accent);
+        }
+        
+        .footer-tagline {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.8);
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
+            gap: 1.8rem;
+            margin: 2rem 0;
         }
         
         .footer-links a {
             color: #bbb;
             text-decoration: none;
             transition: var(--transition);
+            font-weight: 500;
+            font-size: 1.05rem;
         }
         
         .footer-links a:hover {
@@ -463,20 +511,21 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
+            gap: 1.2rem;
+            margin: 2rem 0;
         }
         
         .social-links a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: rgba(255,255,255,0.1);
             color: var(--light);
             transition: var(--transition);
+            font-size: 1.2rem;
         }
         
         .social-links a:hover {
@@ -486,40 +535,57 @@
         }
         
         .copyright {
-            padding-top: 1.5rem;
+            padding-top: 1.8rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: #aaa;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
         
-        /* Live Chat Widget */
-        .chat-widget {
+        /* Chat Widgets */
+        .chat-widgets {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
         
         .chat-button {
             background-color: var(--accent);
             color: var(--primary);
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             transition: var(--transition);
             animation: pulse 2s infinite;
         }
         
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            animation: pulse-green 2s infinite;
+        }
+        
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 rgba(255, 158, 27, 0.6); }
-            70% { box-shadow: 0 0 0 12px rgba(255, 158, 27, 0); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 158, 27, 0); }
             100% { box-shadow: 0 0 0 0 rgba(255, 158, 27, 0); }
+        }
+        
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
         
         .chat-button:hover {
@@ -528,6 +594,16 @@
         }
         
         /* Responsive */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section {
+                padding: 3.5rem 0;
+            }
+        }
+        
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -547,11 +623,15 @@
             }
             
             .hero {
-                padding: 3rem 0;
+                padding: 3.5rem 0;
             }
             
             .hero h2 {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
             }
             
             .hero-btns {
@@ -561,18 +641,60 @@
             
             .btn {
                 width: 100%;
-                max-width: 300px;
+                max-width: 320px;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-booking-grid {
+                gap: 2rem;
             }
         }
         
         @media (max-width: 480px) {
             .section {
-                padding: 2.5rem 0;
+                padding: 3rem 0;
             }
             
             .section-header h2 {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
+            
+            .chat-widgets {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .chat-button {
+                width: 55px;
+                height: 55px;
+                font-size: 1.4rem;
+            }
+        }
+        
+        /* Calendly Widget */
+        .calendly-container {
+            min-height: 600px;
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+        }
+        
+        /* Form Styles */
+        .success-message {
+            background: #e6ffed;
+            border-left: 4px solid #52c41a;
+            padding: 1.2rem;
+            border-radius: 8px;
+            margin-top: 1.8rem;
+            display: none;
+        }
+        
+        .success-message i {
+            color: #52c41a;
+            margin-right: 10px;
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -609,8 +731,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h2>Precision Grinding for Professionals</h2>
-            <p>Fast, accurate grinding services with instant estimates and online booking</p>
+            <h2>Precision Grinding Solutions for Industry Professionals</h2>
+            <p>Fast, accurate grinding services with instant estimates and convenient online booking</p>
             <div class="hero-btns">
                 <a href="#calculator" class="btn">Get Instant Estimate</a>
                 <a href="#booking" class="btn btn-outline">Book Appointment</a>
@@ -623,7 +745,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Our Services</h2>
-                <p>Specialized grinding for demanding applications</p>
+                <p>Specialized grinding solutions for demanding industrial applications</p>
             </div>
             
             <div class="services-grid">
@@ -633,7 +755,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Cylindrical Grinding</h3>
-                        <p>Precision shafts up to 80" long</p>
+                        <p>Precision shafts up to 80" long with tight tolerances</p>
                     </div>
                 </div>
                 
@@ -643,7 +765,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Surface Grinding</h3>
-                        <p>20" × 40" maximum capacity</p>
+                        <p>20" × 40" maximum capacity for flat surfaces</p>
                     </div>
                 </div>
                 
@@ -653,7 +775,7 @@
                     </div>
                     <div class="service-content">
                         <h3>Centerless Grinding</h3>
-                        <p>High-volume production solutions</p>
+                        <p>High-volume production solutions with consistent results</p>
                     </div>
                 </div>
             </div>
@@ -674,11 +796,11 @@
                 </div>
                 
                 <div class="calculator-content">
-                    <form>
+                    <form id="estimate-form" action="https://formspree.io/f/mnnpzqrd" method="POST">
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="serviceType">Service Type</label>
-                                <select id="serviceType" class="form-control" required>
+                                <select id="serviceType" class="form-control" name="serviceType" required>
                                     <option value="">Select Service</option>
                                     <option value="cylindrical">Cylindrical Grinding</option>
                                     <option value="surface">Surface Grinding</option>
@@ -688,11 +810,13 @@
                             
                             <div class="form-group">
                                 <label for="material">Material</label>
-                                <select id="material" class="form-control" required>
+                                <select id="material" class="form-control" name="material" required>
                                     <option value="">Select Material</option>
                                     <option value="mild_steel">Mild Steel</option>
                                     <option value="stainless">Stainless Steel</option>
                                     <option value="alloy">Alloy Steel</option>
+                                    <option value="titanium">Titanium</option>
+                                    <option value="aluminum">Aluminum</option>
                                 </select>
                             </div>
                         </div>
@@ -700,17 +824,45 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="quantity">Quantity</label>
-                                <input type="number" id="quantity" class="form-control" min="1" value="1" required>
+                                <input type="number" id="quantity" class="form-control" min="1" value="1" name="quantity" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="dimension">Key Dimension</label>
-                                <input type="text" id="dimension" class="form-control" placeholder="Diameter or length">
+                                <label for="dimension">Key Dimension (mm)</label>
+                                <input type="text" id="dimension" class="form-control" name="dimension" placeholder="Diameter or length" required>
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-block">Calculate Estimate</button>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" name="name" required>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" class="form-control" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details (Optional)</label>
+                            <textarea id="message" class="form-control" name="message" rows="4" placeholder="Describe your project requirements"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-block">Get Estimate</button>
                     </form>
+                    
+                    <div class="success-message" id="form-success">
+                        <i class="fas fa-check-circle"></i> 
+                        <strong>Thank you for your submission!</strong>
+                        <p>We'll review your project and send an estimate within 24 hours.</p>
+                    </div>
                     
                     <div class="quote-disclaimer">
                         <i class="fas fa-info-circle"></i> 
@@ -727,7 +879,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Contact & Booking</h2>
-                <p>Get in touch or book directly</p>
+                <p>Get in touch or book directly with us</p>
             </div>
             
             <div class="contact-booking-grid">
@@ -738,9 +890,9 @@
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div>
+                        <div class="contact-details">
                             <h4>Address</h4>
-                            <p>1421 Speer Road, Oakville, ON</p>
+                            <p>1421 Speer Road, Oakville, ON L6L 2X4</p>
                         </div>
                     </div>
                     
@@ -748,9 +900,9 @@
                         <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <div>
+                        <div class="contact-details">
                             <h4>Phone</h4>
-                            <p>(365) 351-6656</p>
+                            <p><a href="tel:+13653516656">(365) 351-6656</a></p>
                         </div>
                     </div>
                     
@@ -758,9 +910,9 @@
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <div>
+                        <div class="contact-details">
                             <h4>Email</h4>
-                            <p>info@jamesonsgrinding.com</p>
+                            <p><a href="mailto:info@jamesonsgrinding.com">info@jamesonsgrinding.com</a></p>
                         </div>
                     </div>
                     
@@ -768,33 +920,27 @@
                         <div class="contact-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <div>
+                        <div class="contact-details">
                             <h4>Hours</h4>
-                            <p>Mon-Fri: 8am - 5pm</p>
+                            <p>Mon-Fri: 8am - 5pm<br>Sat: By Appointment</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/message/VZVEKTV6TZWZJ1" target="_blank" style="color: #25D366; text-decoration: none;">Chat with us on WhatsApp</a></p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="booking-widget" id="booking">
-                    <h3>Book Appointment</h3>
-                    <div class="booking-options">
-                        <div class="booking-option">
-                            <i class="fas fa-calendar-day"></i>
-                            <h4>30-Minute Consultation</h4>
-                            <p>Discuss your project needs</p>
-                        </div>
-                        
-                        <div class="booking-option">
-                            <i class="fas fa-tools"></i>
-                            <h4>Shop Visit</h4>
-                            <p>Tour our facility</p>
-                        </div>
-                        
-                        <div class="booking-option">
-                            <i class="fas fa-truck"></i>
-                            <h4>Delivery Appointment</h4>
-                            <p>Schedule part delivery</p>
-                        </div>
+                    <h3>Book an Appointment</h3>
+                    <div class="calendly-container">
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/jamesonsgrinding/30min" style="min-width:320px;height:600px;"></div>
                     </div>
                 </div>
             </div>
@@ -806,46 +952,119 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Jameson's Grinding</div>
-                <p>Precision grinding services for Canadian manufacturers</p>
+                <div class="footer-tagline">Precision grinding services for Canadian manufacturers since 2010</div>
                 
                 <div class="footer-links">
                     <a href="#services">Services</a>
                     <a href="#calculator">Estimate</a>
                     <a href="#contact">Contact</a>
                     <a href="#booking">Booking</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
                 
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
                 
                 <div class="copyright">
-                    &copy; 2024 Jameson's Grinding. All rights reserved.
+                    &copy; 2024 Jameson's Grinding. All rights reserved.<br>
+                    Precision Grinding Services in Oakville, Ontario
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Live Chat Widget -->
-    <div class="chat-widget">
+    <!-- Chat Widgets -->
+    <div class="chat-widgets">
+        <a href="https://wa.me/message/VZVEKTV6TZWZJ1" target="_blank" class="chat-button whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+        </a>
         <div class="chat-button" id="chatButton">
             <i class="fas fa-comment-dots"></i>
         </div>
     </div>
 
+    <!-- Tawk.to Live Chat -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function(){
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/65ea0a5b8d261e1b5f6bd78e/1honlgq7p';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+    <!-- Calendly Widget -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    
     <script>
+        // Form submission handling
+        document.getElementById('estimate-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            if(!name || !email) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Formspree submission
+            const form = e.target;
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('form-success').style.display = 'block';
+                    form.reset();
+                    
+                    // Scroll to success message
+                    document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('There was a problem with your submission. Please try again.');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert('There was a problem with your submission. Please try again.');
+            });
+        });
+        
         // Chat button functionality
         document.getElementById('chatButton').addEventListener('click', function() {
-            alert("Our chat service will open shortly. For immediate assistance, call (365) 351-6656");
+            Tawk_API.toggle();
         });
-
-        // Booking options functionality
-        document.querySelectorAll('.booking-option').forEach(option => {
-            option.addEventListener('click', function() {
-                const service = this.querySelector('h4').textContent;
-                alert(`You've selected: ${service}. Our booking system will open shortly.`);
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
