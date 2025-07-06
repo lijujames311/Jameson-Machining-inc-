@@ -3,52 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jameson's Grinding | Future-Focused Precision Grinding | Oakville, ON</title>
-    <meta name="description" content="Young Canadian precision grinding shop supporting the future of Canadian manufacturing. Cylindrical, surface, centerless grinding in Oakville.">
-    
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Jameson's Grinding",
-      "image": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc",
-      "@id": "",
-      "url": "https://www.jamesonsgrinding.com/",
-      "telephone": "+1-365-351-6656",
-      "email": "info@jamesonsgrinding.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "1421 Speer Road",
-        "addressLocality": "Oakville",
-        "addressRegion": "ON",
-        "postalCode": "L6L 0B7",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 43.447436,
-        "longitude": -79.666672
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "17:00"
-      },
-      "sameAs": [
-        "https://www.facebook.com/jamesonsgrinding",
-        "https://www.linkedin.com/company/jamesonsgrinding"
-      ]
-    }
-    </script>
+    <title>Jameson's Grinding | Precision Grinding | Oakville</title>
+    <meta name="description" content="Fast, precise grinding services for professionals. Get instant estimates and book appointments online.">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -66,7 +22,6 @@
             --gray: #6c757d;
             --transition: all 0.3s ease;
             --shadow: 0 4px 12px rgba(0,0,0,0.1);
-            --section-spacing: 6rem;
         }
         
         * {
@@ -77,7 +32,7 @@
         
         body {
             font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
+            line-height: 1.5;
             color: var(--dark);
             background-color: var(--light-bg);
             overflow-x: hidden;
@@ -93,12 +48,13 @@
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 15px;
         }
         
         /* Header */
         header {
             background-color: var(--primary);
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -120,147 +76,126 @@
         }
         
         .logo h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--light);
         }
         
         .logo i {
             color: var(--accent);
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 1rem;
         }
         
         nav a {
             color: var(--light);
             text-decoration: none;
             font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+            padding: 0.5rem;
             transition: var(--transition);
-            position: relative;
+            font-size: 0.95rem;
         }
         
-        nav a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: var(--transition);
+        nav a:hover {
+            color: var(--accent);
         }
         
-        nav a:hover:after {
-            width: 100%;
+        .header-actions {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+        }
+        
+        .contact-btn, .appointment-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0.6rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
         }
         
         .contact-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background-color: var(--accent);
-            color: var(--primary);
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 4px 10px rgba(255, 158, 27, 0.3);
+            background-color: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
         }
         
         .contact-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(255, 158, 27, 0.4);
+            background-color: rgba(255, 158, 27, 0.1);
+        }
+        
+        .appointment-btn {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+        
+        .appointment-btn:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
         }
         
         /* Hero Section */
         .hero {
             background: linear-gradient(105deg, rgba(13,27,42,0.92), rgba(13,27,42,0.88)), url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3') center/cover;
             color: var(--light);
-            padding: 8rem 0;
+            padding: 4rem 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero:before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 20%;
-            background: linear-gradient(to top, var(--light-bg), transparent);
         }
         
         .hero-content {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
         }
         
         .hero h2 {
-            font-size: 3.8rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.15;
-            color: var(--light);
-            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
             opacity: 0.92;
-            max-width: 700px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
         
         .btn {
             display: inline-block;
             background-color: var(--accent);
             color: var(--primary);
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 1.8rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: var(--transition);
             border: none;
             cursor: pointer;
             box-shadow: var(--shadow);
-            margin: 0.5rem;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        
-        .btn:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: rgba(0,0,0,0.1);
-            transition: var(--transition);
-            z-index: -1;
-        }
-        
-        .btn:hover:after {
-            width: 100%;
         }
         
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            background-color: #e68a00;
         }
         
         .btn-outline {
@@ -275,17 +210,17 @@
         
         /* Services */
         .section {
-            padding: var(--section-spacing) 0;
+            padding: 3.5rem 0;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
         
         .section-header h2 {
-            font-size: 2.8rem;
-            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
             position: relative;
             display: inline-block;
         }
@@ -293,444 +228,351 @@
         .section-header h2:after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
+            width: 60px;
+            height: 3px;
             background: var(--accent);
             border-radius: 2px;
         }
         
-        .section-header p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 1.5rem auto 0;
-            font-size: 1.1rem;
-        }
-        
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
         }
         
         .service-card {
             background-color: var(--light);
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: var(--transition);
-            position: relative;
-            border-bottom: 4px solid transparent;
+            border: 1px solid #eee;
+            text-align: center;
+            padding: 1.8rem 1.5rem;
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-            border-bottom-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
         }
         
-        .service-img {
-            height: 220px;
-            background: linear-gradient(135deg, var(--primary), #1a3a5f);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .service-icon {
+            font-size: 2.5rem;
             color: var(--accent);
-            font-size: 3.5rem;
-        }
-        
-        .service-content {
-            padding: 2rem;
+            margin-bottom: 1.2rem;
         }
         
         .service-content h3 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             margin-bottom: 0.8rem;
-        }
-        
-        .service-content p {
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-features {
-            list-style: none;
-            margin-top: 1rem;
-        }
-        
-        .service-features li {
-            padding: 0.5rem 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-        }
-        
-        .service-features li:before {
-            content: '✓';
-            color: var(--accent);
-            font-weight: bold;
         }
         
         /* Calculator */
         .calculator {
             background-color: var(--light);
-            border-radius: 12px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
             overflow: hidden;
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
         }
         
         .calculator-header {
-            background: linear-gradient(90deg, var(--primary), #1a3a5f);
+            background: var(--primary);
             color: var(--light);
-            padding: 1.8rem 2.5rem;
-        }
-        
-        .calculator-header h3 {
-            font-size: 1.9rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            padding: 1.2rem 1.8rem;
+            text-align: center;
         }
         
         .calculator-content {
-            padding: 2.5rem;
+            padding: 1.8rem;
         }
         
         .form-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.8rem;
-            margin-bottom: 1.8rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.2rem;
         }
         
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
             font-weight: 600;
             color: var(--primary);
+            font-size: 0.95rem;
         }
         
         .form-control {
             width: 100%;
-            padding: 1rem 1.2rem;
+            padding: 0.8rem 1rem;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
             transition: var(--transition);
-            background: #fcfcfc;
         }
         
         .form-control:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(255, 158, 27, 0.15);
-            background: var(--light);
+            box-shadow: 0 0 0 3px rgba(255, 158, 27, 0.15);
         }
         
-        .results {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 2rem;
-            margin-top: 2rem;
-            border-left: 4px solid var(--accent);
-        }
-        
-        .price-breakdown {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.2rem;
-            margin: 1.8rem 0;
-        }
-        
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .total-price {
-            display: flex;
-            justify-content: space-between;
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--primary);
-            padding: 1.2rem 0;
-            margin-top: 1rem;
-            border-top: 2px solid #eee;
-        }
-        
-        .manual-quote-note {
-            background: #fff8e6;
-            border-left: 4px solid var(--accent);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 1.2rem;
         }
         
         .quote-disclaimer {
             background: #e6f7ff;
-            border-left: 4px solid #1890ff;
-            padding: 1.2rem;
+            border-left: 3px solid #1890ff;
+            padding: 1rem;
             border-radius: 6px;
             margin-top: 1.5rem;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         
-        /* Why Choose Us */
-        .features {
+        /* Combined Section */
+        .combined-section {
             background: linear-gradient(135deg, var(--primary), #0c1a2c);
             color: var(--light);
-            padding: var(--section-spacing) 0;
+            padding: 3.5rem 0;
         }
         
-        .features-grid {
+        .contact-booking-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2.5rem;
-        }
-        
-        .feature-card {
-            background-color: rgba(255,255,255,0.05);
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: var(--transition);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-8px);
-            background-color: rgba(255,255,255,0.08);
-            border-color: rgba(255, 158, 27, 0.3);
-        }
-        
-        .feature-icon {
-            font-size: 2.8rem;
-            color: var(--accent);
-            margin-bottom: 1.8rem;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.2rem;
-            color: var(--light);
-        }
-        
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .contact-info {
-            background: linear-gradient(135deg, var(--primary), #1a3a5f);
-            color: var(--light);
-            border-radius: 12px;
-            padding: 2.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-info:before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: rgba(255, 158, 27, 0.08);
+            padding: 1.8rem;
         }
         
         .contact-info h3 {
-            margin-bottom: 1.8rem;
-            padding-bottom: 1.2rem;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             color: var(--light);
-            position: relative;
         }
         
         .contact-item {
             display: flex;
-            gap: 1.2rem;
-            margin-bottom: 1.8rem;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
             align-items: flex-start;
-            position: relative;
-            z-index: 2;
         }
         
         .contact-icon {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: var(--accent);
-            min-width: 35px;
+            min-width: 30px;
         }
         
-        .contact-form {
+        .booking-widget {
             background-color: var(--light);
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 10px;
+            padding: 1.8rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            color: var(--dark);
+        }
+        
+        .booking-widget h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            text-align: center;
+        }
+        
+        .booking-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .booking-option {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+        
+        .booking-option:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .booking-option i {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
         }
         
         /* Footer */
         footer {
             background-color: var(--dark);
             color: var(--light);
-            padding: 4rem 0 1.5rem;
+            padding: 2.5rem 0 1.2rem;
             position: relative;
+            text-align: center;
         }
         
-        footer:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), #ffb858);
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 2.5rem;
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             color: var(--accent);
         }
         
-        .footer-links h4 {
-            margin-bottom: 1.8rem;
-            position: relative;
-            padding-bottom: 0.8rem;
-            color: var(--light);
-        }
-        
-        .footer-links h4:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent);
-        }
-        
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 1rem;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
         }
         
         .footer-links a {
             color: #bbb;
             text-decoration: none;
             transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .footer-links a i {
-            color: var(--accent);
-            width: 20px;
         }
         
         .footer-links a:hover {
             color: var(--accent);
-            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: var(--light);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
         }
         
         .copyright {
-            text-align: center;
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: #aaa;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
+        }
+        
+        /* Live Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+        
+        .chat-button {
+            background-color: var(--accent);
+            color: var(--primary);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 158, 27, 0.6); }
+            70% { box-shadow: 0 0 0 12px rgba(255, 158, 27, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 158, 27, 0); }
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            animation: none;
         }
         
         /* Responsive */
-        @media (max-width: 992px) {
-            :root {
-                --section-spacing: 5rem;
-            }
-            
-            .hero {
-                padding: 6rem 0;
-            }
-            
-            .hero h2 {
-                font-size: 3rem;
-            }
-        }
-        
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 1rem;
+                padding: 0.5rem 0;
             }
             
             nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
+                margin: 0.8rem 0;
+            }
+            
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero {
+                padding: 3rem 0;
             }
             
             .hero h2 {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
             }
             
             .btn {
-                display: block;
                 width: 100%;
-                margin-bottom: 1rem;
-                margin-left: 0;
-                margin-right: 0;
-            }
-            
-            .section-header h2 {
-                font-size: 2.3rem;
+                max-width: 300px;
             }
         }
         
         @media (max-width: 480px) {
-            .hero h2 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
             .section {
-                padding: 4rem 0;
+                padding: 2.5rem 0;
             }
             
-            .calculator-content {
-                padding: 1.8rem;
+            .section-header h2 {
+                font-size: 1.7rem;
             }
-        }
-        
-        .seo-optimization {
-            position: absolute;
-            left: -9999px;
-            top: -9999px;
         }
     </style>
 </head>
@@ -746,27 +588,32 @@
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#calculator">Get Quote</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#calculator">Estimate</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             
-            <a href="tel:+13653516656" class="contact-btn">
-                <i class="fas fa-phone"></i>
-                (365) 351-6656
-            </a>
+            <div class="header-actions">
+                <a href="tel:+13653516656" class="contact-btn">
+                    <i class="fas fa-phone"></i>
+                    (365) 351-6656
+                </a>
+                <a href="#booking" class="appointment-btn">
+                    <i class="fas fa-calendar-check"></i>
+                    Book Now
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h2>Future-Focused Precision Grinding in Oakville</h2>
-            <p>A young Canadian shop supporting the future of Canadian manufacturing with high-quality grinding services</p>
+            <h2>Precision Grinding for Professionals</h2>
+            <p>Fast, accurate grinding services with instant estimates and online booking</p>
             <div class="hero-btns">
-                <a href="#calculator" class="btn">Get Estimate</a>
-                <a href="#contact" class="btn btn-outline">Contact Us</a>
+                <a href="#calculator" class="btn">Get Instant Estimate</a>
+                <a href="#booking" class="btn btn-outline">Book Appointment</a>
             </div>
         </div>
     </section>
@@ -775,98 +622,38 @@
     <section id="services" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Our Precision Services</h2>
-                <p>Specialized grinding services for Canadian manufacturers</p>
+                <h2>Our Services</h2>
+                <p>Specialized grinding for demanding applications</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-img">
+                    <div class="service-icon">
                         <i class="fas fa-cog"></i>
                     </div>
                     <div class="service-content">
                         <h3>Cylindrical Grinding</h3>
-                        <p>Precision grinding of shafts and cylindrical parts with tight tolerances</p>
-                        <ul class="service-features">
-                            <li>OD grinding up to 24" diameter</li>
-                            <li>Precision tolerances to ±0.0001"</li>
-                            <li>Our Como Italia 2000/6 handles shafts up to 80" long</li>
-                        </ul>
+                        <p>Precision shafts up to 80" long</p>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-img">
+                    <div class="service-icon">
                         <i class="fas fa-border-style"></i>
                     </div>
                     <div class="service-content">
                         <h3>Surface Grinding</h3>
-                        <p>Creating perfectly flat surfaces with superior finish quality</p>
-                        <ul class="service-features">
-                            <li>Blanchard and precision surface grinding</li>
-                            <li>Maximum capacity: 20" × 40"</li>
-                            <li>Surface finishes to 8 RMS</li>
-                        </ul>
+                        <p>20" × 40" maximum capacity</p>
                     </div>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-img">
+                    <div class="service-icon">
                         <i class="fas fa-infinity"></i>
                     </div>
                     <div class="service-content">
                         <h3>Centerless Grinding</h3>
-                        <p>High-volume production grinding for consistent results</p>
-                        <ul class="service-features">
-                            <li>Through-feed and in-feed grinding</li>
-                            <li>Diameter range: 0.030" to 4"</li>
-                            <li>Lengths up to 20 feet</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Microfinishing</h3>
-                        <p>Superfinishing for superior surface quality and precision</p>
-                        <ul class="service-features">
-                            <li>Surface finishes to 2 RMS</li>
-                            <li>Tolerance capabilities to ±0.00005"</li>
-                            <li>Specialized for bearing surfaces</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Chrome Shaft Operations</h3>
-                        <p>Specialized services for chrome-plated shafts</p>
-                        <ul class="service-features">
-                            <li>Pre and post-grinding operations</li>
-                            <li>Chrome plating coordination</li>
-                            <li>Precision straightening</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Welding Services</h3>
-                        <p>Specialized welding for industrial applications</p>
-                        <ul class="service-features">
-                            <li>MIG, TIG, and stick welding</li>
-                            <li>Hardfacing and buildup</li>
-                            <li>Precision welding for repairs</li>
-                        </ul>
+                        <p>High-volume production solutions</p>
                     </div>
                 </div>
             </div>
@@ -877,17 +664,17 @@
     <section id="calculator" class="section" style="background-color: #f8f9fa;">
         <div class="container">
             <div class="section-header">
-                <h2>Instant Estimate Calculator</h2>
-                <p>Get a preliminary estimate for your grinding project</p>
+                <h2>Instant Estimate</h2>
+                <p>Get a preliminary quote in seconds</p>
             </div>
             
             <div class="calculator">
                 <div class="calculator-header">
-                    <h3><i class="fas fa-calculator"></i> Get Your Estimate</h3>
+                    <h3>Calculate Your Price</h3>
                 </div>
                 
                 <div class="calculator-content">
-                    <form id="quoteForm">
+                    <form>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="serviceType">Service Type</label>
@@ -896,9 +683,6 @@
                                     <option value="cylindrical">Cylindrical Grinding</option>
                                     <option value="surface">Surface Grinding</option>
                                     <option value="centerless">Centerless Grinding</option>
-                                    <option value="microfinishing">Microfinishing</option>
-                                    <option value="chrome">Chrome Shaft Operations</option>
-                                    <option value="welding">Welding Services</option>
                                 </select>
                             </div>
                             
@@ -908,122 +692,47 @@
                                     <option value="">Select Material</option>
                                     <option value="mild_steel">Mild Steel</option>
                                     <option value="stainless">Stainless Steel</option>
-                                    <option value="alloy">Alloy Steel (D2, A2)</option>
-                                    <option value="aluminum">Aluminum</option>
-                                    <option value="other">Other Material</option>
+                                    <option value="alloy">Alloy Steel</option>
                                 </select>
                             </div>
-                            
+                        </div>
+                        
+                        <div class="form-grid">
                             <div class="form-group">
                                 <label for="quantity">Quantity</label>
                                 <input type="number" id="quantity" class="form-control" min="1" value="1" required>
                             </div>
                             
                             <div class="form-group">
-                                <label for="dimension">Key Dimension (inches)</label>
+                                <label for="dimension">Key Dimension</label>
                                 <input type="text" id="dimension" class="form-control" placeholder="Diameter or length">
                             </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="tolerance">Tolerance Requirements</label>
-                            <select id="tolerance" class="form-control">
-                                <option value="standard">Standard (±0.001")</option>
-                                <option value="precision">Precision (±0.0005")</option>
-                                <option value="ultra">Ultra-Precision (±0.0002")</option>
-                                <option value="micro">Microfinishing (±0.00005")</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Your Email (for estimate)</label>
-                            <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
-                        </div>
-                        
-                        <button type="submit" class="btn" style="width: 100%;">Calculate Estimate</button>
+                        <button type="submit" class="btn btn-block">Calculate Estimate</button>
                     </form>
                     
-                    <div id="quoteResults" class="results" style="display: none;">
-                        <h3>Your Preliminary Estimate</h3>
-                        <div class="price-breakdown" id="priceBreakdown">
-                            <!-- Filled by JavaScript -->
-                        </div>
-                        
-                        <div class="total-price">
-                            <span>Estimated Total:</span>
-                            <span id="totalPrice">$0.00</span>
-                        </div>
-                        
-                        <div class="quote-disclaimer">
-                            <i class="fas fa-exclamation-circle"></i> <strong>This is a preliminary estimate only</strong>
-                            <p>Final pricing will be confirmed after our team reviews your project requirements. We'll contact you within 1 business day with a formal quote.</p>
-                        </div>
-                    </div>
-                    
-                    <div id="manualQuoteNote" class="manual-quote-note" style="display: none;">
-                        <h4><i class="fas fa-exclamation-circle"></i> Custom Quote Required</h4>
-                        <p>For welding, chrome shaft operations, and complex microfinishing projects, we provide custom quotes after consultation. We've noted your requirements and will contact you within 1 business day with a detailed quote.</p>
+                    <div class="quote-disclaimer">
+                        <i class="fas fa-info-circle"></i> 
+                        <strong>This is a preliminary estimate</strong>
+                        <p>Final quote will be confirmed after project review. We'll contact you within 24 hours.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section id="about" class="features">
+    <!-- Combined Contact & Booking Section -->
+    <section id="contact" class="combined-section">
         <div class="container">
             <div class="section-header">
-                <h2>Why Choose Jameson's Grinding</h2>
-                <p>A new generation of precision grinding for Canadian manufacturing</p>
+                <h2>Contact & Booking</h2>
+                <p>Get in touch or book directly</p>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <h3>Fast Turnaround</h3>
-                    <p>Most jobs completed within 3-5 business days</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Canadian-Owned</h3>
-                    <p>Supporting the future of Canadian manufacturing</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Modern Approach</h3>
-                    <p>Innovative solutions for today's manufacturing challenges</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Quality Equipment</h3>
-                    <p>Reliable machines including our Como Italia 2000/6 grinder</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section" style="background-color: #f8f9fa;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Get in touch for your precision grinding needs</p>
-            </div>
-            
-            <div class="contact-grid">
+            <div class="contact-booking-grid">
                 <div class="contact-info">
-                    <h3>Our Information</h3>
+                    <h3>Contact Information</h3>
                     
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -1031,7 +740,7 @@
                         </div>
                         <div>
                             <h4>Address</h4>
-                            <p>1421 Speer Road, Oakville, ON L6L 0B7</p>
+                            <p>1421 Speer Road, Oakville, ON</p>
                         </div>
                     </div>
                     
@@ -1060,61 +769,33 @@
                             <i class="fas fa-clock"></i>
                         </div>
                         <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday-Friday: 8am - 5pm</p>
-                            <p>Saturday: By appointment</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map"></i>
-                        </div>
-                        <div>
-                            <h4>Location</h4>
-                            <div style="height: 220px; background: #eee; border-radius: 8px; margin-top: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray); flex-direction: column;">
-                                <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--accent);"></i>
-                                <p style="margin-top: 1rem;">1421 Speer Road, Oakville</p>
-                                <p style="font-size: 0.9rem;">Conveniently located near QEW & 403</p>
-                            </div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 8am - 5pm</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3>Send Us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                <div class="booking-widget" id="booking">
+                    <h3>Book Appointment</h3>
+                    <div class="booking-options">
+                        <div class="booking-option">
+                            <i class="fas fa-calendar-day"></i>
+                            <h4>30-Minute Consultation</h4>
+                            <p>Discuss your project needs</p>
                         </div>
                         
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        <div class="booking-option">
+                            <i class="fas fa-tools"></i>
+                            <h4>Shop Visit</h4>
+                            <p>Tour our facility</p>
                         </div>
                         
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Your Phone" required>
+                        <div class="booking-option">
+                            <i class="fas fa-truck"></i>
+                            <h4>Delivery Appointment</h4>
+                            <p>Schedule part delivery</p>
                         </div>
-                        
-                        <div class="form-group">
-                            <select class="form-control" required>
-                                <option value="">Select Service</option>
-                                <option>Cylindrical Grinding</option>
-                                <option>Surface Grinding</option>
-                                <option>Centerless Grinding</option>
-                                <option>Microfinishing</option>
-                                <option>Chrome Shaft Operations</option>
-                                <option>Welding Services</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1123,263 +804,49 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-links">
-                    <div class="footer-logo">Jameson's Grinding</div>
-                    <p>Supporting the future of Canadian manufacturing with precision grinding services in Oakville.</p>
-                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-                        <a href="#" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
-                        <a href="#" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+            <div class="footer-content">
+                <div class="footer-logo">Jameson's Grinding</div>
+                <p>Precision grinding services for Canadian manufacturers</p>
                 
                 <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Cylindrical Grinding</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Surface Grinding</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Centerless Grinding</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Microfinishing</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Chrome Shaft Operations</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Welding Services</a></li>
-                    </ul>
+                    <a href="#services">Services</a>
+                    <a href="#calculator">Estimate</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#booking">Booking</a>
                 </div>
                 
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#services"><i class="fas fa-angle-right"></i> Services</a></li>
-                        <li><a href="#calculator"><i class="fas fa-angle-right"></i> Get Estimate</a></li>
-                        <li><a href="#about"><i class="fas fa-angle-right"></i> About Us</a></li>
-                        <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
-                    </ul>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
                 
-                <div class="footer-links">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 1421 Speer Road, Oakville</a></li>
-                        <li><a href="tel:+13653516656"><i class="fas fa-phone"></i> (365) 351-6656</a></li>
-                        <li><a href="mailto:info@jamesonsgrinding.com"><i class="fas fa-envelope"></i> info@jamesonsgrinding.com</a></li>
-                    </ul>
+                <div class="copyright">
+                    &copy; 2024 Jameson's Grinding. All rights reserved.
                 </div>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2024 Jameson's Grinding. All rights reserved. | Proudly supporting Canadian manufacturing
             </div>
         </div>
     </footer>
 
-    <!-- Hidden SEO Content -->
-    <div class="seo-optimization">
-        <h1>Precision Grinding Oakville | Jameson's Grinding Services</h1>
-        <h2>Cylindrical Grinding Oakville | Surface Grinding GTA | Centerless Grinding Ontario</h2>
-        <p>Jameson's Grinding provides professional precision grinding services in Oakville, Ontario. As a young Canadian-owned machine shop, we're committed to supporting the future of Canadian manufacturing with high-quality cylindrical grinding, surface grinding, and centerless grinding services. Contact us today for a quote on your grinding project.</p>
-        <p>Keywords: precision grinding oakville, cylindrical grinding gta, surface grinding ontario, centerless grinding canada, machine shop oakville, grinding services toronto, microfinishing ontario, chrome shaft operations, welding services oakville</p>
+    <!-- Live Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-button" id="chatButton">
+            <i class="fas fa-comment-dots"></i>
+        </div>
     </div>
 
     <script>
-        // Pricing configuration
-        const pricingConfig = {
-            cylindrical: {
-                base: 75,
-                materials: {
-                    mild_steel: 1.0,
-                    stainless: 1.3,
-                    alloy: 1.4,
-                    aluminum: 0.95,
-                    other: 1.2
-                },
-                min: 55
-            },
-            surface: {
-                base: 2.25,
-                min: 65
-            },
-            centerless: {
-                base: 45,
-                bulkThreshold: 100,
-                bulkPrice: 3.75
-            },
-            microfinishing: {
-                base: 120,
-                min: 95
-            },
-            chrome: "manual",
-            welding: "manual",
-            tolerance: {
-                standard: 1.0,
-                precision: 1.4,
-                ultra: 1.8,
-                micro: 2.2
-            },
-            taxRate: 0.13
-        };
-
-        // Form submission handler
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const serviceType = document.getElementById('serviceType').value;
-            const material = document.getElementById('material').value;
-            const quantity = parseInt(document.getElementById('quantity').value) || 1;
-            const dimension = parseFloat(document.getElementById('dimension').value) || 0;
-            const tolerance = document.getElementById('tolerance').value;
-            const email = document.getElementById('email').value;
-            
-            // Validate service and material selection
-            if (!serviceType || !material || !email) {
-                alert('Please fill in all required fields');
-                return;
-            }
-            
-            // Check for manual quote services
-            if (pricingConfig[serviceType] === "manual") {
-                document.getElementById('quoteResults').style.display = 'none';
-                document.getElementById('manualQuoteNote').style.display = 'block';
-                
-                // Show confirmation
-                alert(`Thank you! We've noted your requirements for ${document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text}. We'll contact you within 1 business day with a custom quote.`);
-                
-                // Scroll to results
-                document.getElementById('manualQuoteNote').scrollIntoView({ behavior: 'smooth' });
-                
-                // Reset form
-                this.reset();
-                return;
-            }
-            
-            // Calculate price
-            let basePrice = 0;
-            let priceDescription = '';
-            let breakdownHTML = '';
-            
-            switch(serviceType) {
-                case 'cylindrical':
-                    basePrice = pricingConfig.cylindrical.base;
-                    priceDescription = `Cylindrical grinding @ $${basePrice}/part`;
-                    break;
-                    
-                case 'surface':
-                    const area = dimension ? Math.PI * Math.pow(dimension/2, 2) : 0;
-                    basePrice = area * pricingConfig.surface.base;
-                    priceDescription = `Surface grinding @ $${pricingConfig.surface.base.toFixed(2)}/sq.in`;
-                    
-                    // Apply minimum charge
-                    if (basePrice < pricingConfig.surface.min) {
-                        basePrice = pricingConfig.surface.min;
-                        breakdownHTML += `
-                            <div class="price-item">
-                                <span>Minimum job charge</span>
-                                <span>$${pricingConfig.surface.min.toFixed(2)}</span>
-                            </div>
-                        `;
-                    }
-                    break;
-                    
-                case 'centerless':
-                    if (quantity >= pricingConfig.centerless.bulkThreshold) {
-                        basePrice = pricingConfig.centerless.bulkPrice;
-                        priceDescription = `Centerless grinding (bulk) @ $${basePrice}/part`;
-                    } else {
-                        basePrice = pricingConfig.centerless.base;
-                        priceDescription = `Centerless grinding @ $${basePrice}/part`;
-                    }
-                    break;
-                    
-                case 'microfinishing':
-                    basePrice = pricingConfig.microfinishing.base;
-                    priceDescription = `Microfinishing @ $${basePrice}/part`;
-                    
-                    // Apply minimum charge
-                    if (basePrice < pricingConfig.microfinishing.min) {
-                        basePrice = pricingConfig.microfinishing.min;
-                        breakdownHTML += `
-                            <div class="price-item">
-                                <span>Minimum job charge</span>
-                                <span>$${pricingConfig.microfinishing.min.toFixed(2)}</span>
-                            </div>
-                        `;
-                    }
-                    break;
-            }
-            
-            // Apply material multiplier
-            const materialMultiplier = pricingConfig.cylindrical.materials[material] || 1;
-            basePrice *= materialMultiplier;
-            
-            // Apply tolerance multiplier
-            const toleranceMultiplier = pricingConfig.tolerance[tolerance] || 1;
-            basePrice *= toleranceMultiplier;
-            
-            // Calculate subtotal
-            const subtotal = basePrice * quantity;
-            
-            // Apply tax
-            const tax = subtotal * pricingConfig.taxRate;
-            const total = subtotal + tax;
-            
-            // Build breakdown HTML
-            breakdownHTML += `
-                <div class="price-item">
-                    <span>${priceDescription}</span>
-                    <span>$${basePrice.toFixed(2)} × ${quantity}</span>
-                </div>
-            `;
-            
-            if (materialMultiplier !== 1) {
-                breakdownHTML += `
-                    <div class="price-item">
-                        <span>${document.getElementById('material').options[document.getElementById('material').selectedIndex].text} material adjustment</span>
-                        <span>${(materialMultiplier - 1)*100}%</span>
-                    </div>
-                `;
-            }
-            
-            if (toleranceMultiplier !== 1) {
-                breakdownHTML += `
-                    <div class="price-item">
-                        <span>${document.getElementById('tolerance').options[document.getElementById('tolerance').selectedIndex].text} tolerance</span>
-                        <span>${(toleranceMultiplier - 1)*100}%</span>
-                    </div>
-                `;
-            }
-            
-            breakdownHTML += `
-                <div class="price-item">
-                    <span>Subtotal</span>
-                    <span>$${subtotal.toFixed(2)}</span>
-                </div>
-                <div class="price-item">
-                    <span>HST (${pricingConfig.taxRate*100}%)</span>
-                    <span>$${tax.toFixed(2)}</span>
-                </div>
-            `;
-            
-            // Update UI
-            document.getElementById('priceBreakdown').innerHTML = breakdownHTML;
-            document.getElementById('totalPrice').textContent = `$${total.toFixed(2)}`;
-            document.getElementById('quoteResults').style.display = 'block';
-            document.getElementById('manualQuoteNote').style.display = 'none';
-            
-            // Show confirmation
-            alert(`Thank you! We've sent your estimate to ${email} and will contact you shortly to confirm your formal quote.`);
-            
-            // Scroll to results
-            document.getElementById('quoteResults').scrollIntoView({ behavior: 'smooth' });
-            
-            // Reset form
-            this.reset();
+        // Chat button functionality
+        document.getElementById('chatButton').addEventListener('click', function() {
+            alert("Our chat service will open shortly. For immediate assistance, call (365) 351-6656");
         });
 
-        // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will contact you shortly.');
-            this.reset();
+        // Booking options functionality
+        document.querySelectorAll('.booking-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const service = this.querySelector('h4').textContent;
+                alert(`You've selected: ${service}. Our booking system will open shortly.`);
+            });
         });
     </script>
 </body>
