@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jameson's Grinding | Precision Grinding Services | Oakville, ON</title>
-    <meta name="description" content="Professional precision grinding services in Oakville. Cylindrical, surface, and centerless grinding with competitive pricing and fast turnaround times.">
+    <title>Jameson's Grinding | Precision Grinding & Finishing | Oakville, ON</title>
+    <meta name="description" content="Professional precision grinding and finishing services in Oakville. Cylindrical, surface, centerless grinding, microfinishing, welding, and chrome shaft operations.">
+    
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHH6HGB9YY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YHH6HGB9YY');
+    </script>
     
     <!-- Schema.org markup for Google -->
     <script type="application/ld+json">
@@ -16,6 +25,7 @@
       "@id": "",
       "url": "https://www.jamesonsgrinding.com/",
       "telephone": "+1-365-351-6656",
+      "email": "info@jamesonsgrinding.com",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -53,18 +63,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Calendly widget CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     
     <style>
         :root {
-            --primary: #1a2a44;
-            --accent: #d4a017;
+            --primary: #0d1b2a;
+            --accent: #ff9e1b;
             --light: #ffffff;
             --light-bg: #f8f9fa;
-            --dark: #333333;
+            --dark: #1e1e24;
             --gray: #6c757d;
             --transition: all 0.3s ease;
             --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --section-spacing: 6rem;
         }
         
         * {
@@ -78,11 +92,13 @@
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--light-bg);
+            overflow-x: hidden;
         }
         
         h1, h2, h3, h4 {
             font-family: 'Montserrat', sans-serif;
             color: var(--primary);
+            font-weight: 800;
         }
         
         .container {
@@ -98,7 +114,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
         }
         
         .header-container {
@@ -138,11 +154,22 @@
             padding: 0.5rem 1rem;
             border-radius: 4px;
             transition: var(--transition);
+            position: relative;
         }
         
-        nav a:hover {
-            background-color: rgba(255,255,255,0.1);
-            color: var(--accent);
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        nav a:hover:after {
+            width: 100%;
         }
         
         .contact-btn {
@@ -153,40 +180,56 @@
             color: var(--primary);
             padding: 0.7rem 1.5rem;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(255, 158, 27, 0.3);
         }
         
         .contact-btn:hover {
             transform: translateY(-3px);
-            box-shadow: var(--shadow);
+            box-shadow: 0 6px 15px rgba(255, 158, 27, 0.4);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(26,42,68,0.9), rgba(26,42,68,0.85)), url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3') center/cover;
+            background: linear-gradient(105deg, rgba(13,27,42,0.92), rgba(13,27,42,0.88)), url('https://images.unsplash.com/photo-1597852074816-d933c7d2b988?ixlib=rb-4.0.3') center/cover;
             color: var(--light);
-            padding: 6rem 0;
+            padding: 8rem 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background: linear-gradient(to top, var(--light-bg), transparent);
         }
         
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
             color: var(--light);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
         
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.92;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
@@ -199,19 +242,37 @@
             padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
             transition: var(--transition);
             border: none;
             cursor: pointer;
             box-shadow: var(--shadow);
             margin: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(0,0,0,0.1);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .btn:hover:after {
+            width: 100%;
         }
         
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-            background-color: #e6b325;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
         
         .btn-outline {
@@ -221,137 +282,175 @@
         }
         
         .btn-outline:hover {
-            background-color: rgba(212, 160, 23, 0.1);
+            background-color: rgba(255, 158, 27, 0.1);
         }
         
         /* Services */
         .section {
-            padding: 5rem 0;
+            padding: var(--section-spacing) 0;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         
         .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
         }
         
         .section-header p {
             color: var(--gray);
             max-width: 700px;
-            margin: 0 auto;
+            margin: 1.5rem auto 0;
+            font-size: 1.1rem;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
         
         .service-card {
             background-color: var(--light);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
             transition: var(--transition);
+            position: relative;
+            border-bottom: 4px solid transparent;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            border-bottom-color: var(--accent);
         }
         
         .service-img {
-            height: 200px;
-            background-color: var(--primary);
+            height: 220px;
+            background: linear-gradient(135deg, var(--primary), #1a3a5f);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--accent);
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
         
         .service-content {
-            padding: 1.5rem;
+            padding: 2rem;
         }
         
         .service-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
         }
         
         .service-content p {
             color: var(--gray);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .service-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+        
+        .service-features li:before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
         }
         
         /* Calculator */
         .calculator {
             background-color: var(--light);
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.1);
             overflow: hidden;
             max-width: 1000px;
             margin: 0 auto;
         }
         
         .calculator-header {
-            background-color: var(--primary);
+            background: linear-gradient(90deg, var(--primary), #1a3a5f);
             color: var(--light);
-            padding: 1.5rem 2rem;
+            padding: 1.8rem 2.5rem;
         }
         
         .calculator-header h3 {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
         
         .calculator-content {
-            padding: 2rem;
+            padding: 2.5rem;
         }
         
         .form-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            gap: 1.8rem;
+            margin-bottom: 1.8rem;
         }
         
         .form-group {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             font-weight: 600;
             color: var(--primary);
         }
         
         .form-control {
             width: 100%;
-            padding: 0.8rem 1rem;
+            padding: 1rem 1.2rem;
             border: 1px solid #ddd;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 1rem;
             transition: var(--transition);
+            background: #fcfcfc;
         }
         
         .form-control:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2);
+            box-shadow: 0 0 0 4px rgba(255, 158, 27, 0.15);
+            background: var(--light);
         }
         
         .results {
             background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 1.5rem;
+            border-radius: 10px;
+            padding: 2rem;
             margin-top: 2rem;
             border-left: 4px solid var(--accent);
         }
@@ -359,132 +458,190 @@
         .price-breakdown {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
+            gap: 1.2rem;
+            margin: 1.8rem 0;
         }
         
         .price-item {
             display: flex;
             justify-content: space-between;
-            padding: 0.8rem 0;
+            padding: 1rem 0;
             border-bottom: 1px solid #eee;
         }
         
         .total-price {
             display: flex;
             justify-content: space-between;
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 1.4rem;
+            font-weight: 800;
             color: var(--primary);
-            padding: 1rem 0;
+            padding: 1.2rem 0;
             margin-top: 1rem;
             border-top: 2px solid #eee;
         }
         
+        .manual-quote-note {
+            background: #fff8e6;
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        
         /* Why Choose Us */
         .features {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary), #0c1a2c);
             color: var(--light);
-            padding: 5rem 0;
+            padding: var(--section-spacing) 0;
         }
         
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
         
         .feature-card {
             background-color: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            padding: 2rem;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
             text-align: center;
             transition: var(--transition);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
         .feature-card:hover {
-            transform: translateY(-5px);
-            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-8px);
+            background-color: rgba(255,255,255,0.08);
+            border-color: rgba(255, 158, 27, 0.3);
         }
         
         .feature-icon {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--accent);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
         
         .feature-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             color: var(--light);
         }
         
         /* Contact Section */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
         }
         
         .contact-info {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary), #1a3a5f);
             color: var(--light);
-            border-radius: 10px;
-            padding: 2rem;
+            border-radius: 12px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-info:before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 158, 27, 0.08);
         }
         
         .contact-info h3 {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 1.8rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
             color: var(--light);
+            position: relative;
         }
         
         .contact-item {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            gap: 1.2rem;
+            margin-bottom: 1.8rem;
             align-items: flex-start;
+            position: relative;
+            z-index: 2;
         }
         
         .contact-icon {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--accent);
-            min-width: 30px;
+            min-width: 35px;
         }
         
         .contact-form {
             background-color: var(--light);
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        /* Calendly Button */
+        .calendly-btn {
+            background-color: #00a2ff;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+        
+        .calendly-btn:hover {
+            background-color: #0085d6;
+            transform: translateY(-2px);
         }
         
         /* Footer */
         footer {
             background-color: var(--dark);
             color: var(--light);
-            padding: 3rem 0 1.5rem;
+            padding: 4rem 0 1.5rem;
+            position: relative;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #ffb858);
         }
         
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
         }
         
         .footer-logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1.2rem;
             color: var(--accent);
         }
         
         .footer-links h4 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             position: relative;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.8rem;
             color: var(--light);
         }
         
@@ -494,7 +651,7 @@
             bottom: 0;
             left: 0;
             width: 50px;
-            height: 2px;
+            height: 3px;
             background-color: var(--accent);
         }
         
@@ -503,13 +660,21 @@
         }
         
         .footer-links li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
         }
         
         .footer-links a {
             color: #bbb;
             text-decoration: none;
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a i {
+            color: var(--accent);
+            width: 20px;
         }
         
         .footer-links a:hover {
@@ -519,128 +684,27 @@
         
         .copyright {
             text-align: center;
-            padding-top: 1.5rem;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: #aaa;
-            font-size: 0.9rem;
-        }
-        
-        /* Live Chat Widget */
-        .chat-widget {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999;
-        }
-        
-        .chat-button {
-            background-color: var(--accent);
-            color: var(--primary);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            transition: var(--transition);
-        }
-        
-        .chat-button:hover {
-            transform: scale(1.1);
-        }
-        
-        .chat-box {
-            position: absolute;
-            bottom: 70px;
-            right: 0;
-            width: 350px;
-            height: 450px;
-            background: var(--light);
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-            display: none;
-            flex-direction: column;
-        }
-        
-        .chat-header {
-            background: var(--primary);
-            color: var(--light);
-            padding: 15px;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .chat-body {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background: var(--light-bg);
-        }
-        
-        .chat-footer {
-            padding: 15px;
-            border-top: 1px solid #eee;
-            display: flex;
-        }
-        
-        .chat-footer input {
-            flex: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            outline: none;
-        }
-        
-        .chat-footer button {
-            background: var(--accent);
-            color: var(--primary);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        
-        .message {
-            margin-bottom: 15px;
-            max-width: 80%;
-        }
-        
-        .message.user {
-            margin-left: auto;
-        }
-        
-        .message.bot {
-            margin-right: auto;
-        }
-        
-        .message-content {
-            padding: 10px 15px;
-            border-radius: 18px;
-            display: inline-block;
-        }
-        
-        .user .message-content {
-            background: var(--accent);
-            color: var(--primary);
-            border-bottom-right-radius: 5px;
-        }
-        
-        .bot .message-content {
-            background: var(--light);
-            color: var(--dark);
-            border-bottom-left-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-size: 0.95rem;
         }
         
         /* Responsive */
+        @media (max-width: 992px) {
+            :root {
+                --section-spacing: 5rem;
+            }
+            
+            .hero {
+                padding: 6rem 0;
+            }
+            
+            .hero h2 {
+                font-size: 3rem;
+            }
+        }
+        
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -660,15 +724,30 @@
                 display: block;
                 width: 100%;
                 margin-bottom: 1rem;
-            }
-            
-            .btn-outline {
                 margin-left: 0;
+                margin-right: 0;
             }
             
-            .chat-box {
-                width: 300px;
-                height: 400px;
+            .section-header h2 {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+            
+            .calculator-content {
+                padding: 1.8rem;
             }
         }
     </style>
@@ -701,8 +780,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h2>Precision Grinding Services in Oakville</h2>
-            <p>High-quality cylindrical, surface, and centerless grinding with competitive pricing and fast turnaround times</p>
+            <h2>Precision Grinding & Finishing Services in Oakville</h2>
+            <p>High-quality grinding, microfinishing, welding, and chrome shaft operations with competitive pricing and fast turnaround times</p>
             <div class="hero-btns">
                 <a href="#calculator" class="btn">Get Instant Quote</a>
                 <a href="#contact" class="btn btn-outline">Contact Us</a>
@@ -715,7 +794,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Our Precision Services</h2>
-                <p>We specialize in high-accuracy grinding for industrial applications</p>
+                <p>We specialize in high-accuracy machining for industrial applications</p>
             </div>
             
             <div class="services-grid">
@@ -726,6 +805,11 @@
                     <div class="service-content">
                         <h3>Cylindrical Grinding</h3>
                         <p>Precision grinding of shafts and cylindrical parts with tight tolerances</p>
+                        <ul class="service-features">
+                            <li>OD grinding up to 24" diameter</li>
+                            <li>Precision tolerances to ±0.0001"</li>
+                            <li>Various material capabilities</li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -736,6 +820,11 @@
                     <div class="service-content">
                         <h3>Surface Grinding</h3>
                         <p>Creating perfectly flat surfaces with superior finish quality</p>
+                        <ul class="service-features">
+                            <li>Blanchard and precision surface grinding</li>
+                            <li>Capacities up to 48" × 96"</li>
+                            <li>Surface finishes to 8 RMS</li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -746,6 +835,56 @@
                     <div class="service-content">
                         <h3>Centerless Grinding</h3>
                         <p>High-volume production grinding for consistent results</p>
+                        <ul class="service-features">
+                            <li>Through-feed and in-feed grinding</li>
+                            <li>Diameter range: 0.030" to 4"</li>
+                            <li>Lengths up to 20 feet</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Microfinishing</h3>
+                        <p>Superfinishing for superior surface quality and precision</p>
+                        <ul class="service-features">
+                            <li>Surface finishes to 2 RMS</li>
+                            <li>Tolerance capabilities to ±0.00005"</li>
+                            <li>Specialized for bearing surfaces</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Chrome Shaft Operations</h3>
+                        <p>Specialized services for chrome-plated shafts</p>
+                        <ul class="service-features">
+                            <li>Pre and post-grinding operations</li>
+                            <li>Chrome plating coordination</li>
+                            <li>Precision straightening</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Welding Services</h3>
+                        <p>Specialized welding for industrial applications</p>
+                        <ul class="service-features">
+                            <li>MIG, TIG, and stick welding</li>
+                            <li>Hardfacing and buildup</li>
+                            <li>Precision welding for repairs</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -775,6 +914,9 @@
                                     <option value="cylindrical">Cylindrical Grinding</option>
                                     <option value="surface">Surface Grinding</option>
                                     <option value="centerless">Centerless Grinding</option>
+                                    <option value="microfinishing">Microfinishing</option>
+                                    <option value="chrome">Chrome Shaft Operations</option>
+                                    <option value="welding">Welding Services</option>
                                 </select>
                             </div>
                             
@@ -786,6 +928,7 @@
                                     <option value="stainless">Stainless Steel</option>
                                     <option value="alloy">Alloy Steel (D2, A2)</option>
                                     <option value="aluminum">Aluminum</option>
+                                    <option value="other">Other Material</option>
                                 </select>
                             </div>
                             
@@ -806,12 +949,18 @@
                                 <option value="standard">Standard (±0.001")</option>
                                 <option value="precision">Precision (±0.0005")</option>
                                 <option value="ultra">Ultra-Precision (±0.0002")</option>
+                                <option value="micro">Microfinishing (±0.00005")</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Your Email (for quote)</label>
                             <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Your Phone</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="(123) 456-7890">
                         </div>
                         
                         <button type="submit" class="btn" style="width: 100%;">Calculate Price & Get Quote</button>
@@ -832,6 +981,15 @@
                             <i class="fas fa-info-circle"></i> We've sent this quote to your email. Our team will contact you shortly.
                         </p>
                     </div>
+                    
+                    <div id="manualQuoteNote" class="manual-quote-note" style="display: none;">
+                        <h4><i class="fas fa-exclamation-circle"></i> Custom Quote Required</h4>
+                        <p>For welding, chrome shaft operations, and complex microfinishing projects, we provide custom quotes after consultation. We've noted your requirements and will contact you within 1 business day with a detailed quote.</p>
+                        
+                        <button class="calendly-btn" id="scheduleConsultation">
+                            <i class="fas fa-calendar-alt"></i> Schedule Consultation
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -842,13 +1000,13 @@
         <div class="container">
             <div class="section-header">
                 <h2>Why Choose Jameson's Grinding</h2>
-                <p>Our commitment to quality and service sets us apart</p>
+                <p>What makes us the preferred choice for precision grinding in Oakville</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
+                        <i class="fas fa-tachometer-alt"></i>
                     </div>
                     <h3>Fast Turnaround</h3>
                     <p>Most jobs completed within 3-5 business days</p>
@@ -856,18 +1014,18 @@
                 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Quality Guaranteed</h3>
-                    <p>ISO 9001 certified processes and quality control</p>
+                    <h3>Oakville-Based</h3>
+                    <p>Local shop serving the GTA with quick response times</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Local & Reliable</h3>
-                    <p>Oakville-based shop with reliable service</p>
+                    <h3>Expert Team</h3>
+                    <p>20+ years of combined grinding experience</p>
                 </div>
                 
                 <div class="feature-card">
@@ -875,7 +1033,7 @@
                         <i class="fas fa-cogs"></i>
                     </div>
                     <h3>Modern Equipment</h3>
-                    <p>State-of-the-art grinding machines for precision work</p>
+                    <p>State-of-the-art CNC grinding machines</p>
                 </div>
             </div>
         </div>
@@ -940,41 +1098,49 @@
                         </div>
                         <div>
                             <h4>Location</h4>
-                            <div style="height: 200px; background: #eee; border-radius: 8px; margin-top: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray);">
-                                <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: var(--accent);"></i>
-                                <p>Map of 1421 Speer Road, Oakville</p>
+                            <div style="height: 220px; background: #eee; border-radius: 8px; margin-top: 10px; display: flex; align-items: center; justify-content: center; color: var(--gray); flex-direction: column;">
+                                <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--accent);"></i>
+                                <p style="margin-top: 1rem;">1421 Speer Road, Oakville</p>
+                                <p style="font-size: 0.9rem;">Conveniently located near QEW & 403</p>
                             </div>
                         </div>
                     </div>
+                    
+                    <button class="calendly-btn" id="contactCalendly">
+                        <i class="fas fa-calendar-alt"></i> Schedule a Consultation
+                    </button>
                 </div>
                 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <input type="text" class="form-control" placeholder="Your Name" required id="contactName">
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input type="email" class="form-control" placeholder="Your Email" required id="contactEmail">
                         </div>
                         
                         <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Your Phone" required>
+                            <input type="tel" class="form-control" placeholder="Your Phone" required id="contactPhone">
                         </div>
                         
                         <div class="form-group">
-                            <select class="form-control" required>
+                            <select class="form-control" required id="contactService">
                                 <option value="">Select Service</option>
                                 <option>Cylindrical Grinding</option>
                                 <option>Surface Grinding</option>
                                 <option>Centerless Grinding</option>
+                                <option>Microfinishing</option>
+                                <option>Chrome Shaft Operations</option>
+                                <option>Welding Services</option>
                                 <option>Other</option>
                             </select>
                         </div>
                         
                         <div class="form-group">
-                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required id="contactMessage"></textarea>
                         </div>
                         
                         <button type="submit" class="btn">Send Message</button>
@@ -990,98 +1156,107 @@
             <div class="footer-grid">
                 <div class="footer-links">
                     <div class="footer-logo">Jameson's Grinding</div>
-                    <p>Precision grinding services for industrial clients in Oakville and surrounding areas.</p>
+                    <p>Precision grinding and finishing services for industrial clients in Oakville and surrounding areas.</p>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                        <a href="#" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#">Cylindrical Grinding</a></li>
-                        <li><a href="#">Surface Grinding</a></li>
-                        <li><a href="#">Centerless Grinding</a></li>
-                        <li><a href="#">Microfinishing</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Cylindrical Grinding</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Surface Grinding</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Centerless Grinding</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Microfinishing</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Chrome Shaft Operations</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Welding Services</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#calculator">Get Quote</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#services"><i class="fas fa-angle-right"></i> Services</a></li>
+                        <li><a href="#calculator"><i class="fas fa-angle-right"></i> Get Quote</a></li>
+                        <li><a href="#about"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Careers</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h4>Contact Us</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 1421 Speer Road, Oakville</li>
-                        <li><i class="fas fa-phone"></i> (365) 351-6656</li>
-                        <li><i class="fas fa-envelope"></i> info@jamesonsgrinding.com</li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 1421 Speer Road, Oakville</a></li>
+                        <li><a href="tel:+13653516656"><i class="fas fa-phone"></i> (365) 351-6656</a></li>
+                        <li><a href="mailto:info@jamesonsgrinding.com"><i class="fas fa-envelope"></i> info@jamesonsgrinding.com</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                &copy; 2024 Jameson's Grinding. All rights reserved.
+                &copy; 2024 Jameson's Grinding. All rights reserved. | Serving Oakville and the Greater Toronto Area
             </div>
         </div>
     </footer>
 
-    <!-- Live Chat Widget -->
-    <div class="chat-widget">
-        <div class="chat-button" id="chatButton">
-            <i class="fas fa-comment-dots"></i>
-        </div>
-        <div class="chat-box" id="chatBox">
-            <div class="chat-header">
-                <h4>Chat with Us</h4>
-                <i class="fas fa-times" id="closeChat"></i>
-            </div>
-            <div class="chat-body" id="chatBody">
-                <div class="message bot">
-                    <div class="message-content">
-                        Hello! 👋 How can we help you today?
-                    </div>
-                </div>
-            </div>
-            <div class="chat-footer">
-                <input type="text" id="chatInput" placeholder="Type your message...">
-                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
-            </div>
-        </div>
-    </div>
-
+    <!-- Calendly Widget JS -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
     <script>
         // Pricing configuration
         const pricingConfig = {
             cylindrical: {
-                base: 65,
+                base: 75,
                 materials: {
                     mild_steel: 1.0,
-                    stainless: 1.25,
-                    alloy: 1.35,
-                    aluminum: 0.9
+                    stainless: 1.3,
+                    alloy: 1.4,
+                    aluminum: 0.95,
+                    other: 1.2
                 },
-                min: 45
-            },
-            surface: {
-                base: 1.85,
                 min: 55
             },
-            centerless: {
-                base: 35,
-                bulkThreshold: 100,
-                bulkPrice: 3.25
+            surface: {
+                base: 2.25,
+                min: 65
             },
+            centerless: {
+                base: 45,
+                bulkThreshold: 100,
+                bulkPrice: 3.75
+            },
+            microfinishing: {
+                base: 120,
+                min: 95
+            },
+            chrome: "manual",
+            welding: "manual",
             tolerance: {
                 standard: 1.0,
-                precision: 1.3,
-                ultra: 1.7
+                precision: 1.4,
+                ultra: 1.8,
+                micro: 2.2
             },
             taxRate: 0.13
         };
+
+        // Formspree endpoint
+        const formspreeEndpoint = 'https://formspree.io/f/mnnpzqrd';
+
+        // Initialize Calendly buttons
+        document.querySelectorAll('.calendly-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                Calendly.initPopupWidget({
+                    url: 'https://calendly.com/jamesonsgrinding/30min'
+                });
+                return false;
+            });
+        });
 
         // Form submission handler
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
@@ -1094,10 +1269,53 @@
             const dimension = parseFloat(document.getElementById('dimension').value) || 0;
             const tolerance = document.getElementById('tolerance').value;
             const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             
             // Validate service and material selection
             if (!serviceType || !material || !email) {
                 alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Track quote submission
+            gtag('event', 'quote_submit', {
+                'event_category': 'engagement',
+                'event_label': 'instant_quote',
+                'value': quantity
+            });
+            
+            // Submit to Formspree
+            const formData = new FormData();
+            formData.append('service', serviceType);
+            formData.append('material', material);
+            formData.append('quantity', quantity);
+            formData.append('dimension', dimension);
+            formData.append('tolerance', tolerance);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('form-type', 'quote-request');
+            
+            fetch(formspreeEndpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).catch(error => console.log('Formspree submission error:', error));
+            
+            // Check for manual quote services
+            if (pricingConfig[serviceType] === "manual") {
+                document.getElementById('quoteResults').style.display = 'none';
+                document.getElementById('manualQuoteNote').style.display = 'block';
+                
+                // Show confirmation
+                alert(`Thank you! We've noted your requirements for ${document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text}. We'll contact you within 1 business day with a custom quote.`);
+                
+                // Scroll to results
+                document.getElementById('manualQuoteNote').scrollIntoView({ behavior: 'smooth' });
+                
+                // Reset form
+                this.reset();
                 return;
             }
             
@@ -1136,6 +1354,22 @@
                     } else {
                         basePrice = pricingConfig.centerless.base;
                         priceDescription = `Centerless grinding @ $${basePrice}/part`;
+                    }
+                    break;
+                    
+                case 'microfinishing':
+                    basePrice = pricingConfig.microfinishing.base;
+                    priceDescription = `Microfinishing @ $${basePrice}/part`;
+                    
+                    // Apply minimum charge
+                    if (basePrice < pricingConfig.microfinishing.min) {
+                        basePrice = pricingConfig.microfinishing.min;
+                        breakdownHTML += `
+                            <div class="price-item">
+                                <span>Minimum job charge</span>
+                                <span>$${pricingConfig.microfinishing.min.toFixed(2)}</span>
+                            </div>
+                        `;
                     }
                     break;
             }
@@ -1196,6 +1430,7 @@
             document.getElementById('priceBreakdown').innerHTML = breakdownHTML;
             document.getElementById('totalPrice').textContent = `$${total.toFixed(2)}`;
             document.getElementById('quoteResults').style.display = 'block';
+            document.getElementById('manualQuoteNote').style.display = 'none';
             
             // Show confirmation
             alert(`Thank you! We've sent your quote to ${email} and will contact you shortly.`);
@@ -1210,68 +1445,74 @@
         // Contact form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const phone = document.getElementById('contactPhone').value;
+            const service = document.getElementById('contactService').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            // Track contact form submission
+            gtag('event', 'contact_submit', {
+                'event_category': 'engagement',
+                'event_label': 'contact_form'
+            });
+            
+            // Submit to Formspree
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('service', service);
+            formData.append('message', message);
+            formData.append('form-type', 'contact-request');
+            
+            fetch(formspreeEndpoint, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).catch(error => console.log('Formspree submission error:', error));
+            
+            // Show confirmation
             alert('Thank you for your message! We will contact you shortly.');
             this.reset();
         });
 
-        // Live Chat Widget Functionality
-        const chatButton = document.getElementById('chatButton');
-        const chatBox = document.getElementById('chatBox');
-        const closeChat = document.getElementById('closeChat');
-        const chatBody = document.getElementById('chatBody');
-        const chatInput = document.getElementById('chatInput');
-        const sendMessage = document.getElementById('sendMessage');
-        
-        chatButton.addEventListener('click', () => {
-            chatBox.style.display = 'flex';
+        // Track phone clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                gtag('event', 'phone_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Header Phone'
+                });
+            });
         });
         
-        closeChat.addEventListener('click', () => {
-            chatBox.style.display = 'none';
+        // Track email clicks
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                gtag('event', 'email_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Footer Email'
+                });
+            });
         });
-        
-        sendMessage.addEventListener('click', sendChatMessage);
-        chatInput.addEventListener('keypress', (e) => {
-            if(e.key === 'Enter') sendChatMessage();
-        });
-        
-        function sendChatMessage() {
-            const message = chatInput.value.trim();
-            if(message) {
-                // Add user message
-                addMessage(message, 'user');
-                chatInput.value = '';
-                
-                // Simulate bot response after delay
-                setTimeout(() => {
-                    const responses = [
-                        "Thanks for your message! We'll get back to you shortly.",
-                        "Can you tell me more about your grinding needs?",
-                        "Would you like a quote for our grinding services?",
-                        "One of our representatives will contact you soon.",
-                        "We can help with that! What material are you working with?"
-                    ];
-                    
-                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                    addMessage(randomResponse, 'bot');
-                }, 1000);
-            }
-        }
-        
-        function addMessage(text, sender) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${sender}`;
-            
-            const messageContent = document.createElement('div');
-            messageContent.className = 'message-content';
-            messageContent.textContent = text;
-            
-            messageDiv.appendChild(messageContent);
-            chatBody.appendChild(messageDiv);
-            
-            // Scroll to bottom
-            chatBody.scrollTop = chatBody.scrollHeight;
-        }
+    </script>
+    
+    <!-- Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/YOUR_PROPERTY_ID/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
     </script>
 </body>
 </html>
