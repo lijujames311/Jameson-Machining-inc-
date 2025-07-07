@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jameson's Grinding | Precision Cylindrical Grinding Services | Oakville, Toronto, GTA</title>
-    <meta name="description" content="Professional cylindrical grinding services in Oakville, Toronto, Mississauga, North York, and GTA. Fast, accurate grinding with instant estimates.">
+    <title>Jameson's Grinding | Precision Grinding Services | Oakville, Ontario</title>
+    <meta name="description" content="Professional precision grinding services in Oakville, ON. Fast, accurate grinding with instant estimates. Serving Toronto, Hamilton, Mississauga, and all of Ontario.">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://jamesonsgrinding.com">
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Jameson's Grinding | Precision Cylindrical Grinding Services | GTA">
-    <meta property="og:description" content="Professional cylindrical grinding services in Oakville, Toronto, Mississauga, and North York. Get instant estimates and book online.">
+    <meta property="og:title" content="Jameson's Grinding | Precision Grinding Services | Oakville, Ontario">
+    <meta property="og:description" content="Professional precision grinding services in Oakville, ON. Get instant estimates and book online.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jamesonsgrinding.com">
     <meta property="og:image" content="https://jamesonsgrinding.com/images/social-preview.jpg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Jameson's Grinding | Precision Cylindrical Grinding Services | GTA">
-    <meta name="twitter:description" content="Professional cylindrical grinding services across the GTA. Fast, accurate grinding with instant estimates.">
+    <meta name="twitter:title" content="Jameson's Grinding | Precision Grinding Services | Oakville, Ontario">
+    <meta name="twitter:description" content="Professional precision grinding services in Oakville, ON. Fast, accurate grinding with instant estimates.">
     <meta name="twitter:image" content="https://jamesonsgrinding.com/images/social-preview.jpg">
     
     <!-- JSON-LD Structured Data -->
@@ -63,28 +63,15 @@
         "https://www.instagram.com/jamesonsgrinding"
       ],
       "priceRange": "$$",
-      "areaServed": [
-        "Oakville", "Toronto", "Mississauga", "North York", 
-        "Brampton", "Hamilton", "Burlington", "Etobicoke",
-        "Markham", "Vaughan", "Richmond Hill", "Scarborough"
-      ],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "name": "Cylindrical Grinding",
-          "description": "Precision shafts up to 80\" long with tight tolerances"
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.4675,
+          "longitude": -79.6877
         },
-        {
-          "@type": "Offer",
-          "name": "Surface Grinding",
-          "description": "20\" × 40\" maximum capacity for flat surfaces"
-        },
-        {
-          "@type": "Offer",
-          "name": "Centerless Grinding",
-          "description": "High-volume production solutions with consistent results"
-        }
-      ]
+        "geoRadius": 50000
+      }
     }
     </script>
     
@@ -101,15 +88,6 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-488024804');
-    </script>
-    
-    <!-- Google Ads Conversion Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-123456789"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-123456789');
     </script>
     
     <style>
@@ -399,23 +377,6 @@
         
         .service-content p {
             color: var(--gray);
-        }
-        
-        .service-areas-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .service-area-tag {
-            background: rgba(255, 158, 27, 0.1);
-            color: var(--accent);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
         }
         
         /* Calculator */
@@ -825,71 +786,11 @@
             padding: 1.2rem;
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .area-card:hover {
-            transform: translateY(-5px);
         }
         
         .area-card h4 {
             color: var(--primary);
             margin-bottom: 0.5rem;
-        }
-        
-        .area-card p {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
-        
-        /* Local SEO Section */
-        .local-seo-section {
-            background: linear-gradient(135deg, #0c1a2c, #1a2b3c);
-            color: var(--light);
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .local-seo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1100px;
-            margin: 2rem auto;
-        }
-        
-        .seo-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            padding: 2rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .seo-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .seo-card i {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-        
-        .seo-card h3 {
-            margin-bottom: 1rem;
-        }
-        
-        /* Google Ads CTA */
-        .cta-section {
-            background: linear-gradient(135deg, var(--accent), #e68a00);
-            color: var(--primary);
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
         }
     </style>
 </head>
@@ -908,7 +809,6 @@
                     <li><a href="#calculator">Estimate</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#areas">Service Areas</a></li>
-                    <li><a href="#local-seo">Local SEO</a></li>
                 </ul>
             </nav>
             
@@ -928,8 +828,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h2>Cylindrical Grinding Services in Oakville, Toronto, Mississauga & North York</h2>
-            <p>Professional precision grinding solutions for industrial clients across the GTA</p>
+            <h2>Precision Grinding Services in Oakville & GTA</h2>
+            <p>Professional grinding solutions for industrial clients across Southern Ontario</p>
             <div class="hero-btns">
                 <a href="#calculator" class="btn">Get Instant Estimate</a>
                 <a href="#booking" class="btn btn-outline">Book Appointment</a>
@@ -941,8 +841,8 @@
     <section id="services" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Cylindrical Grinding Services</h2>
-                <p>Specialized precision grinding solutions for demanding industrial applications</p>
+                <h2>Our Grinding Services</h2>
+                <p>Specialized grinding solutions for demanding industrial applications</p>
             </div>
             
             <div class="services-grid">
@@ -951,14 +851,8 @@
                         <i class="fas fa-cog"></i>
                     </div>
                     <div class="service-content">
-                        <h3 itemprop="name">Precision Cylindrical Grinding</h3>
-                        <p itemprop="description">Shafts up to 80" long with tolerances to ±0.0001"</p>
-                        <div class="service-areas-list">
-                            <span class="service-area-tag">Oakville</span>
-                            <span class="service-area-tag">Toronto</span>
-                            <span class="service-area-tag">Mississauga</span>
-                            <span class="service-area-tag">North York</span>
-                        </div>
+                        <h3 itemprop="name">Cylindrical Grinding</h3>
+                        <p itemprop="description">Precision shafts up to 80" long with tight tolerances</p>
                     </div>
                 </div>
                 
@@ -968,13 +862,7 @@
                     </div>
                     <div class="service-content">
                         <h3 itemprop="name">Surface Grinding</h3>
-                        <p itemprop="description">20" × 40" capacity for flat surfaces with precision finishes</p>
-                        <div class="service-areas-list">
-                            <span class="service-area-tag">Brampton</span>
-                            <span class="service-area-tag">Hamilton</span>
-                            <span class="service-area-tag">Burlington</span>
-                            <span class="service-area-tag">Etobicoke</span>
-                        </div>
+                        <p itemprop="description">20" × 40" maximum capacity for flat surfaces</p>
                     </div>
                 </div>
                 
@@ -984,13 +872,7 @@
                     </div>
                     <div class="service-content">
                         <h3 itemprop="name">Centerless Grinding</h3>
-                        <p itemprop="description">High-volume production with consistent results</p>
-                        <div class="service-areas-list">
-                            <span class="service-area-tag">Markham</span>
-                            <span class="service-area-tag">Vaughan</span>
-                            <span class="service-area-tag">Richmond Hill</span>
-                            <span class="service-area-tag">Scarborough</span>
-                        </div>
+                        <p itemprop="description">High-volume production solutions with consistent results</p>
                     </div>
                 </div>
             </div>
@@ -1001,42 +883,34 @@
     <section id="areas" class="service-areas">
         <div class="container">
             <div class="section-header">
-                <h2>Our GTA Service Areas</h2>
-                <p>Providing precision grinding services across the Greater Toronto Area</p>
+                <h2>Our Service Areas</h2>
+                <p>Serving industrial clients across Southern Ontario</p>
             </div>
             
             <div class="areas-grid">
                 <div class="area-card">
                     <h4>Oakville</h4>
-                    <p>Precision Cylindrical Grinding</p>
+                    <p>Precision Grinding</p>
                 </div>
                 <div class="area-card">
                     <h4>Toronto</h4>
-                    <p>Industrial Grinding Solutions</p>
+                    <p>Industrial Solutions</p>
                 </div>
                 <div class="area-card">
                     <h4>Mississauga</h4>
-                    <p>Metal Grinding Services</p>
-                </div>
-                <div class="area-card">
-                    <h4>North York</h4>
-                    <p>Cylindrical Grinding Specialists</p>
-                </div>
-                <div class="area-card">
-                    <h4>Brampton</h4>
-                    <p>Production Grinding</p>
+                    <p>Metal Grinding</p>
                 </div>
                 <div class="area-card">
                     <h4>Hamilton</h4>
-                    <p>Industrial Grinding</p>
+                    <p>Manufacturing Support</p>
                 </div>
                 <div class="area-card">
                     <h4>Burlington</h4>
                     <p>Precision Services</p>
                 </div>
                 <div class="area-card">
-                    <h4>Markham</h4>
-                    <p>Technical Grinding</p>
+                    <h4>Brampton</h4>
+                    <p>Industrial Grinding</p>
                 </div>
             </div>
         </div>
@@ -1046,8 +920,8 @@
     <section id="calculator" class="section" style="background-color: #f8f9fa;">
         <div class="container">
             <div class="section-header">
-                <h2>Instant Grinding Estimate</h2>
-                <p>Get a preliminary quote in seconds for your cylindrical grinding needs</p>
+                <h2>Instant Estimate</h2>
+                <p>Get a preliminary quote in seconds</p>
             </div>
             
             <div class="calculator">
@@ -1117,11 +991,10 @@
                                 <option value="oakville">Oakville</option>
                                 <option value="toronto">Toronto</option>
                                 <option value="mississauga">Mississauga</option>
-                                <option value="north-york">North York</option>
                                 <option value="hamilton">Hamilton</option>
-                                <option value="brampton">Brampton</option>
                                 <option value="burlington">Burlington</option>
-                                <option value="other">Other GTA Location</option>
+                                <option value="brampton">Brampton</option>
+                                <option value="other">Other Ontario Location</option>
                             </select>
                         </div>
                         
@@ -1145,54 +1018,6 @@
                         <p>Final quote will be confirmed after project review. We'll contact you within 24 hours.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Local SEO Section -->
-    <section id="local-seo" class="local-seo-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Find Us Across the GTA</h2>
-                <p>We serve industrial clients throughout the Greater Toronto Area</p>
-            </div>
-            
-            <div class="local-seo-grid">
-                <div class="seo-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Local Service Areas</h3>
-                    <p>Oakville, Toronto, Mississauga, North York, Brampton, Hamilton, Burlington, Markham, Vaughan, and Richmond Hill</p>
-                </div>
-                
-                <div class="seo-card">
-                    <i class="fas fa-search"></i>
-                    <h3>Search Optimization</h3>
-                    <p>Optimized for "cylindrical grinding service in [Your City]" searches across the GTA</p>
-                </div>
-                
-                <div class="seo-card">
-                    <i class="fas fa-truck"></i>
-                    <h3>Service Coverage</h3>
-                    <p>We serve clients within a 50km radius of our Oakville facility with pickup and delivery options</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Google Ads CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Ready to Get Started?</h2>
-                <p>Get discovered by industrial clients across the GTA</p>
-            </div>
-            
-            <div class="cta-content">
-                <h3>Get Featured in Google Search Results</h3>
-                <p>Our Google Ads campaigns target clients searching for precision grinding services in your area</p>
-                <a href="#contact" class="btn btn-outline" style="background: var(--primary); color: var(--light); border-color: var(--primary);">
-                    <i class="fas fa-bullhorn"></i> Boost My Visibility
-                </a>
             </div>
         </div>
     </section>
@@ -1283,8 +1108,8 @@
                     <a href="#calculator">Estimate</a>
                     <a href="#contact">Contact</a>
                     <a href="#areas">Service Areas</a>
-                    <a href="#local-seo">Local SEO</a>
                     <a href="#booking">Booking</a>
+                    <a href="#">Privacy Policy</a>
                 </div>
                 
                 <div class="social-links">
@@ -1296,7 +1121,7 @@
                 
                 <div class="copyright">
                     &copy; 2024 Jameson's Grinding. All rights reserved.<br>
-                    Precision Cylindrical Grinding Services in Oakville, Toronto, Mississauga, North York, and all of Southern Ontario
+                    Precision Grinding Services in Oakville, Ontario | Serving Toronto, Mississauga, Hamilton, and all of Southern Ontario
                 </div>
             </div>
         </div>
@@ -1357,14 +1182,6 @@
                     
                     // Scroll to success message
                     document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Track Google Ads conversion
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-123456789/AbC-D_efGhIj12KlMnOpQ',
-                        'value': 1.0,
-                        'currency': 'CAD',
-                        'transaction_id': 'EST-' + Date.now()
-                    });
                 } else {
                     alert('There was a problem with your submission. Please try again.');
                 }
@@ -1409,4 +1226,4 @@
         window.addEventListener('DOMContentLoaded', loadCalendly);
     </script>
 </body>
-</html>
+</html>.   
