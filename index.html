@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/LocalBusiness">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jameson's Grinding | Precision Shaft Grinding in Oakville</title>
+  <meta name="description" content="Jameson's Grinding offers high-precision cylindrical, surface, and centerless grinding services in Oakville. Get instant quotes, file uploads, and expert support." />
+  <meta name="keywords" content="shaft grinding, centerless grinding, cylindrical grinding, surface grinding, Oakville grinding services, precision grinding" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.jamesonsgrinding.com/" />
+  <link rel="stylesheet" href="style.min.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jameson's Grinding | Precision Shaft Grinding in Oakville" />
+  <meta property="og:description" content="Expert shaft grinding for GTA manufacturers. Up to 80-inch shafts. Instant quotes, file upload support. Centerless, surface, and cylindrical grinding." />
+  <meta property="og:url" content="https://www.jamesonsgrinding.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.jamesonsgrinding.com/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jameson's Grinding | Oakville's Shaft Grinding Specialists" />
+  <meta name="twitter:description" content="Precision grinding in Oakville. Cylindrical, surface, and centerless shaft work with file upload and fast quotes." />
+  <meta name="twitter:image" content="https://www.jamesonsgrinding.com/og-image.jpg" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Jameson's Grinding",
+    "image": "https://www.jamesonsgrinding.com/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1421 Speers Road",
+      "addressLocality": "Oakville",
+      "addressRegion": "ON",
+      "postalCode": "L6L 2X5",
+      "addressCountry": "CA"
+    },
+    "url": "https://www.jamesonsgrinding.com/",
+    "telephone": "+1-905-519-2255",
+    "email": "liju@jamesonsgrinding.com",
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 09:00-17:00"
+  }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Jameson's Grinding</h1>
+    <p>Precision Shaft Grinding | Oakville, Ontario</p>
+    <nav>
+      <a href="#services">Services</a> |
+      <a href="#quote">Get a Quote</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="services">
+      <h2>Our Grinding Services</h2>
+      <ul>
+        <li>Cylindrical, Surface, and Centerless Grinding</li>
+        <li>Shafts up to 80" long × 20" diameter</li>
+        <li>Material: 4140PH, A2, Stainless Steel</li>
+        <li>Microfinishing Available</li>
+        <li>High-volume and Rush Jobs Accepted</li>
+      </ul>
+    </section>
+
+    <section id="quote">
+      <h2>Instant Quote Calculator</h2>
+      <form id="quote-form">
+        <label>Grinding Type:
+          <select name="type" required>
+            <option value="centerless">Centerless</option>
+            <option value="cylindrical">Cylindrical</option>
+            <option value="surface">Surface</option>
+          </select>
+        </label><br />
+        <label>Diameter (inches): <input type="number" name="diameter" required /></label><br />
+        <label>Length (inches): <input type="number" name="length" required /></label><br />
+        <label>Quantity: <input type="number" name="quantity" required /></label><br />
+        <label>Material:
+          <select name="material">
+            <option value="4140PH">4140PH</option>
+            <option value="Stainless">Stainless</option>
+            <option value="A2">A2</option>
+            <option value="Mild Steel">Mild Steel</option>
+          </select>
+        </label><br />
+        <button type="button" onclick="calculateQuote()">Estimate Price</button>
+        <p id="quote-result"></p>
+      </form>
+
+      <h3>Upload Drawings / Attachments</h3>
+      <form action="https://formspree.io/f/xjvlnzdn" method="POST" enctype="multipart/form-data">
+        <label>Your Name: <input type="text" name="name" required /></label><br />
+        <label>Email: <input type="email" name="email" required /></label><br />
+        <label>Message or RFQ Notes:</label><br />
+        <textarea name="message" rows="4" required></textarea><br />
+        <label>Attach File: <input type="file" name="file" /></label><br />
+        <button type="submit">Submit RFQ</button>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Info</h2>
+      <p>Liju James<br />
+         Jameson Machining Inc.<br />
+         1421 Speers Rd, Oakville, ON<br />
+         Phone: <a href="tel:+19055192255">(905) 519-2255</a><br />
+         Email: <a href="mailto:liju@jamesonsgrinding.com">liju@jamesonsgrinding.com</a>
+      </p>
+      <p>
+        <a href="https://wa.me/message/VZVEKTV6TZWZJ1" target="_blank">💬 WhatsApp</a> |
+        <a href="https://calendly.com/jamesonsgrinding/15min" target="_blank">📅 Book a Meeting</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jameson's Grinding Inc. | Grind With Passion | Powered by Precision</p>
+  </footer>
+
+  <!-- JavaScript Quote Logic -->
+  <script>
+  function calculateQuote() {
+    const type = document.querySelector('[name="type"]').value;
+    const D = parseFloat(document.querySelector('[name="diameter"]').value);
+    const L = parseFloat(document.querySelector('[name="length"]').value);
+    const Q = parseInt(document.querySelector('[name="quantity"]').value);
+
+    if (!D || !L || !Q) {
+      document.getElementById("quote-result").textContent = "Please fill all fields.";
+      return;
+    }
+
+    const baseRate = 90; // $/hr
+    const area = 0.6 * Math.PI * D * L;
+    let unitTime = area / 60; // adjust divisor for scaling
+    if (type === "centerless") unitTime *= 0.8;
+    if (type === "surface") unitTime *= 1.2;
+
+    const time = unitTime * Q + 0.5; // add setup time
+    const rawCost = time * baseRate;
+    const minTotal = 60; // $ minimum
+    const final = Math.max(rawCost, minTotal).toFixed(2);
+
+    document.getElementById("quote-result").textContent = "Estimated total: $" + final + " CAD";
+  }
+  </script>
+
+  <!-- Tawk.to Live Chat -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6602e43fa0c6737bd12694bc/1hpk2qu0n';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+</body>
+</html>
