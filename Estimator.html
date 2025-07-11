@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Instant Grinding Quote | Jameson's Grinding Oakville</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get an instant online quote for cylindrical, surface, or centerless grinding, chrome, welding, repair. Upload your drawings/specs—serving Oakville, Toronto, GTA.">
+  <link rel="canonical" href="https://www.jamesonsgrinding.com/estimator.html"/>
+  <meta property="og:title" content="Instant Grinding Estimate | Jameson's Grinding Oakville"/>
+  <meta property="og:description" content="Quick online quote for grinding, chrome, repair. Upload specs—get pricing and lead time instantly.">
+  <meta property="og:url" content="https://www.jamesonsgrinding.com/estimator.html"/>
+  <meta property="og:image" content="https://www.jamesonsgrinding.com/images/social-preview.jpg"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/xxxx.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a class="logo" href="index.html"><i class="fas fa-tools"></i><h1>Jameson's Grinding</h1></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="estimator.html" class="active">Estimate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="contact-btn" href="tel:+19055192255"><i class="fas fa-phone"></i>(905) 519-2255</a>
+        <a class="appointment-btn" href="contact.html#booking"><i class="fas fa-calendar-check"></i>Book Now</a>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="section" id="estimator">
+      <div class="container">
+        <div class="section-header">
+          <h2>Instant Quote Estimator</h2>
+          <p>Get a real-time estimate for your grinding job. Fill out your specs—your price, no surprises, all-in.</p>
+        </div>
+        <form id="quoteForm" enctype="multipart/form-data" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="type">Service Type</label>
+              <select id="type" name="type" required>
+                <option value="cylindrical">Cylindrical Grinding</option>
+                <option value="surface">Surface Grinding</option>
+                <option value="centerless">Centerless Grinding</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="od">OD / Width (mm)</label>
+              <input type="number" id="od" name="od" required placeholder="e.g. 40" min="1">
+            </div>
+            <div class="form-group">
+              <label for="length">Length (mm)</label>
+              <input type="number" id="length" name="length" required placeholder="e.g. 800" min="1">
+            </div>
+            <div class="form-group">
+              <label for="qty">Quantity</label>
+              <input type="number" id="qty" name="qty" required placeholder="e.g. 20" min="1">
+            </div>
+            <div class="form-group">
+              <label for="material">Material</label>
+              <select id="material" name="material" required>
+                <option value="mild">Mild Steel / Alloy</option>
+                <option value="stainless">Stainless</option>
+                <option value="chrome">Chrome</option>
+                <option value="tool steel">Tool Steel</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><input type="checkbox" id="chrome" name="chrome"> Chrome Plating</label>
+            </div>
+            <div class="form-group">
+              <label><input type="checkbox" id="repair" name="repair"> Repair/Welding</label>
+            </div>
+            <div class="form-group">
+              <label><input type="checkbox" id="rush" name="rush"> Rush Job</label>
+            </div>
+            <div class="form-group">
+              <label for="file">Attach Drawing/Specs</label>
+              <input type="file" id="file" name="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+            </div>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+          <button class="btn btn-block" type="submit">Get Instant Estimate</button>
+        </form>
+        <div id="result" style="margin-top:2rem; font-size:1.25rem;"></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Jameson's Grinding</div>
+        <div class="footer-tagline">Precision grinding & repair for Canadian manufacturers</div>
+        <div class="footer-links">
+          <a href="services.html">Services</a>
+          <a href="estimator.html">Estimate</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+          © <script>document.write(new Date().getFullYear())</script> Jameson's Grinding. All rights reserved.<br>
+          Precision Grinding Services in Oakville, Ontario | Serving Toronto, Mississauga, Hamilton, and all of Southern Ontario
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Estimator Logic (your shop's real formula) -->
+  <script>
+  function chromeUpcharge(qty, type) {
+    if (type === "centerless") {
+      if (qty > 200) return qty * 8;
+      if (qty > 50) return qty * 10;
+      if (qty > 10) return qty * 18;
+      return qty * 30;
+    }
+    return qty * 30;
+  }
+
+  function grindingQuote({type, od, length, qty, material, chrome, repair, rush}) {
+    const shopRate = 90, minCharge = 120, setupTime = 0.5;
+    let grindTimePerPart = 0.10 + 0.00002 * od * length; // default cylindrical
+    if(type === "surface") grindTimePerPart = 0.08 + 0.000015 * od * length;
+    if(type === "centerless") grindTimePerPart = 0.07 + 0.000012 * od * length;
+    let totalTime = setupTime + (grindTimePerPart * qty);
+    let price = totalTime * shopRate;
+    if (["stainless", "chrome", "tool steel"].includes((material||"").toLowerCase())) price *= 1.15;
+    if (chrome) price += chromeUpcharge(qty, type);
+    if (repair) price *= 1.2;
+    if (rush) price *= 1.25;
+    if (qty >= 100) price *= 0.92;
+    else if (qty >= 50) price *= 0.96;
+    if (price < minCharge) price = minCharge;
+    return Math.ceil(price / 10) * 10;
+  }
+
+  function getEstimateExplanation({type, od, length, qty, material, chrome, repair, rush}, price) {
+    let lines = [];
+    lines.push(`• Service: <b>${type.charAt(0).toUpperCase() + type.slice(1)} grinding</b>`);
+    lines.push(`• Part size: <b>${od}mm OD × ${length}mm length</b>`);
+    lines.push(`• Quantity: <b>${qty}</b>`);
+    lines.push(`• Material: <b>${material}</b>`);
+    if (chrome) lines.push(`• Includes <b>chrome plating</b>`);
+    if (repair) lines.push(`• Includes <b>repair/welding</b>`);
+    if (rush) lines.push(`• <b>Rush job</b> (priority scheduling)`);
+    lines.push(`• <b>Total estimate: <span style="font-size:1.3em;">$${price} CAD</span></b>`);
+    lines.push(`<span style="font-size:0.9em;">This estimate includes setup, grinding, all handling, and minimum charges. Actual quote will be confirmed after review. Attach drawings/specs for fastest turnaround.</span>`);
+    return lines.join('<br>');
+  }
+
+  document.getElementById('quoteForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Gather form data
+    const form = e.target;
+    const data = {
+      type: form.type.value,
+      od: parseFloat(form.od.value),
+      length: parseFloat(form.length.value),
+      qty: parseInt(form.qty.value, 10),
+      material: form.material.value,
+      chrome: form.chrome.checked,
+      repair: form.repair.checked,
+      rush: form.rush.checked
+    };
+    if (!(data.od > 0 && data.length > 0 && data.qty > 0)) {
+      document.getElementById('result').innerHTML = '<span style="color:red;">Please enter all dimensions and quantity.</span>';
+      return;
+    }
+    const price = grindingQuote(data);
+    document.getElementById('result').innerHTML = getEstimateExplanation(data, price);
+    // Optionally, send lead to CRM or email here...
+  });
+  </script>
+</body>
+</html>
